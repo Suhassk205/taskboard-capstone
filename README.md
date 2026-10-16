@@ -40,8 +40,4 @@ The first ten implementation commits cover the original application, isolated te
 
 ### GitHub commit-history page
 
-These browser captures show the published history in this repository.
-
-![Recent commits on GitHub](evidence/screenshots/02-github-commit-history.png)
-
-![Earlier implementation commits on GitHub](evidence/screenshots/03-github-commit-history-earlier.png)
+![Published commits in the GitHub browser view](evidence/screenshots/04-github-complete-commit-history.png)
