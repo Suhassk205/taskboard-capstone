@@ -1,0 +1,61 @@
+{{- range $name := list "backend" "frontend" }}
+{{- $config := index $.Values $name }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ $name }}
+spec:
+  replicas: {{ $.Values.replicaCount }}
+  selector:
+    matchLabels: {app: {{ $name }}}
+  template:
+    metadata:
+      labels: {app: {{ $name }}}
+    spec:
+      containers:
+      - name: {{ $name }}
+        image: "{{ $config.image }}:{{ $config.tag }}"
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: {{ if eq $name "backend" }}8000{{ else }}8080{{ end }}
+        {{- if eq $name "backend" }}
+        env:
+        - {name: DATABASE_HOST, value: postgres}
+        - name: DATABASE_PASSWORD
+          valueFrom:
+            secretKeyRef: {name: {{ $.Values.database.existingSecret }}, key: DATABASE_PASSWORD}
+        - {name: APP_VERSION, value: {{ $config.tag | quote }}}
+        {{- end }}
+        readinessProbe:
+          httpGet:
+            path: {{ if eq $name "backend" }}/ready{{ else }}/{{ end }}
+            port: {{ if eq $name "backend" }}8000{{ else }}8080{{ end }}
+          initialDelaySeconds: 5
+          periodSeconds: 3
+        livenessProbe:
+          httpGet:
+            path: {{ if eq $name "backend" }}/health{{ else }}/{{ end }}
+            port: {{ if eq $name "backend" }}8000{{ else }}8080{{ end }}
+          initialDelaySeconds: 30
+        resources:
+          requests: {cpu: 50m, memory: 64Mi}
+          limits: {cpu: 500m, memory: 256Mi}
+        securityContext:
+          runAsNonRoot: true
+          allowPrivilegeEscalation: false
+          capabilities: {drop: [ALL]}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ $name }}
+  labels: {app: {{ $name }}}
+spec:
+  type: ClusterIP
+  selector: {app: {{ $name }}}
+  ports:
+  - name: http
+    port: {{ if eq $name "backend" }}8000{{ else }}80{{ end }}
+    targetPort: {{ if eq $name "backend" }}8000{{ else }}8080{{ end }}
+{{- end }}
