@@ -29,3 +29,11 @@ Open `http://localhost:3000`. The backend API documentation is at `http://localh
 `GET /health`, `GET /ready`, `GET /metrics`, `GET /api/tickets`, `GET /api/tickets/stats`, `GET /api/tickets/{id}`, `POST /api/tickets`, `PUT /api/tickets/{id}`, and `DELETE /api/tickets/{id}`.
 
 This is a classroom application. It runs without user authentication and should be deployed only in a controlled demonstration environment.
+
+## Implementation history
+
+The first ten implementation commits cover the original application, isolated tests, containers, Helm, Terraform, monitoring, and delivery workflow.
+
+[Published commit records](evidence/01-published-commit-history.txt)
+
+![Published implementation history](evidence/screenshots/01-published-commit-history.png)

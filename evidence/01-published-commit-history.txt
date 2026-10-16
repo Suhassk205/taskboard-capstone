@@ -1,0 +1,17 @@
+CampusDesk — published GitHub commit history
+Repository: https://github.com/Suhassk205/taskboard-capstone
+Source: GitHub REST API /repos/Suhassk205/taskboard-capstone/commits
+Checked at: 16 October 2026, 11:57:04 PM IST
+Published commits: 11 (10 implementation commits plus repository initialization)
+
+82b61a1 | 11:43:44 PM IST | Initial commit
+899193e | 11:55:40 PM IST | Define CampusDesk application scope and capstone deliverables
+50c6471 | 11:55:43 PM IST | Configure isolated database sessions and pinned API dependencies
+6f957cb | 11:55:43 PM IST | Model campus support tickets with ownership and validated lifecycle fields
+bc05b7d | 11:55:43 PM IST | Create Alembic ticket migration and serialize replica startup migrations
+e0a9555 | 11:55:43 PM IST | Implement ticket CRUD, filtering, readiness, and Prometheus metrics
+488bee6 | 11:55:43 PM IST | Test complete ticket lifecycle against a fresh isolated database
+7a94400 | 11:55:44 PM IST | Build responsive CampusDesk dashboard with live ticket creation and actions
+ec03654 | 11:55:44 PM IST | Containerize non-root services and coordinate PostgreSQL Compose startup
+290185c | 11:55:44 PM IST | Package persistent database, replicated services, Ingress, and HPA in Helm
+9080425 | 11:55:44 PM IST | Define credited EKS infrastructure, application monitoring, and gated CI delivery
