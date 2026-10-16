@@ -37,3 +37,11 @@ The first ten implementation commits cover the original application, isolated te
 [Published commit records](evidence/01-published-commit-history.txt)
 
 ![Published implementation history](evidence/screenshots/01-published-commit-history.png)
+
+### GitHub commit-history page
+
+These browser captures show the published history in this repository.
+
+![Recent commits on GitHub](evidence/screenshots/02-github-commit-history.png)
+
+![Earlier implementation commits on GitHub](evidence/screenshots/03-github-commit-history-earlier.png)
