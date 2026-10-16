@@ -1,0 +1,84 @@
+name: CampusDesk CI and delivery
+on:
+  push: {branches: [main]}
+  pull_request: {branches: [main]}
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-python@v7
+      with: {python-version: '3.12'}
+    - run: pip install -r requirements-dev.txt
+      working-directory: backend
+    - run: pytest -v --junitxml=tests.xml
+      working-directory: backend
+    - uses: actions/setup-node@v4
+      with: {node-version: '24'}
+    - run: npm install && npm run build
+      working-directory: frontend
+  images:
+    needs: test
+    runs-on: ubuntu-latest
+    permissions: {contents: read, packages: write}
+    steps:
+    - uses: actions/checkout@v6
+    - id: names
+      run: echo "owner=${GITHUB_REPOSITORY_OWNER,,}" >> "$GITHUB_OUTPUT"
+    - uses: docker/login-action@v3
+      if: github.event_name == 'push'
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    - name: Build both images
+      run: |
+        docker build -t ghcr.io/${{ steps.names.outputs.owner }}/campusdesk-backend:${{ github.sha }} ./backend
+        docker build --build-arg APP_VERSION=${{ github.sha }} -t ghcr.io/${{ steps.names.outputs.owner }}/campusdesk-frontend:${{ github.sha }} ./frontend
+    - name: Scan backend image
+      uses: aquasecurity/trivy-action@0.35.0
+      with:
+        image-ref: ghcr.io/${{ steps.names.outputs.owner }}/campusdesk-backend:${{ github.sha }}
+        severity: HIGH,CRITICAL
+        exit-code: '1'
+        format: table
+    - name: Scan frontend image
+      uses: aquasecurity/trivy-action@0.35.0
+      with:
+        image-ref: ghcr.io/${{ steps.names.outputs.owner }}/campusdesk-frontend:${{ github.sha }}
+        severity: HIGH,CRITICAL
+        exit-code: '1'
+        format: table
+    - name: Publish scanned images
+      if: github.event_name == 'push'
+      run: |
+        docker push ghcr.io/${{ steps.names.outputs.owner }}/campusdesk-backend:${{ github.sha }}
+        docker push ghcr.io/${{ steps.names.outputs.owner }}/campusdesk-frontend:${{ github.sha }}
+  deploy:
+    needs: images
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions: {contents: read, packages: read}
+    steps:
+    - uses: actions/checkout@v6
+    - uses: helm/kind-action@v1.12.0
+    - uses: docker/login-action@v3
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    - uses: azure/setup-helm@v4.3.0
+    - name: Deploy the published release
+      run: |
+        OWNER=${GITHUB_REPOSITORY_OWNER,,}
+        docker pull ghcr.io/$OWNER/campusdesk-backend:$GITHUB_SHA
+        docker pull ghcr.io/$OWNER/campusdesk-frontend:$GITHUB_SHA
+        kind load docker-image ghcr.io/$OWNER/campusdesk-backend:$GITHUB_SHA ghcr.io/$OWNER/campusdesk-frontend:$GITHUB_SHA --name chart-testing
+        kubectl apply -f k8s/namespace.yaml
+        PASSWORD=$(openssl rand -hex 24)
+        kubectl -n campusdesk create secret generic campusdesk-db --from-literal=DATABASE_PASSWORD="$PASSWORD"
+        helm upgrade --install campusdesk helm/campusdesk -n campusdesk --set backend.image=ghcr.io/$OWNER/campusdesk-backend --set backend.tag=$GITHUB_SHA --set frontend.image=ghcr.io/$OWNER/campusdesk-frontend --set frontend.tag=$GITHUB_SHA --set ingress.enabled=false --set hpa.enabled=false --wait --timeout=5m
+        kubectl -n campusdesk get pods,svc
+        kubectl -n campusdesk exec deployment/backend -- python -c 'import urllib.request; print(urllib.request.urlopen("http://backend:8000/ready").read().decode())'

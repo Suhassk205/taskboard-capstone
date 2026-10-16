@@ -1,0 +1,17 @@
+admin:
+  existingSecret: grafana-admin
+  userKey: username
+  passwordKey: password
+service: {type: ClusterIP}
+resources:
+  requests: {cpu: 25m, memory: 96Mi}
+datasources:
+  datasources.yaml:
+    apiVersion: 1
+    datasources:
+    - name: Prometheus
+      type: prometheus
+      uid: prometheus
+      url: http://prometheus-server.monitoring.svc.cluster.local
+      access: proxy
+      isDefault: true

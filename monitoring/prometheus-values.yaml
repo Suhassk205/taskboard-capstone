@@ -1,0 +1,14 @@
+server:
+  persistentVolume: {enabled: false}
+  resources:
+    requests: {cpu: 50m, memory: 128Mi}
+alertmanager: {enabled: false}
+prometheus-pushgateway: {enabled: false}
+prometheus-node-exporter: {enabled: false}
+kube-state-metrics: {enabled: false}
+extraScrapeConfigs: |
+  - job_name: campusdesk
+    metrics_path: /metrics
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['backend.campusdesk.svc.cluster.local:8000']
