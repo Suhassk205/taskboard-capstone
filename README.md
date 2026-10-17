@@ -196,7 +196,7 @@ The isolated `campusdesk-lab` exercise used a nonexistent image tag to demonstra
 | --- | --- |
 | M1 — Application | [Running UI](evidence/screenshots/10-compose-application.png), [CRUD and PostgreSQL](evidence/04-api-database.txt) |
 | M2 — Testing | [16 passing tests](evidence/screenshots/11-pytest-results.png), [JUnit report](evidence/backend-tests.xml) |
-| M3 — Git | [GitHub history](evidence/screenshots/04-github-complete-commit-history.png), [published commit records](evidence/01-published-commit-history.txt) |
+| M3 — Git | [Complete commit-history screenshot](evidence/screenshots/01-published-commit-history.png), [GitHub page](evidence/screenshots/04-github-complete-commit-history.png), [published records](evidence/01-published-commit-history.txt) |
 | M4 — Docker | [Compose and non-root execution](evidence/03-compose-stack.txt), [terminal screenshot](evidence/screenshots/12-compose-stack.png) |
 | M5 — CI/CD | [Successful pipeline](evidence/screenshots/14-ci-success.png), [backend](evidence/screenshots/17-ghcr-backend.png) and [frontend](evidence/screenshots/18-ghcr-frontend.png) packages |
 | M6 — Security | [Backend scan](evidence/screenshots/15-trivy-backend.png), [frontend scan](evidence/screenshots/16-trivy-frontend.png), explanation above |
