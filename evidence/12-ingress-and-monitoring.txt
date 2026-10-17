@@ -1,0 +1,96 @@
+CampusDesk - Ingress routing and live monitoring
+Actual command transcript; 2026-10-17T00:21:24.646944+05:30
+Context: kind-session13
+
+$ curl --fail -sS -I -H 'Host: campusdesk.localhost' http://127.0.0.1:8088/
+HTTP/1.1 200 OK
+Date: Fri, 16 Oct 2026 18:51:24 GMT
+Content-Type: text/html
+Content-Length: 414
+Connection: keep-alive
+Last-Modified: Fri, 16 Oct 2026 18:27:58 GMT
+ETag: "6ad26cae-19e"
+Accept-Ranges: bytes
+[exit 0]
+
+$ python3 scripts/seed_demo.py --base-url http://127.0.0.1:8001
+201 Library Wi-Fi keeps disconnecting
+201 Projector in Seminar Hall 2 needs attention
+201 Access to the assessment portal
+201 Replace the reading-room desk lamp
+201 Student ID card is not opening the lab
+201 Need a transcript for the internship application
+201 Water dispenser on the second floor is offline
+201 Connect a laptop to the presentation screen
+[exit 0]
+
+$ curl --fail -sS -H 'Host: campusdesk.localhost' http://127.0.0.1:8088/api/tickets/stats
+{"total":8,"open":4,"in_progress":2,"resolved":2,"urgent":2}
+[exit 0]
+
+Actual Prometheus campusdesk targets:
+[
+  {
+    "url": "http://10.244.0.83:8000/metrics",
+    "health": "up",
+    "error": ""
+  },
+  {
+    "url": "http://10.244.0.84:8000/metrics",
+    "health": "up",
+    "error": ""
+  }
+]
+Actual application request counter:
+{
+  "status": "success",
+  "data": {
+    "resultType": "vector",
+    "result": [
+      {
+        "metric": {},
+        "value": [
+          1792176702.175,
+          "660"
+        ]
+      }
+    ]
+  }
+}
+$ curl --fail -sS http://127.0.0.1:3001/api/health
+{
+  "database": "ok",
+  "version": "12.3.1",
+  "commit": "3a1c80ca7ce612f309fdc99338dd3c5e486339be"
+}
+[exit 0]
+
+$ curl --fail -sS http://127.0.0.1:3001/api/dashboards/uid/campusdesk
+{"meta":{"type":"db","canSave":false,"canEdit":false,"canAdmin":false,"canStar":false,"canDelete":false,"slug":"campusdesk-e28094-application-health","url":"/d/campusdesk/campusdesk-e28094-application-health","expires":"0001-01-01T00:00:00Z","created":"2026-10-16T18:45:13Z","updated":"2026-10-16T18:45:13Z","updatedBy":"Anonymous","createdBy":"Anonymous","version":1,"hasAcl":false,"isFolder":false,"apiVersion":"v0alpha1","folderId":0,"folderUid":"","folderTitle":"General","folderUrl":"","provisioned":true,"provisionedExternalId":"campusdesk.json","annotationsPermissions":{"dashboard":{"canAdd":false,"canEdit":false,"canDelete":false},"organization":{"canAdd":false,"canEdit":false,"canDelete":false}}},"dashboard":{"id":1,"panels":[{"datasource":{"type":"prometheus","uid":"prometheus"},"gridPos":{"h":9,"w":12,"x":0,"y":0},"id":1,"targets":[{"expr":"sum(http_requests_total{job=\"campusdesk\"})","refId":"A"}],"title":"HTTP requests handled","type":"timeseries"},{"datasource":{"type":"prometheus","uid":"prometheus"},"gridPos":{"h":9,"w":12,"x":12,"y":0},"id":2,"targets":[{"expr":"sum by(handler) (rate(http_requests_total{job=\"campusdesk\"}[1m]))","refId":"A"}],"title":"Request rate by endpoint","type":"timeseries"}],"refresh":"5s","schemaVersion":39,"time":{"from":"now-15m","to":"now"},"title":"CampusDesk — application health","uid":"campusdesk","version":1}}
+[exit 0]
+
+$ kubectl --context kind-session13 -n campusdesk get pods,svc,ingress,hpa
+NAME                            READY   STATUS    RESTARTS   AGE
+pod/backend-59ddd9cf8c-gkzpj    1/1     Running   0          8m44s
+pod/backend-59ddd9cf8c-jb6vr    1/1     Running   0          8m44s
+pod/frontend-569bc9746f-kgxgg   1/1     Running   0          8m44s
+pod/frontend-569bc9746f-m6zh4   1/1     Running   0          8m44s
+pod/postgres-dfc66bf4c-4c7z9    1/1     Running   0          8m44s
+
+NAME               TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+service/backend    ClusterIP   10.96.236.95    <none>        8000/TCP   8m44s
+service/frontend   ClusterIP   10.96.184.169   <none>        80/TCP     8m44s
+service/postgres   ClusterIP   10.96.207.119   <none>        5432/TCP   8m44s
+
+NAME                                   CLASS   HOSTS                  ADDRESS        PORTS   AGE
+ingress.networking.k8s.io/campusdesk   nginx   campusdesk.localhost   10.96.74.191   80      8m44s
+
+NAME                                                     REFERENCE            TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/campusdesk-backend   Deployment/backend   cpu: 8%/50%   2         4         2          8m44s
+[exit 0]
+
+$ helm --kube-context kind-session13 list -n campusdesk
+NAME      	NAMESPACE 	REVISION	UPDATED                             	STATUS  	CHART           	APP VERSION
+campusdesk	campusdesk	1       	2026-10-17 00:12:58.838564 +0530 IST	deployed	campusdesk-0.1.0	1.0.0
+[exit 0]
+

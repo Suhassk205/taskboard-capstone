@@ -1,0 +1,58 @@
+CampusDesk - Helm installation and healthy Kubernetes resources
+Actual command transcript; 2026-10-17T00:12:56.455227+05:30
+Context: kind-session13
+
+$ kind load docker-image campusdesk-backend:local campusdesk-frontend:local --name session13
+Image: "campusdesk-backend:local" with ID "sha256:3873679e88323d9c1b85132fd8266a9e0af158973fa833f9838dfad9f38a9422" not yet present on node "session13-control-plane", loading...
+Image: "campusdesk-frontend:local" with ID "sha256:3658c5d17ed0d894dce7938f55a6a8439bbd2ecac77f50b28ba6b5970dc8cf73" not yet present on node "session13-control-plane", loading...
+[exit 0]
+
+$ kubectl --context kind-session13 apply -f k8s/namespace.yaml
+namespace/campusdesk created
+[exit 0]
+
+$ kubectl --context kind-session13 -n campusdesk apply -f -
+secret/campusdesk-db created
+[exit 0]
+
+$ helm --kube-context kind-session13 upgrade --install campusdesk helm/campusdesk -n campusdesk --set ingress.host=campusdesk.localhost --wait --timeout 5m
+Release "campusdesk" does not exist. Installing it now.
+NAME: campusdesk
+LAST DEPLOYED: Sat Oct 17 00:12:58 2026
+NAMESPACE: campusdesk
+STATUS: deployed
+REVISION: 1
+DESCRIPTION: Install complete
+TEST SUITE: None
+[exit 0]
+
+$ kubectl --context kind-session13 -n campusdesk get pods -o wide
+NAME                        READY   STATUS    RESTARTS   AGE   IP            NODE                      NOMINATED NODE   READINESS GATES
+backend-59ddd9cf8c-gkzpj    1/1     Running   0          41s   10.244.0.83   session13-control-plane   <none>           <none>
+backend-59ddd9cf8c-jb6vr    1/1     Running   0          41s   10.244.0.84   session13-control-plane   <none>           <none>
+frontend-569bc9746f-kgxgg   1/1     Running   0          41s   10.244.0.85   session13-control-plane   <none>           <none>
+frontend-569bc9746f-m6zh4   1/1     Running   0          41s   10.244.0.82   session13-control-plane   <none>           <none>
+postgres-dfc66bf4c-4c7z9    1/1     Running   0          41s   10.244.0.87   session13-control-plane   <none>           <none>
+[exit 0]
+
+$ kubectl --context kind-session13 -n campusdesk get svc
+NAME       TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+backend    ClusterIP   10.96.236.95    <none>        8000/TCP   41s
+frontend   ClusterIP   10.96.184.169   <none>        80/TCP     41s
+postgres   ClusterIP   10.96.207.119   <none>        5432/TCP   41s
+[exit 0]
+
+$ kubectl --context kind-session13 -n campusdesk get ingress
+NAME         CLASS   HOSTS                  ADDRESS        PORTS   AGE
+campusdesk   nginx   campusdesk.localhost   10.96.74.191   80      41s
+[exit 0]
+
+$ helm --kube-context kind-session13 list -n campusdesk
+NAME      	NAMESPACE 	REVISION	UPDATED                             	STATUS  	CHART           	APP VERSION
+campusdesk	campusdesk	1       	2026-10-17 00:12:58.838564 +0530 IST	deployed	campusdesk-0.1.0	1.0.0
+[exit 0]
+
+$ kubectl --context kind-session13 -n campusdesk exec deployment/backend -- python -c 'import urllib.request; print(urllib.request.urlopen("http://backend:8000/ready").read().decode())'
+{"status":"ready"}
+[exit 0]
+

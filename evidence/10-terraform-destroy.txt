@@ -1,0 +1,883 @@
+CampusDesk - destroy all capstone AWS resources
+Actual command transcript; 2026-10-17T00:20:46.193794+05:30
+Context: AWS ap-south-1; cleanup after the demonstration
+
+$ terraform destroy -input=false -auto-approve -no-color -var project=suhas-campusdesk-1792175635
+
+Error: Retrieving AWS account details: validating provider credentials: retrieving caller identity from STS: operation error STS: GetCallerIdentity, https response error StatusCode: 403, RequestID: c4bb66d7-6485-4772-b356-5bdca425200e, api error ExpiredToken: The security token included in the request is expired
+
+  with provider["registry.terraform.io/hashicorp/aws"],
+  on versions.tf line 7, in provider "aws":
+   7: provider "aws" { region = var.region }
+[exit 1]
+
+CampusDesk - complete AWS cleanup with refreshed credentials
+Actual command transcript; 2026-10-17T00:21:59.758798+05:30
+Context: AWS ap-south-1
+
+$ terraform destroy -input=false -auto-approve -no-color -var project=suhas-campusdesk-1792175635
+data.aws_availability_zones.available: Reading...
+aws_vpc.main: Refreshing state... [id=vpc-09395fa337d196918]
+aws_iam_role.nodes: Refreshing state... [id=suhas-campusdesk-1792175635-nodes]
+aws_iam_role.cluster: Refreshing state... [id=suhas-campusdesk-1792175635-cluster]
+data.aws_availability_zones.available: Read complete after 0s [id=ap-south-1]
+aws_internet_gateway.main: Refreshing state... [id=igw-0dac0a856c51828e8]
+aws_subnet.public[0]: Refreshing state... [id=subnet-06f62dd18680f3b55]
+aws_subnet.public[1]: Refreshing state... [id=subnet-0b6893daaa2c7f411]
+aws_route_table.public: Refreshing state... [id=rtb-03795a098125a0233]
+aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-04dc920b34aab23e1]
+aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-03d9fcbad77be32d5]
+aws_iam_role_policy_attachment.cluster: Refreshing state... [id=suhas-campusdesk-1792175635-cluster/arn:aws:iam::aws:policy/AmazonEKSClusterPolicy]
+aws_iam_role_policy_attachment.nodes["AmazonEC2ContainerRegistryReadOnly"]: Refreshing state... [id=suhas-campusdesk-1792175635-nodes/arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly]
+aws_iam_role_policy_attachment.nodes["AmazonEKS_CNI_Policy"]: Refreshing state... [id=suhas-campusdesk-1792175635-nodes/arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy]
+aws_iam_role_policy_attachment.nodes["AmazonEKSWorkerNodePolicy"]: Refreshing state... [id=suhas-campusdesk-1792175635-nodes/arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy]
+aws_eks_cluster.main: Refreshing state... [id=suhas-campusdesk-1792175635]
+aws_eks_node_group.main: Refreshing state... [id=suhas-campusdesk-1792175635:campusdesk-workers]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # aws_eks_cluster.main will be destroyed
+  - resource "aws_eks_cluster" "main" {
+      - arn                           = "arn:aws:eks:ap-south-1:662875145165:cluster/suhas-campusdesk-1792175635" -> null
+      - bootstrap_self_managed_addons = true -> null
+      - certificate_authority         = [
+          - {
+              - data = "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURNakNDQWhxZ0F3SUJBZ0lSQUl5aTlLcDZXNElXalV4bytRKysrVjh3RFFZSktvWklodmNOQVFFTEJRQXcKSnpFUU1BNEdBMVVFQ2hNSFFWZFRJRVZMVXpFVE1CRUdBMVVFQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TmpFdwpNVFl4T0RNME1qbGFGdzB6TVRFd01UVXhPRE0wTWpsYU1DY3hFREFPQmdOVkJBb1RCMEZYVXlCRlMxTXhFekFSCkJnTlZCQU1UQ210MVltVnlibVYwWlhNd2dnRWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUJEd0F3Z2dFS0FvSUIKQVFEVTR2cXEycHVXWG43anFKZGdLSCtZb09SamV4ekJSTy8ycUo3L1g0TEVYbkcxTjNNRnExTlYzanllaUZENgpwWDdtUEEyVXdlVFZEamc2WnVjdUlkbVR0MmU0dnJxK2MyRWN3S0grenRZVys3Y3J0bjZPdnh6SzFmZzE3eXFVCmRtUHoxaHhoQ1R4cFJDMForRCszdXFkWHAwSFQybXlWTy9ZRjBKRWFSQUdMemJ5ZFJRM2ZpK3haTjhGd1hCM0QKNDBrNWNMemV6SnBkTWcrbkxhZXcxQmE3K1hIRmt0SGhFM01vNU45eVhFYngxYTdJYlpEWEs4M1hOaE05NkJvVQorRFpvRkFwU1lSUWNNbEhDTm9LbW1kRmdjMlNzb2dwQ1ozYjdPM0svaDJ6L0dJZUFSSkVLYSs1MGZoZmRIR1JOCnl3YVdmejBLSnN2Zks1elNobkwwbnZxUEFnTUJBQUdqV1RCWE1BNEdBMVVkRHdFQi93UUVBd0lDcERBUEJnTlYKSFJNQkFmOEVCVEFEQVFIL01CMEdBMVVkRGdRV0JCVG1rblU2Y2d0VjVtZk1ENWMzVWZwOTNxTzVPakFWQmdOVgpIUkVFRGpBTWdncHJkV0psY201bGRHVnpNQTBHQ1NxR1NJYjNEUUVCQ3dVQUE0SUJBUUFlbEtxaGFrdjNOUXpWCkxYNU14aFBURXRETWg2ODFzV3V6SXlxaXRVRVdiMUlja2lPb2VNTmpJZzFzb1VvZEJJeDNxMENPUDBaaWl5dzQKZnM5aHd2bE5mSXZkZE53QXBFOUtRclUwVzJ5bVR1R2NTWHMxazdJcXlNRDBpNjN2eWsvS0E0dDhhWlZMemd0YgpKTHRIbjcxdHpySlJkUkV1aE9CYnUwMU5yWWI4RCs4K3NocUVmdmRDQm0rMHcxem1SV01OTFBZU0NHSWdWamYyCmpoNVZ3d3IvdkV3ZEJxK3NEdFJsL1RpdkpjM0VVYVZPejR6QkNoQzVoc3IyQmxIaDEzWUU1UFpqeW1UTm9ReFUKUDFLME5RUFBBMzYydHR2cUVnZkQ3OTJaV1czMU55WUVmWVl3dnYrSXoyeXMxVm9nZTRYbTM3TUx2OFJCeENlMQprc0pBMkJ5aQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg=="
+            },
+        ] -> null
+      - created_at                    = "2026-10-16T18:34:20Z" -> null
+      - deletion_protection           = false -> null
+      - enabled_cluster_log_types     = [] -> null
+      - endpoint                      = "https://C4614A537FEF205AEB7EFDC0D25B6435.gr7.ap-south-1.eks.amazonaws.com" -> null
+      - id                            = "suhas-campusdesk-1792175635" -> null
+      - identity                      = [
+          - {
+              - oidc = [
+                  - {
+                      - issuer = "https://oidc.eks.ap-south-1.amazonaws.com/id/C4614A537FEF205AEB7EFDC0D25B6435"
+                    },
+                ]
+            },
+        ] -> null
+      - name                          = "suhas-campusdesk-1792175635" -> null
+      - platform_version              = "eks.25" -> null
+      - region                        = "ap-south-1" -> null
+      - role_arn                      = "arn:aws:iam::662875145165:role/suhas-campusdesk-1792175635-cluster" -> null
+      - status                        = "ACTIVE" -> null
+      - tags                          = {} -> null
+      - tags_all                      = {} -> null
+      - version                       = "1.35" -> null
+
+      - access_config {
+          - authentication_mode                         = "API_AND_CONFIG_MAP" -> null
+          - bootstrap_cluster_creator_admin_permissions = true -> null
+        }
+
+      - compute_config {
+          - enabled       = false -> null
+          - node_pools    = [] -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - control_plane_scaling_config {
+          - tier = "standard" -> null
+        }
+
+      - kube_api_server_config {
+          - event_ttl = "60m" -> null
+
+          - service_node_port_range {
+              - max_port = 32767 -> null
+              - min_port = 30000 -> null
+            }
+        }
+
+      - kube_controller_manager_config {
+          - horizontal_pod_autoscaler_controller_config {
+              - horizontal_pod_autoscaler_sync_period = "15s" -> null
+            }
+          - pod_gc_controller_config {
+              - terminated_pod_gc_threshold = 12500 -> null
+            }
+        }
+
+      - kube_scheduler_config {
+          - node_resources_fit {
+              - scoring_strategy {
+                  - type = "LeastAllocated" -> null
+
+                  - resource {
+                      - name   = "cpu" -> null
+                      - weight = 1 -> null
+                    }
+                  - resource {
+                      - name   = "memory" -> null
+                      - weight = 1 -> null
+                    }
+                }
+            }
+        }
+
+      - kubernetes_network_config {
+          - ip_family         = "ipv4" -> null
+          - service_ipv4_cidr = "172.20.0.0/16" -> null
+            # (1 unchanged attribute hidden)
+
+          - elastic_load_balancing {
+              - enabled = false -> null
+            }
+        }
+
+      - storage_config {
+          - block_storage {
+              - enabled = false -> null
+            }
+        }
+
+      - upgrade_policy {
+          - support_type = "EXTENDED" -> null
+        }
+
+      - vpc_config {
+          - cluster_security_group_id = "sg-0b9180f016d0f028e" -> null
+          - control_plane_egress_mode = "AWS_MANAGED" -> null
+          - endpoint_private_access   = false -> null
+          - endpoint_public_access    = true -> null
+          - public_access_cidrs       = [
+              - "0.0.0.0/0",
+            ] -> null
+          - security_group_ids        = [] -> null
+          - subnet_ids                = [
+              - "subnet-06f62dd18680f3b55",
+              - "subnet-0b6893daaa2c7f411",
+            ] -> null
+          - vpc_id                    = "vpc-09395fa337d196918" -> null
+        }
+    }
+
+  # aws_eks_node_group.main will be destroyed
+  - resource "aws_eks_node_group" "main" {
+      - ami_type               = "AL2023_x86_64_STANDARD" -> null
+      - arn                    = "arn:aws:eks:ap-south-1:662875145165:nodegroup/suhas-campusdesk-1792175635/campusdesk-workers/4ad0a302-291d-7782-97cf-52f728c55af6" -> null
+      - capacity_type          = "ON_DEMAND" -> null
+      - cluster_name           = "suhas-campusdesk-1792175635" -> null
+      - disk_size              = 20 -> null
+      - id                     = "suhas-campusdesk-1792175635:campusdesk-workers" -> null
+      - instance_types         = [
+          - "t3.small",
+        ] -> null
+      - labels                 = {} -> null
+      - node_group_name        = "campusdesk-workers" -> null
+      - node_role_arn          = "arn:aws:iam::662875145165:role/suhas-campusdesk-1792175635-nodes" -> null
+      - region                 = "ap-south-1" -> null
+      - release_version        = "1.35.8-20261012" -> null
+      - resources              = [
+          - {
+              - autoscaling_groups              = [
+                  - {
+                      - name = "eks-campusdesk-workers-4ad0a302-291d-7782-97cf-52f728c55af6"
+                    },
+                ]
+                # (1 unchanged attribute hidden)
+            },
+        ] -> null
+      - status                 = "ACTIVE" -> null
+      - subnet_ids             = [
+          - "subnet-06f62dd18680f3b55",
+          - "subnet-0b6893daaa2c7f411",
+        ] -> null
+      - tags                   = {} -> null
+      - tags_all               = {} -> null
+      - version                = "1.35" -> null
+        # (1 unchanged attribute hidden)
+
+      - scaling_config {
+          - desired_size = 2 -> null
+          - max_size     = 2 -> null
+          - min_size     = 1 -> null
+        }
+
+      - update_config {
+          - max_unavailable            = 1 -> null
+          - max_unavailable_percentage = 0 -> null
+            # (1 unchanged attribute hidden)
+        }
+    }
+
+  # aws_iam_role.cluster will be destroyed
+  - resource "aws_iam_role" "cluster" {
+      - arn                   = "arn:aws:iam::662875145165:role/suhas-campusdesk-1792175635-cluster" -> null
+      - assume_role_policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sts:AssumeRole"
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "eks.amazonaws.com"
+                        }
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - create_date           = "2026-10-16T18:34:05Z" -> null
+      - force_detach_policies = false -> null
+      - id                    = "suhas-campusdesk-1792175635-cluster" -> null
+      - managed_policy_arns   = [
+          - "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy",
+        ] -> null
+      - max_session_duration  = 3600 -> null
+      - name                  = "suhas-campusdesk-1792175635-cluster" -> null
+      - path                  = "/" -> null
+      - tags                  = {} -> null
+      - tags_all              = {} -> null
+      - unique_id             = "AROAZUVTQAPGUFXOCEUZN" -> null
+        # (3 unchanged attributes hidden)
+    }
+
+  # aws_iam_role.nodes will be destroyed
+  - resource "aws_iam_role" "nodes" {
+      - arn                   = "arn:aws:iam::662875145165:role/suhas-campusdesk-1792175635-nodes" -> null
+      - assume_role_policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sts:AssumeRole"
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "ec2.amazonaws.com"
+                        }
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - create_date           = "2026-10-16T18:34:05Z" -> null
+      - force_detach_policies = false -> null
+      - id                    = "suhas-campusdesk-1792175635-nodes" -> null
+      - managed_policy_arns   = [
+          - "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
+          - "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
+          - "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
+        ] -> null
+      - max_session_duration  = 3600 -> null
+      - name                  = "suhas-campusdesk-1792175635-nodes" -> null
+      - path                  = "/" -> null
+      - tags                  = {} -> null
+      - tags_all              = {} -> null
+      - unique_id             = "AROAZUVTQAPGZ34HOGSGU" -> null
+        # (3 unchanged attributes hidden)
+    }
+
+  # aws_iam_role_policy_attachment.cluster will be destroyed
+  - resource "aws_iam_role_policy_attachment" "cluster" {
+      - id         = "suhas-campusdesk-1792175635-cluster/arn:aws:iam::aws:policy/AmazonEKSClusterPolicy" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy" -> null
+      - role       = "suhas-campusdesk-1792175635-cluster" -> null
+    }
+
+  # aws_iam_role_policy_attachment.nodes["AmazonEC2ContainerRegistryReadOnly"] will be destroyed
+  - resource "aws_iam_role_policy_attachment" "nodes" {
+      - id         = "suhas-campusdesk-1792175635-nodes/arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly" -> null
+      - role       = "suhas-campusdesk-1792175635-nodes" -> null
+    }
+
+  # aws_iam_role_policy_attachment.nodes["AmazonEKSWorkerNodePolicy"] will be destroyed
+  - resource "aws_iam_role_policy_attachment" "nodes" {
+      - id         = "suhas-campusdesk-1792175635-nodes/arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy" -> null
+      - role       = "suhas-campusdesk-1792175635-nodes" -> null
+    }
+
+  # aws_iam_role_policy_attachment.nodes["AmazonEKS_CNI_Policy"] will be destroyed
+  - resource "aws_iam_role_policy_attachment" "nodes" {
+      - id         = "suhas-campusdesk-1792175635-nodes/arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy" -> null
+      - role       = "suhas-campusdesk-1792175635-nodes" -> null
+    }
+
+  # aws_internet_gateway.main will be destroyed
+  - resource "aws_internet_gateway" "main" {
+      - arn      = "arn:aws:ec2:ap-south-1:662875145165:internet-gateway/igw-0dac0a856c51828e8" -> null
+      - id       = "igw-0dac0a856c51828e8" -> null
+      - owner_id = "662875145165" -> null
+      - region   = "ap-south-1" -> null
+      - tags     = {} -> null
+      - tags_all = {} -> null
+      - vpc_id   = "vpc-09395fa337d196918" -> null
+    }
+
+  # aws_route_table.public will be destroyed
+  - resource "aws_route_table" "public" {
+      - arn              = "arn:aws:ec2:ap-south-1:662875145165:route-table/rtb-03795a098125a0233" -> null
+      - id               = "rtb-03795a098125a0233" -> null
+      - owner_id         = "662875145165" -> null
+      - propagating_vgws = [] -> null
+      - region           = "ap-south-1" -> null
+      - route            = [
+          - {
+              - cidr_block                 = "0.0.0.0/0"
+              - gateway_id                 = "igw-0dac0a856c51828e8"
+                # (12 unchanged attributes hidden)
+            },
+        ] -> null
+      - tags             = {} -> null
+      - tags_all         = {} -> null
+      - vpc_id           = "vpc-09395fa337d196918" -> null
+    }
+
+  # aws_route_table_association.public[0] will be destroyed
+  - resource "aws_route_table_association" "public" {
+      - id             = "rtbassoc-04dc920b34aab23e1" -> null
+      - region         = "ap-south-1" -> null
+      - route_table_id = "rtb-03795a098125a0233" -> null
+      - subnet_id      = "subnet-06f62dd18680f3b55" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # aws_route_table_association.public[1] will be destroyed
+  - resource "aws_route_table_association" "public" {
+      - id             = "rtbassoc-03d9fcbad77be32d5" -> null
+      - region         = "ap-south-1" -> null
+      - route_table_id = "rtb-03795a098125a0233" -> null
+      - subnet_id      = "subnet-0b6893daaa2c7f411" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # aws_subnet.public[0] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:ap-south-1:662875145165:subnet/subnet-06f62dd18680f3b55" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "ap-south-1a" -> null
+      - availability_zone_id                           = "aps1-az1" -> null
+      - cidr_block                                     = "10.42.0.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-06f62dd18680f3b55" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = true -> null
+      - owner_id                                       = "662875145165" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - region                                         = "ap-south-1" -> null
+      - tags                                           = {
+          - "Name"                   = "suhas-campusdesk-1792175635-public-0"
+          - "kubernetes.io/role/elb" = "1"
+        } -> null
+      - tags_all                                       = {
+          - "Name"                   = "suhas-campusdesk-1792175635-public-0"
+          - "kubernetes.io/role/elb" = "1"
+        } -> null
+      - vpc_id                                         = "vpc-09395fa337d196918" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # aws_subnet.public[1] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:ap-south-1:662875145165:subnet/subnet-0b6893daaa2c7f411" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "ap-south-1b" -> null
+      - availability_zone_id                           = "aps1-az3" -> null
+      - cidr_block                                     = "10.42.1.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0b6893daaa2c7f411" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = true -> null
+      - owner_id                                       = "662875145165" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - region                                         = "ap-south-1" -> null
+      - tags                                           = {
+          - "Name"                   = "suhas-campusdesk-1792175635-public-1"
+          - "kubernetes.io/role/elb" = "1"
+        } -> null
+      - tags_all                                       = {
+          - "Name"                   = "suhas-campusdesk-1792175635-public-1"
+          - "kubernetes.io/role/elb" = "1"
+        } -> null
+      - vpc_id                                         = "vpc-09395fa337d196918" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # aws_vpc.main will be destroyed
+  - resource "aws_vpc" "main" {
+      - arn                                  = "arn:aws:ec2:ap-south-1:662875145165:vpc/vpc-09395fa337d196918" -> null
+      - assign_generated_ipv6_cidr_block     = false -> null
+      - cidr_block                           = "10.42.0.0/16" -> null
+      - default_network_acl_id               = "acl-0c0970395c22b1d8a" -> null
+      - default_route_table_id               = "rtb-058d0f59187508071" -> null
+      - default_security_group_id            = "sg-07bb6814340e16890" -> null
+      - dhcp_options_id                      = "dopt-038df586b0eb569ff" -> null
+      - enable_dns_hostnames                 = true -> null
+      - enable_dns_support                   = true -> null
+      - enable_network_address_usage_metrics = false -> null
+      - id                                   = "vpc-09395fa337d196918" -> null
+      - instance_tenancy                     = "default" -> null
+      - ipv6_netmask_length                  = 0 -> null
+      - main_route_table_id                  = "rtb-058d0f59187508071" -> null
+      - owner_id                             = "662875145165" -> null
+      - region                               = "ap-south-1" -> null
+      - tags                                 = {
+          - "Name" = "suhas-campusdesk-1792175635"
+        } -> null
+      - tags_all                             = {
+          - "Name" = "suhas-campusdesk-1792175635"
+        } -> null
+        # (4 unchanged attributes hidden)
+    }
+
+Plan: 0 to add, 0 to change, 15 to destroy.
+
+Changes to Outputs:
+  - cluster_endpoint = "https://C4614A537FEF205AEB7EFDC0D25B6435.gr7.ap-south-1.eks.amazonaws.com" -> null
+  - cluster_name     = "suhas-campusdesk-1792175635" -> null
+  - public_subnets   = [
+      - "subnet-06f62dd18680f3b55",
+      - "subnet-0b6893daaa2c7f411",
+    ] -> null
+  - vpc_id           = "vpc-09395fa337d196918" -> null
+aws_eks_node_group.main: Destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 00m10s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 00m20s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 00m30s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 00m40s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 00m50s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 01m00s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 01m10s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 01m20s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 01m30s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 01m40s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 01m50s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 02m00s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 02m10s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 02m20s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 02m30s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 02m40s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 02m50s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 03m00s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 03m10s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 03m20s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 03m30s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 03m40s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 03m50s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 04m00s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 04m10s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 04m20s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 04m30s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 04m40s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 04m50s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 05m00s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 05m10s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 05m20s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 05m30s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 05m40s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 05m50s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 06m00s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 06m10s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 06m20s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 06m30s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 06m40s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 06m50s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 07m00s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 07m10s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 07m20s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 07m30s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 07m40s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 07m50s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 08m00s elapsed]
+aws_eks_node_group.main: Still destroying... [id=suhas-campusdesk-1792175635:campusdesk-workers, 08m10s elapsed]
+aws_eks_node_group.main: Destruction complete after 8m12s
+aws_route_table_association.public[1]: Destroying... [id=rtbassoc-03d9fcbad77be32d5]
+aws_iam_role_policy_attachment.nodes["AmazonEC2ContainerRegistryReadOnly"]: Destroying... [id=suhas-campusdesk-1792175635-nodes/arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly]
+aws_route_table_association.public[0]: Destroying... [id=rtbassoc-04dc920b34aab23e1]
+aws_iam_role_policy_attachment.nodes["AmazonEKSWorkerNodePolicy"]: Destroying... [id=suhas-campusdesk-1792175635-nodes/arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy]
+aws_iam_role_policy_attachment.nodes["AmazonEKS_CNI_Policy"]: Destroying... [id=suhas-campusdesk-1792175635-nodes/arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy]
+aws_eks_cluster.main: Destroying... [id=suhas-campusdesk-1792175635]
+aws_route_table_association.public[1]: Destruction complete after 1s
+aws_route_table_association.public[0]: Destruction complete after 1s
+aws_route_table.public: Destroying... [id=rtb-03795a098125a0233]
+aws_route_table.public: Destruction complete after 1s
+aws_internet_gateway.main: Destroying... [id=igw-0dac0a856c51828e8]
+aws_iam_role_policy_attachment.nodes["AmazonEKS_CNI_Policy"]: Destruction complete after 2s
+aws_iam_role_policy_attachment.nodes["AmazonEC2ContainerRegistryReadOnly"]: Destruction complete after 2s
+aws_iam_role_policy_attachment.nodes["AmazonEKSWorkerNodePolicy"]: Destruction complete after 2s
+aws_iam_role.nodes: Destroying... [id=suhas-campusdesk-1792175635-nodes]
+aws_internet_gateway.main: Destruction complete after 0s
+aws_iam_role.nodes: Destruction complete after 1s
+aws_eks_cluster.main: Still destroying... [id=suhas-campusdesk-1792175635, 00m10s elapsed]
+
+Error: deleting EKS Cluster (suhas-campusdesk-1792175635): operation error EKS: DeleteCluster, https response error StatusCode: 403, RequestID: dc065d0a-090f-44ea-8a44-1dfb0a47b0ed, api error ExpiredTokenException: The security token included in the request is expired
+[exit 1]
+
+CampusDesk - finish cleanup with automatically refreshed credentials
+Actual command transcript; 2026-10-17T00:37:31.038699+05:30
+Context: AWS ap-south-1
+
+$ terraform destroy -input=false -auto-approve -no-color -var project=suhas-campusdesk-1792175635
+
+Error: No valid credential sources found
+
+  with provider["registry.terraform.io/hashicorp/aws"],
+  on versions.tf line 7, in provider "aws":
+   7: provider "aws" { region = var.region }
+
+Please see https://registry.terraform.io/providers/hashicorp/aws
+for more information about providing credentials.
+
+Error: failed to refresh cached credentials, process provider error: error in
+credential_process: exit status 253
+[exit 1]
+
+CampusDesk - finish cleanup with automatically refreshed credentials
+Actual command transcript; 2026-10-17T00:40:31.221974+05:30
+Context: AWS ap-south-1
+
+$ terraform destroy -input=false -auto-approve -no-color -var project=suhas-campusdesk-1792175635
+aws_iam_role.cluster: Refreshing state... [id=suhas-campusdesk-1792175635-cluster]
+aws_vpc.main: Refreshing state... [id=vpc-09395fa337d196918]
+data.aws_availability_zones.available: Reading...
+data.aws_availability_zones.available: Read complete after 3s [id=ap-south-1]
+aws_subnet.public[0]: Refreshing state... [id=subnet-06f62dd18680f3b55]
+aws_subnet.public[1]: Refreshing state... [id=subnet-0b6893daaa2c7f411]
+aws_iam_role_policy_attachment.cluster: Refreshing state... [id=suhas-campusdesk-1792175635-cluster/arn:aws:iam::aws:policy/AmazonEKSClusterPolicy]
+aws_eks_cluster.main: Refreshing state... [id=suhas-campusdesk-1792175635]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # aws_eks_cluster.main will be destroyed
+  - resource "aws_eks_cluster" "main" {
+      - arn                           = "arn:aws:eks:ap-south-1:662875145165:cluster/suhas-campusdesk-1792175635" -> null
+      - bootstrap_self_managed_addons = true -> null
+      - certificate_authority         = [
+          - {
+              - data = "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURNakNDQWhxZ0F3SUJBZ0lSQUl5aTlLcDZXNElXalV4bytRKysrVjh3RFFZSktvWklodmNOQVFFTEJRQXcKSnpFUU1BNEdBMVVFQ2hNSFFWZFRJRVZMVXpFVE1CRUdBMVVFQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TmpFdwpNVFl4T0RNME1qbGFGdzB6TVRFd01UVXhPRE0wTWpsYU1DY3hFREFPQmdOVkJBb1RCMEZYVXlCRlMxTXhFekFSCkJnTlZCQU1UQ210MVltVnlibVYwWlhNd2dnRWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUJEd0F3Z2dFS0FvSUIKQVFEVTR2cXEycHVXWG43anFKZGdLSCtZb09SamV4ekJSTy8ycUo3L1g0TEVYbkcxTjNNRnExTlYzanllaUZENgpwWDdtUEEyVXdlVFZEamc2WnVjdUlkbVR0MmU0dnJxK2MyRWN3S0grenRZVys3Y3J0bjZPdnh6SzFmZzE3eXFVCmRtUHoxaHhoQ1R4cFJDMForRCszdXFkWHAwSFQybXlWTy9ZRjBKRWFSQUdMemJ5ZFJRM2ZpK3haTjhGd1hCM0QKNDBrNWNMemV6SnBkTWcrbkxhZXcxQmE3K1hIRmt0SGhFM01vNU45eVhFYngxYTdJYlpEWEs4M1hOaE05NkJvVQorRFpvRkFwU1lSUWNNbEhDTm9LbW1kRmdjMlNzb2dwQ1ozYjdPM0svaDJ6L0dJZUFSSkVLYSs1MGZoZmRIR1JOCnl3YVdmejBLSnN2Zks1elNobkwwbnZxUEFnTUJBQUdqV1RCWE1BNEdBMVVkRHdFQi93UUVBd0lDcERBUEJnTlYKSFJNQkFmOEVCVEFEQVFIL01CMEdBMVVkRGdRV0JCVG1rblU2Y2d0VjVtZk1ENWMzVWZwOTNxTzVPakFWQmdOVgpIUkVFRGpBTWdncHJkV0psY201bGRHVnpNQTBHQ1NxR1NJYjNEUUVCQ3dVQUE0SUJBUUFlbEtxaGFrdjNOUXpWCkxYNU14aFBURXRETWg2ODFzV3V6SXlxaXRVRVdiMUlja2lPb2VNTmpJZzFzb1VvZEJJeDNxMENPUDBaaWl5dzQKZnM5aHd2bE5mSXZkZE53QXBFOUtRclUwVzJ5bVR1R2NTWHMxazdJcXlNRDBpNjN2eWsvS0E0dDhhWlZMemd0YgpKTHRIbjcxdHpySlJkUkV1aE9CYnUwMU5yWWI4RCs4K3NocUVmdmRDQm0rMHcxem1SV01OTFBZU0NHSWdWamYyCmpoNVZ3d3IvdkV3ZEJxK3NEdFJsL1RpdkpjM0VVYVZPejR6QkNoQzVoc3IyQmxIaDEzWUU1UFpqeW1UTm9ReFUKUDFLME5RUFBBMzYydHR2cUVnZkQ3OTJaV1czMU55WUVmWVl3dnYrSXoyeXMxVm9nZTRYbTM3TUx2OFJCeENlMQprc0pBMkJ5aQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg=="
+            },
+        ] -> null
+      - created_at                    = "2026-10-16T18:34:20Z" -> null
+      - deletion_protection           = false -> null
+      - enabled_cluster_log_types     = [] -> null
+      - endpoint                      = "https://C4614A537FEF205AEB7EFDC0D25B6435.gr7.ap-south-1.eks.amazonaws.com" -> null
+      - id                            = "suhas-campusdesk-1792175635" -> null
+      - identity                      = [
+          - {
+              - oidc = [
+                  - {
+                      - issuer = "https://oidc.eks.ap-south-1.amazonaws.com/id/C4614A537FEF205AEB7EFDC0D25B6435"
+                    },
+                ]
+            },
+        ] -> null
+      - name                          = "suhas-campusdesk-1792175635" -> null
+      - platform_version              = "eks.25" -> null
+      - region                        = "ap-south-1" -> null
+      - role_arn                      = "arn:aws:iam::662875145165:role/suhas-campusdesk-1792175635-cluster" -> null
+      - status                        = "ACTIVE" -> null
+      - tags                          = {} -> null
+      - tags_all                      = {} -> null
+      - version                       = "1.35" -> null
+
+      - access_config {
+          - authentication_mode                         = "API_AND_CONFIG_MAP" -> null
+          - bootstrap_cluster_creator_admin_permissions = true -> null
+        }
+
+      - compute_config {
+          - enabled       = false -> null
+          - node_pools    = [] -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - control_plane_scaling_config {
+          - tier = "standard" -> null
+        }
+
+      - kube_api_server_config {
+          - event_ttl = "60m" -> null
+
+          - service_node_port_range {
+              - max_port = 32767 -> null
+              - min_port = 30000 -> null
+            }
+        }
+
+      - kube_controller_manager_config {
+          - horizontal_pod_autoscaler_controller_config {
+              - horizontal_pod_autoscaler_sync_period = "15s" -> null
+            }
+          - pod_gc_controller_config {
+              - terminated_pod_gc_threshold = 12500 -> null
+            }
+        }
+
+      - kube_scheduler_config {
+          - node_resources_fit {
+              - scoring_strategy {
+                  - type = "LeastAllocated" -> null
+
+                  - resource {
+                      - name   = "cpu" -> null
+                      - weight = 1 -> null
+                    }
+                  - resource {
+                      - name   = "memory" -> null
+                      - weight = 1 -> null
+                    }
+                }
+            }
+        }
+
+      - kubernetes_network_config {
+          - ip_family         = "ipv4" -> null
+          - service_ipv4_cidr = "172.20.0.0/16" -> null
+            # (1 unchanged attribute hidden)
+
+          - elastic_load_balancing {
+              - enabled = false -> null
+            }
+        }
+
+      - storage_config {
+          - block_storage {
+              - enabled = false -> null
+            }
+        }
+
+      - upgrade_policy {
+          - support_type = "EXTENDED" -> null
+        }
+
+      - vpc_config {
+          - cluster_security_group_id = "sg-0b9180f016d0f028e" -> null
+          - control_plane_egress_mode = "AWS_MANAGED" -> null
+          - endpoint_private_access   = false -> null
+          - endpoint_public_access    = true -> null
+          - public_access_cidrs       = [
+              - "0.0.0.0/0",
+            ] -> null
+          - security_group_ids        = [] -> null
+          - subnet_ids                = [
+              - "subnet-06f62dd18680f3b55",
+              - "subnet-0b6893daaa2c7f411",
+            ] -> null
+          - vpc_id                    = "vpc-09395fa337d196918" -> null
+        }
+    }
+
+  # aws_iam_role.cluster will be destroyed
+  - resource "aws_iam_role" "cluster" {
+      - arn                   = "arn:aws:iam::662875145165:role/suhas-campusdesk-1792175635-cluster" -> null
+      - assume_role_policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sts:AssumeRole"
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "eks.amazonaws.com"
+                        }
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - create_date           = "2026-10-16T18:34:05Z" -> null
+      - force_detach_policies = false -> null
+      - id                    = "suhas-campusdesk-1792175635-cluster" -> null
+      - managed_policy_arns   = [
+          - "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy",
+        ] -> null
+      - max_session_duration  = 3600 -> null
+      - name                  = "suhas-campusdesk-1792175635-cluster" -> null
+      - path                  = "/" -> null
+      - tags                  = {} -> null
+      - tags_all              = {} -> null
+      - unique_id             = "AROAZUVTQAPGUFXOCEUZN" -> null
+        # (3 unchanged attributes hidden)
+    }
+
+  # aws_iam_role_policy_attachment.cluster will be destroyed
+  - resource "aws_iam_role_policy_attachment" "cluster" {
+      - id         = "suhas-campusdesk-1792175635-cluster/arn:aws:iam::aws:policy/AmazonEKSClusterPolicy" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy" -> null
+      - role       = "suhas-campusdesk-1792175635-cluster" -> null
+    }
+
+  # aws_subnet.public[0] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:ap-south-1:662875145165:subnet/subnet-06f62dd18680f3b55" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "ap-south-1a" -> null
+      - availability_zone_id                           = "aps1-az1" -> null
+      - cidr_block                                     = "10.42.0.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-06f62dd18680f3b55" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = true -> null
+      - owner_id                                       = "662875145165" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - region                                         = "ap-south-1" -> null
+      - tags                                           = {
+          - "Name"                   = "suhas-campusdesk-1792175635-public-0"
+          - "kubernetes.io/role/elb" = "1"
+        } -> null
+      - tags_all                                       = {
+          - "Name"                   = "suhas-campusdesk-1792175635-public-0"
+          - "kubernetes.io/role/elb" = "1"
+        } -> null
+      - vpc_id                                         = "vpc-09395fa337d196918" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # aws_subnet.public[1] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:ap-south-1:662875145165:subnet/subnet-0b6893daaa2c7f411" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "ap-south-1b" -> null
+      - availability_zone_id                           = "aps1-az3" -> null
+      - cidr_block                                     = "10.42.1.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0b6893daaa2c7f411" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = true -> null
+      - owner_id                                       = "662875145165" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - region                                         = "ap-south-1" -> null
+      - tags                                           = {
+          - "Name"                   = "suhas-campusdesk-1792175635-public-1"
+          - "kubernetes.io/role/elb" = "1"
+        } -> null
+      - tags_all                                       = {
+          - "Name"                   = "suhas-campusdesk-1792175635-public-1"
+          - "kubernetes.io/role/elb" = "1"
+        } -> null
+      - vpc_id                                         = "vpc-09395fa337d196918" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # aws_vpc.main will be destroyed
+  - resource "aws_vpc" "main" {
+      - arn                                  = "arn:aws:ec2:ap-south-1:662875145165:vpc/vpc-09395fa337d196918" -> null
+      - assign_generated_ipv6_cidr_block     = false -> null
+      - cidr_block                           = "10.42.0.0/16" -> null
+      - default_network_acl_id               = "acl-0c0970395c22b1d8a" -> null
+      - default_route_table_id               = "rtb-058d0f59187508071" -> null
+      - default_security_group_id            = "sg-07bb6814340e16890" -> null
+      - dhcp_options_id                      = "dopt-038df586b0eb569ff" -> null
+      - enable_dns_hostnames                 = true -> null
+      - enable_dns_support                   = true -> null
+      - enable_network_address_usage_metrics = false -> null
+      - id                                   = "vpc-09395fa337d196918" -> null
+      - instance_tenancy                     = "default" -> null
+      - ipv6_netmask_length                  = 0 -> null
+      - main_route_table_id                  = "rtb-058d0f59187508071" -> null
+      - owner_id                             = "662875145165" -> null
+      - region                               = "ap-south-1" -> null
+      - tags                                 = {
+          - "Name" = "suhas-campusdesk-1792175635"
+        } -> null
+      - tags_all                             = {
+          - "Name" = "suhas-campusdesk-1792175635"
+        } -> null
+        # (4 unchanged attributes hidden)
+    }
+
+Plan: 0 to add, 0 to change, 6 to destroy.
+
+Changes to Outputs:
+  - cluster_endpoint = "https://C4614A537FEF205AEB7EFDC0D25B6435.gr7.ap-south-1.eks.amazonaws.com" -> null
+  - cluster_name     = "suhas-campusdesk-1792175635" -> null
+  - public_subnets   = [
+      - "subnet-06f62dd18680f3b55",
+      - "subnet-0b6893daaa2c7f411",
+    ] -> null
+  - vpc_id           = "vpc-09395fa337d196918" -> null
+aws_eks_cluster.main: Destroying... [id=suhas-campusdesk-1792175635]
+aws_eks_cluster.main: Still destroying... [id=suhas-campusdesk-1792175635, 00m10s elapsed]
+aws_eks_cluster.main: Still destroying... [id=suhas-campusdesk-1792175635, 00m20s elapsed]
+aws_eks_cluster.main: Still destroying... [id=suhas-campusdesk-1792175635, 00m30s elapsed]
+aws_eks_cluster.main: Still destroying... [id=suhas-campusdesk-1792175635, 00m40s elapsed]
+aws_eks_cluster.main: Still destroying... [id=suhas-campusdesk-1792175635, 00m50s elapsed]
+aws_eks_cluster.main: Still destroying... [id=suhas-campusdesk-1792175635, 01m00s elapsed]
+aws_eks_cluster.main: Still destroying... [id=suhas-campusdesk-1792175635, 01m10s elapsed]
+aws_eks_cluster.main: Still destroying... [id=suhas-campusdesk-1792175635, 01m20s elapsed]
+aws_eks_cluster.main: Still destroying... [id=suhas-campusdesk-1792175635, 01m30s elapsed]
+aws_eks_cluster.main: Still destroying... [id=suhas-campusdesk-1792175635, 01m40s elapsed]
+aws_eks_cluster.main: Still destroying... [id=suhas-campusdesk-1792175635, 01m50s elapsed]
+aws_eks_cluster.main: Destruction complete after 1m53s
+aws_iam_role_policy_attachment.cluster: Destroying... [id=suhas-campusdesk-1792175635-cluster/arn:aws:iam::aws:policy/AmazonEKSClusterPolicy]
+aws_subnet.public[0]: Destroying... [id=subnet-06f62dd18680f3b55]
+aws_subnet.public[1]: Destroying... [id=subnet-0b6893daaa2c7f411]
+aws_subnet.public[0]: Destruction complete after 6s
+aws_iam_role_policy_attachment.cluster: Destruction complete after 6s
+aws_iam_role.cluster: Destroying... [id=suhas-campusdesk-1792175635-cluster]
+aws_subnet.public[1]: Destruction complete after 6s
+aws_vpc.main: Destroying... [id=vpc-09395fa337d196918]
+aws_vpc.main: Destruction complete after 1s
+aws_iam_role.cluster: Destruction complete after 1s
+
+Destroy complete! Resources: 6 destroyed.
+[exit 0]
+
+$ terraform state list
+
+[exit 0]
+
+$ aws eks list-clusters --output json
+{
+    "clusters": []
+}
+[exit 0]
+
+$ aws ec2 describe-vpcs --filters Name=vpc-id,Values=vpc-09395fa337d196918 --query Vpcs --output json
+[]
+[exit 0]
+
+$ aws ec2 describe-instances --filters Name=tag:eks:cluster-name,Values=suhas-campusdesk-1792175635 --query 'Reservations[].Instances[].{Id:InstanceId,State:State.Name}' --output json
+[
+    {
+        "Id": "i-0a695c8e340c00330",
+        "State": "terminated"
+    },
+    {
+        "Id": "i-0f95c718d211a2efa",
+        "State": "terminated"
+    }
+]
+[exit 0]
+
+$ aws freetier get-account-plan-state --region us-east-1
+{
+    "accountId": "662875145165",
+    "accountPlanType": "FREE",
+    "accountPlanStatus": "ACTIVE",
+    "accountPlanRemainingCredits": {
+        "amount": 120.0,
+        "unit": "USD"
+    },
+    "accountPlanExpirationDate": "2027-04-16T17:04:28.086000+00:00"
+}
+[exit 0]
+

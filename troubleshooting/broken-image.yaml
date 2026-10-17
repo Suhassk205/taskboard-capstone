@@ -1,0 +1,31 @@
+{
+  "apiVersion": "apps/v1",
+  "kind": "Deployment",
+  "metadata": {
+    "name": "broken-image",
+    "namespace": "campusdesk-lab"
+  },
+  "spec": {
+    "replicas": 1,
+    "selector": {
+      "matchLabels": {
+        "app": "broken-image"
+      }
+    },
+    "template": {
+      "metadata": {
+        "labels": {
+          "app": "broken-image"
+        }
+      },
+      "spec": {
+        "containers": [
+          {
+            "name": "web",
+            "image": "nginx:campusdesk-tag-does-not-exist"
+          }
+        ]
+      }
+    }
+  }
+}

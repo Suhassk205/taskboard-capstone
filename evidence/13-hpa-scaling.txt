@@ -1,0 +1,122 @@
+CampusDesk - HPA scaling under real API traffic
+Actual command transcript; 2026-10-17T00:22:24.769455+05:30
+Context: kind-session13
+
+$ kubectl --context kind-session13 -n campusdesk get hpa
+NAME                 REFERENCE            TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+campusdesk-backend   Deployment/backend   cpu: 9%/50%   2         4         2          9m26s
+[exit 0]
+
+$ kubectl --context kind-session13 -n campusdesk apply -f -
+job.batch/campusdesk-api-load created
+[exit 0]
+
+$ kubectl --context kind-session13 -n campusdesk get hpa
+NAME                 REFERENCE            TARGETS        MINPODS   MAXPODS   REPLICAS   AGE
+campusdesk-backend   Deployment/backend   cpu: 10%/50%   2         4         2          9m36s
+[exit 0]
+
+$ kubectl --context kind-session13 -n campusdesk top pods
+NAME                        CPU(cores)   MEMORY(bytes)   
+backend-59ddd9cf8c-gkzpj    6m           64Mi            
+backend-59ddd9cf8c-jb6vr    4m           62Mi            
+frontend-569bc9746f-kgxgg   1m           2Mi             
+frontend-569bc9746f-m6zh4   1m           2Mi             
+postgres-dfc66bf4c-4c7z9    3m           35Mi
+[exit 0]
+
+$ kubectl --context kind-session13 -n campusdesk get hpa
+NAME                 REFERENCE            TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+campusdesk-backend   Deployment/backend   cpu: 333%/50%   2         4         2          9m47s
+[exit 0]
+
+$ kubectl --context kind-session13 -n campusdesk top pods
+NAME                        CPU(cores)   MEMORY(bytes)   
+backend-59ddd9cf8c-gkzpj    217m         67Mi            
+backend-59ddd9cf8c-jb6vr    116m         65Mi            
+campusdesk-api-load-zsdbb   132m         25Mi            
+frontend-569bc9746f-kgxgg   1m           2Mi             
+frontend-569bc9746f-m6zh4   1m           2Mi             
+postgres-dfc66bf4c-4c7z9    39m          65Mi
+[exit 0]
+
+$ kubectl --context kind-session13 -n campusdesk get hpa
+NAME                 REFERENCE            TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+campusdesk-backend   Deployment/backend   cpu: 333%/50%   2         4         2          9m57s
+[exit 0]
+
+$ kubectl --context kind-session13 -n campusdesk top pods
+NAME                        CPU(cores)   MEMORY(bytes)   
+backend-59ddd9cf8c-gkzpj    459m         67Mi            
+backend-59ddd9cf8c-jb6vr    392m         66Mi            
+campusdesk-api-load-zsdbb   105m         25Mi            
+frontend-569bc9746f-kgxgg   1m           2Mi             
+frontend-569bc9746f-m6zh4   1m           2Mi             
+postgres-dfc66bf4c-4c7z9    252m         59Mi
+[exit 0]
+
+$ kubectl --context kind-session13 -n campusdesk get hpa
+NAME                 REFERENCE            TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+campusdesk-backend   Deployment/backend   cpu: 851%/50%   2         4         4          10m
+[exit 0]
+
+$ kubectl --context kind-session13 -n campusdesk top pods
+NAME                        CPU(cores)   MEMORY(bytes)   
+backend-59ddd9cf8c-gkzpj    459m         67Mi            
+backend-59ddd9cf8c-jb6vr    392m         66Mi            
+campusdesk-api-load-zsdbb   105m         25Mi            
+frontend-569bc9746f-kgxgg   1m           2Mi             
+frontend-569bc9746f-m6zh4   1m           2Mi             
+postgres-dfc66bf4c-4c7z9    252m         59Mi
+[exit 0]
+
+$ kubectl --context kind-session13 -n campusdesk get pods -l app=backend
+NAME                       READY   STATUS    RESTARTS   AGE
+backend-59ddd9cf8c-c2hkh   1/1     Running   0          21s
+backend-59ddd9cf8c-gkzpj   1/1     Running   0          10m
+backend-59ddd9cf8c-jb6vr   1/1     Running   0          10m
+backend-59ddd9cf8c-z6t27   1/1     Running   0          21s
+[exit 0]
+
+$ kubectl --context kind-session13 -n campusdesk wait --for=condition=complete job/campusdesk-api-load --timeout=130s
+job.batch/campusdesk-api-load condition met
+[exit 0]
+
+$ kubectl --context kind-session13 -n campusdesk logs job/campusdesk-api-load
+Successful API requests: 70388
+[exit 0]
+
+$ kubectl --context kind-session13 -n campusdesk describe hpa campusdesk-backend
+Name:                                                  campusdesk-backend
+Namespace:                                             campusdesk
+Labels:                                                app.kubernetes.io/managed-by=Helm
+Annotations:                                           meta.helm.sh/release-name: campusdesk
+                                                       meta.helm.sh/release-namespace: campusdesk
+CreationTimestamp:                                     Sat, 17 Oct 2026 00:12:58 +0530
+Reference:                                             Deployment/backend
+Metrics:                                               ( current / target )
+  resource cpu on pods  (as a percentage of request):  665% (332m) / 50%
+Min replicas:                                          2
+Max replicas:                                          4
+Deployment pods:                                       4 current / 4 desired
+Conditions:
+  Type            Status  Reason            Message
+  ----            ------  ------            -------
+  AbleToScale     True    ReadyForNewScale  recommended size matches current size
+  ScalingActive   True    ValidMetricFound  the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
+  ScalingLimited  True    TooManyReplicas   the desired replica count is more than the maximum replica count
+  ScaledToZero    False   NotScaledToZero   the HPA controller did not scale the workload to zero
+Events:
+  Type     Reason                        Age                From                       Message
+  ----     ------                        ----               ----                       -------
+  Warning  FailedGetResourceMetric       10m (x2 over 11m)  horizontal-pod-autoscaler  failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+  Warning  FailedComputeMetricsReplicas  10m (x2 over 11m)  horizontal-pod-autoscaler  invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+  Warning  FailedGetResourceMetric       10m (x3 over 10m)  horizontal-pod-autoscaler  failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+  Warning  FailedComputeMetricsReplicas  10m (x3 over 10m)  horizontal-pod-autoscaler  invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+  Normal   SuccessfulRescale             84s                horizontal-pod-autoscaler  New size: 4; reason: cpu resource utilization (percentage of request) above target
+[exit 0]
+
+$ kubectl --context kind-session13 -n campusdesk delete job campusdesk-api-load
+job.batch "campusdesk-api-load" deleted from campusdesk namespace
+[exit 0]
+

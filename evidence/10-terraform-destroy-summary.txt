@@ -1,0 +1,45 @@
+Final successful cleanup excerpt; full attempts are in 10-terraform-destroy.txt
+
+Destroy complete! Resources: 6 destroyed.
+[exit 0]
+
+$ terraform state list
+
+[exit 0]
+
+$ aws eks list-clusters --output json
+{
+    "clusters": []
+}
+[exit 0]
+
+$ aws ec2 describe-vpcs --filters Name=vpc-id,Values=vpc-09395fa337d196918 --query Vpcs --output json
+[]
+[exit 0]
+
+$ aws ec2 describe-instances --filters Name=tag:eks:cluster-name,Values=suhas-campusdesk-1792175635 --query 'Reservations[].Instances[].{Id:InstanceId,State:State.Name}' --output json
+[
+    {
+        "Id": "i-0a695c8e340c00330",
+        "State": "terminated"
+    },
+    {
+        "Id": "i-0f95c718d211a2efa",
+        "State": "terminated"
+    }
+]
+[exit 0]
+
+$ aws freetier get-account-plan-state --region us-east-1
+{
+    "accountId": "662875145165",
+    "accountPlanType": "FREE",
+    "accountPlanStatus": "ACTIVE",
+    "accountPlanRemainingCredits": {
+        "amount": 120.0,
+        "unit": "USD"
+    },
+    "accountPlanExpirationDate": "2027-04-16T17:04:28.086000+00:00"
+}
+[exit 0]
+

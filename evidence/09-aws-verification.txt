@@ -1,0 +1,41 @@
+CampusDesk - verify real EKS infrastructure
+Actual command transcript; 2026-10-17T00:12:59.372995+05:30
+Context: AWS ap-south-1
+
+$ terraform output -no-color
+cluster_endpoint = "https://C4614A537FEF205AEB7EFDC0D25B6435.gr7.ap-south-1.eks.amazonaws.com"
+cluster_name = "suhas-campusdesk-1792175635"
+public_subnets = [
+  "subnet-06f62dd18680f3b55",
+  "subnet-0b6893daaa2c7f411",
+]
+vpc_id = "vpc-09395fa337d196918"
+[exit 0]
+
+$ aws eks describe-cluster --name suhas-campusdesk-1792175635 --query 'cluster.{Name:name,Status:status,Version:version,VPC:resourcesVpcConfig.vpcId,Subnets:resourcesVpcConfig.subnetIds}' --output json
+{
+    "Name": "suhas-campusdesk-1792175635",
+    "Status": "ACTIVE",
+    "Version": "1.35",
+    "VPC": "vpc-09395fa337d196918",
+    "Subnets": [
+        "subnet-0b6893daaa2c7f411",
+        "subnet-06f62dd18680f3b55"
+    ]
+}
+[exit 0]
+
+$ aws eks describe-nodegroup --cluster-name suhas-campusdesk-1792175635 --nodegroup-name campusdesk-workers --query 'nodegroup.{Status:status,Scaling:scalingConfig,Instances:instanceTypes}' --output json
+{
+    "Status": "ACTIVE",
+    "Scaling": {
+        "minSize": 1,
+        "maxSize": 2,
+        "desiredSize": 2
+    },
+    "Instances": [
+        "t3.small"
+    ]
+}
+[exit 0]
+

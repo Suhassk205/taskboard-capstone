@@ -14,3 +14,5 @@ dist/
 !terraform.tfvars.example
 *.tfplan
 .DS_Store
+.runtime/
+evidence/*.mov

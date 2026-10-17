@@ -1,0 +1,19 @@
+Hosted scan: https://github.com/Suhassk205/taskboard-capstone/actions/runs/38953107445
+Report Summary
+
+┌─────────────────────────────────────────────────────────────────────────────────┬────────┬─────────────────┬─────────┐
+│                                     Target                                      │  Type  │ Vulnerabilities │ Secrets │
+├─────────────────────────────────────────────────────────────────────────────────┼────────┼─────────────────┼─────────┤
+│ ghcr.io/suhassk205/campusdesk-frontend:e3d116880213a019f1af59caabdd48ce8fecf492 │ alpine │        0        │    -    │
+│ (alpine 3.24.2)                                                                 │        │                 │         │
+└─────────────────────────────────────────────────────────────────────────────────┴────────┴─────────────────┴─────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+📣 Notices:
+- Version 0.76.0 of Trivy is now available, current version is 0.69.3
+
+To suppress version checks, run Trivy scans with the --skip-version-check flag
+
+

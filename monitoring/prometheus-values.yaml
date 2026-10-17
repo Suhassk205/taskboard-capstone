@@ -10,5 +10,14 @@ extraScrapeConfigs: |
   - job_name: campusdesk
     metrics_path: /metrics
     scrape_interval: 5s
-    static_configs:
-      - targets: ['backend.campusdesk.svc.cluster.local:8000']
+    kubernetes_sd_configs:
+      - role: pod
+        namespaces:
+          names: [campusdesk]
+    relabel_configs:
+      - source_labels: [__meta_kubernetes_pod_label_app]
+        action: keep
+        regex: backend
+      - source_labels: [__meta_kubernetes_pod_phase]
+        action: keep
+        regex: Running

@@ -1,0 +1,141 @@
+CampusDesk - Docker Compose build and runtime checks
+Actual command transcript; 2026-10-17T00:12:54.668706+05:30
+Context: Local Docker Compose stack
+
+$ docker compose up --build -d
+time="2026-10-17T00:12:54+05:30" level=warning msg="buildx Docker CLI plugin not found: falling back to the classic builder. BuildKit-only build features (multi-arch, secrets, ssh, additional contexts, ...) will not be available"
+ Image campusdesk-backend:local Building 
+ Image campusdesk-backend:local Building 
+Sending build context to Docker daemon  8.921kB
+
+Step 1/10 : FROM python:3.12-alpine
+ ---> 1b668429b351
+Step 2/10 : WORKDIR /app
+ ---> Using cache
+ ---> 267fccbe18c6
+Step 3/10 : RUN apk upgrade --no-cache && adduser -D -u 10001 campusdesk
+ ---> Using cache
+ ---> f380492e6526
+Step 4/10 : COPY requirements.txt .
+ ---> Using cache
+ ---> 3a632af7fa8d
+Step 5/10 : RUN pip install --no-cache-dir -r requirements.txt
+ ---> Using cache
+ ---> 861523fe983e
+Step 6/10 : COPY . .
+ ---> Using cache
+ ---> dc38f59bf29d
+Step 7/10 : USER 10001
+ ---> Using cache
+ ---> 75439655501d
+Step 8/10 : EXPOSE 8000
+ ---> Using cache
+ ---> 2a92ad35c315
+Step 9/10 : CMD ["sh","-c","python -m app.bootstrap && exec uvicorn app.main:app --host 0.0.0.0 --port 8000"]
+ ---> Using cache
+ ---> 63d690adffb1
+Step 10/10 : LABEL com.docker.compose.image.builder=classic
+ ---> Using cache
+ ---> 3873679e8832
+Successfully built 3873679e8832
+Successfully tagged campusdesk-backend:local
+ Image campusdesk-backend:local Built 
+ Image campusdesk-backend:local Built 
+ Image campusdesk-frontend:local Building 
+ Image campusdesk-frontend:local Building 
+Sending build context to Docker daemon  7.456kB
+
+Step 1/16 : FROM node:24-alpine AS build
+ ---> 44fce696f38b
+Step 2/16 : WORKDIR /app
+ ---> Using cache
+ ---> 0fd99785cbae
+Step 3/16 : COPY package*.json ./
+ ---> Using cache
+ ---> 467f041c7d26
+Step 4/16 : RUN npm install
+ ---> Using cache
+ ---> 519678214673
+Step 5/16 : COPY . .
+ ---> Using cache
+ ---> 9d58f676526d
+Step 6/16 : ARG APP_VERSION=local
+ ---> Using cache
+ ---> cf8be38d7b23
+Step 7/16 : ENV VITE_APP_VERSION=$APP_VERSION
+ ---> Using cache
+ ---> a2f74d11884b
+Step 8/16 : RUN npm run build
+ ---> Using cache
+ ---> d9775731f480
+Step 9/16 : FROM nginx:alpine
+ ---> 72ba65eb42c1
+Step 10/16 : RUN apk upgrade --no-cache
+ ---> Using cache
+ ---> 217a822feeb0
+Step 11/16 : COPY nginx.conf /etc/nginx/nginx.conf
+ ---> Using cache
+ ---> c98f706c9e7e
+Step 12/16 : COPY --from=build /app/dist /usr/share/nginx/html
+ ---> Using cache
+ ---> 6b98a30597ac
+Step 13/16 : USER 101
+ ---> Using cache
+ ---> d65c1faf1b53
+Step 14/16 : EXPOSE 8080
+ ---> Using cache
+ ---> 5f1806fd69ba
+Step 15/16 : CMD ["nginx","-g","daemon off;"]
+ ---> Using cache
+ ---> 22a8a579f951
+Step 16/16 : LABEL com.docker.compose.image.builder=classic
+ ---> Using cache
+ ---> 3658c5d17ed0
+Successfully built 3658c5d17ed0
+Successfully tagged campusdesk-frontend:local
+ Image campusdesk-frontend:local Built 
+ Image campusdesk-frontend:local Built 
+ Container campusdesk-backend-1 Running 
+ Container campusdesk-frontend-1 Running 
+ Container campusdesk-postgres-1 Running 
+ Container campusdesk-postgres-1 Waiting 
+ Container campusdesk-postgres-1 Healthy 
+ Container campusdesk-backend-1 Waiting 
+ Container campusdesk-backend-1 Healthy
+[exit 0]
+
+$ docker compose ps
+NAME                    IMAGE                       COMMAND                  SERVICE    CREATED          STATUS                    PORTS
+campusdesk-backend-1    campusdesk-backend:local    "sh -c 'python -m ap…"   backend    13 minutes ago   Up 13 minutes (healthy)   127.0.0.1:8000->8000/tcp
+campusdesk-frontend-1   campusdesk-frontend:local   "/docker-entrypoint.…"   frontend   2 minutes ago    Up 2 minutes              80/tcp, 127.0.0.1:3000->8080/tcp
+campusdesk-postgres-1   postgres:16-alpine          "docker-entrypoint.s…"   postgres   14 minutes ago   Up 14 minutes (healthy)   5432/tcp
+[exit 0]
+
+$ docker compose exec -T backend id
+uid=10001(campusdesk) gid=10001(campusdesk) groups=10001(campusdesk)
+[exit 0]
+
+$ docker compose exec -T frontend id
+uid=101(nginx) gid=101(nginx) groups=101(nginx)
+[exit 0]
+
+$ curl --fail --silent --include http://localhost:3000
+HTTP/1.1 200 OK
+Server: nginx/1.31.5
+Date: Fri, 16 Oct 2026 18:42:56 GMT
+Content-Type: text/html
+Content-Length: 414
+Last-Modified: Fri, 16 Oct 2026 18:27:58 GMT
+Connection: keep-alive
+ETag: "6ad26cae-19e"
+Accept-Ranges: bytes
+
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="theme-color" content="#16342d"/><title>CampusDesk | Campus support</title>  <script type="module" crossorigin src="/assets/index-B6LjqWyY.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-3kM2jkTt.css">
+</head><body><div id="root"></div></body></html>
+[exit 0]
+
+$ curl --fail --silent http://localhost:8000/ready
+{"status":"ready"}
+[exit 0]
+

@@ -1,0 +1,56 @@
+CampusDesk - real API lifecycle and PostgreSQL migration
+Actual command transcript; 2026-10-17T00:12:56.259763+05:30
+Context: Running local FastAPI and PostgreSQL services
+
+$ curl --fail --silent -H 'Content-Type: application/json' -X POST --data '{"title": "Verify capstone request lifecycle", "category": "IT", "priority": "high", "requester": "Suhas"}' http://localhost:8000/api/tickets
+{"title":"Verify capstone request lifecycle","description":"","category":"IT","requester":"Suhas","owner":"Unassigned","priority":"high","status":"open","id":1,"created_at":"2026-10-16T18:42:56.276935Z","updated_at":"2026-10-16T18:42:56.276939Z"}
+[exit 0]
+
+$ curl --fail --silent http://localhost:8000/api/tickets/1
+{"title":"Verify capstone request lifecycle","description":"","category":"IT","requester":"Suhas","owner":"Unassigned","priority":"high","status":"open","id":1,"created_at":"2026-10-16T18:42:56.276935Z","updated_at":"2026-10-16T18:42:56.276939Z"}
+[exit 0]
+
+$ curl --fail --silent -H 'Content-Type: application/json' -X PUT --data '{"title": "Verify capstone request lifecycle", "description": "", "category": "IT", "requester": "Suhas", "owner": "IT support", "priority": "high", "status": "resolved", "id": 1, "created_at": "2026-10-16T18:42:56.276935Z", "updated_at": "2026-10-16T18:42:56.276939Z"}' http://localhost:8000/api/tickets/1
+{"title":"Verify capstone request lifecycle","description":"","category":"IT","requester":"Suhas","owner":"IT support","priority":"high","status":"resolved","id":1,"created_at":"2026-10-16T18:42:56.276935Z","updated_at":"2026-10-16T18:42:56.300262Z"}
+[exit 0]
+
+$ curl --fail --silent --include -X DELETE http://localhost:8000/api/tickets/1
+HTTP/1.1 204 No Content
+date: Fri, 16 Oct 2026 18:42:56 GMT
+server: uvicorn
+[exit 0]
+
+$ /Users/suhas/Downloads/taskboard-capstone/.venv/bin/python scripts/seed_demo.py
+201 Library Wi-Fi keeps disconnecting
+201 Projector in Seminar Hall 2 needs attention
+201 Access to the assessment portal
+201 Replace the reading-room desk lamp
+201 Student ID card is not opening the lab
+201 Need a transcript for the internship application
+201 Water dispenser on the second floor is offline
+201 Connect a laptop to the presentation screen
+[exit 0]
+
+$ curl --fail --silent http://localhost:8000/api/tickets/stats
+{"total":8,"open":4,"in_progress":2,"resolved":2,"urgent":2}
+[exit 0]
+
+$ docker compose exec -T postgres psql -U campusdesk -d campusdesk -c 'SELECT version_num FROM alembic_version; SELECT id, title, status, owner FROM tickets ORDER BY id;'
+ version_num 
+-------------
+ 0001
+(1 row)
+
+ id |                      title                       |   status    |      owner      
+----+--------------------------------------------------+-------------+-----------------
+  2 | Library Wi-Fi keeps disconnecting                | open        | Network team
+  3 | Projector in Seminar Hall 2 needs attention      | in_progress | Facilities team
+  4 | Access to the assessment portal                  | open        | Academic office
+  5 | Replace the reading-room desk lamp               | resolved    | Facilities team
+  6 | Student ID card is not opening the lab           | in_progress | IT support
+  7 | Need a transcript for the internship application | open        | Academic office
+  8 | Water dispenser on the second floor is offline   | open        | Facilities team
+  9 | Connect a laptop to the presentation screen      | resolved    | IT support
+(8 rows)
+[exit 0]
+

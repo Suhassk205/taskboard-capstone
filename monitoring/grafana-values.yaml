@@ -1,5 +1,5 @@
 admin:
-  existingSecret: grafana-admin
+  existingSecret: campusdesk-grafana-admin
   userKey: username
   passwordKey: password
 service: {type: ClusterIP}
@@ -15,3 +15,13 @@ datasources:
       url: http://prometheus-server.monitoring.svc.cluster.local
       access: proxy
       isDefault: true
+
+grafana.ini:
+  auth.anonymous:
+    enabled: true
+    org_role: Viewer
+sidecar:
+  dashboards:
+    enabled: true
+    label: grafana_dashboard
+    searchNamespace: monitoring

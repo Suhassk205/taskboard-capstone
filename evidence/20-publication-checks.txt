@@ -1,0 +1,27 @@
+CampusDesk - final source and secret checks
+Actual command transcript; 2026-10-17T11:07:04.625191+05:30
+Context: kind-session13
+
+All README and presentation-guide file links resolve locally.
+$ git check-ignore .env .venv/example .runtime/example terraform/terraform.tfstate terraform/terraform.tfvars evidence/campusdesk-delivery-walkthrough.mov
+.env
+.venv/example
+.runtime/example
+terraform/terraform.tfstate
+terraform/terraform.tfvars
+evidence/campusdesk-delivery-walkthrough.mov
+[exit 0]
+
+$ /Users/suhas/Downloads/devops-heros-main/session-17-devsecops/demo/.tools/bin/gitleaks git --redact --no-banner /Users/suhas/Downloads/taskboard-capstone
+11:07AM INF 16 commits scanned.
+11:07AM INF scanned ~50399 bytes (50.40 KB) in 117ms
+11:07AM INF no leaks found
+[exit 0]
+
+$ /Users/suhas/Downloads/devops-heros-main/session-17-devsecops/demo/.tools/bin/gitleaks git --staged --redact --no-banner /Users/suhas/Downloads/taskboard-capstone
+11:07AM INF 0 commits scanned.
+11:07AM INF scanned ~482065 bytes (482.07 KB) in 105ms
+11:07AM INF no leaks found
+[exit 0]
+
+History and staged publication passed Gitleaks; private inputs and raw recordings remain excluded.

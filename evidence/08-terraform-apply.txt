@@ -1,0 +1,102 @@
+CampusDesk - provision AWS VPC and EKS
+Actual command transcript; 2026-10-17T00:04:00.864505+05:30
+Context: AWS ap-south-1; real Terraform apply
+
+$ terraform apply -input=false -auto-approve -no-color /private/tmp/campusdesk-cloud.tfplan
+aws_iam_role.cluster: Creating...
+aws_iam_role.nodes: Creating...
+aws_vpc.main: Creating...
+aws_vpc.main: Creation complete after 3s [id=vpc-09395fa337d196918]
+aws_internet_gateway.main: Creating...
+aws_subnet.public[0]: Creating...
+aws_subnet.public[1]: Creating...
+aws_iam_role.nodes: Creation complete after 3s [id=suhas-campusdesk-1792175635-nodes]
+aws_iam_role.cluster: Creation complete after 3s [id=suhas-campusdesk-1792175635-cluster]
+aws_iam_role_policy_attachment.nodes["AmazonEKSWorkerNodePolicy"]: Creating...
+aws_iam_role_policy_attachment.nodes["AmazonEKS_CNI_Policy"]: Creating...
+aws_iam_role_policy_attachment.nodes["AmazonEC2ContainerRegistryReadOnly"]: Creating...
+aws_iam_role_policy_attachment.cluster: Creating...
+aws_internet_gateway.main: Creation complete after 1s [id=igw-0dac0a856c51828e8]
+aws_route_table.public: Creating...
+aws_iam_role_policy_attachment.nodes["AmazonEC2ContainerRegistryReadOnly"]: Creation complete after 1s [id=suhas-campusdesk-1792175635-nodes/arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly]
+aws_iam_role_policy_attachment.nodes["AmazonEKS_CNI_Policy"]: Creation complete after 1s [id=suhas-campusdesk-1792175635-nodes/arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy]
+aws_iam_role_policy_attachment.nodes["AmazonEKSWorkerNodePolicy"]: Creation complete after 1s [id=suhas-campusdesk-1792175635-nodes/arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy]
+aws_iam_role_policy_attachment.cluster: Creation complete after 2s [id=suhas-campusdesk-1792175635-cluster/arn:aws:iam::aws:policy/AmazonEKSClusterPolicy]
+aws_route_table.public: Creation complete after 1s [id=rtb-03795a098125a0233]
+aws_subnet.public[1]: Still creating... [00m10s elapsed]
+aws_subnet.public[0]: Still creating... [00m10s elapsed]
+aws_subnet.public[0]: Creation complete after 11s [id=subnet-06f62dd18680f3b55]
+aws_subnet.public[1]: Creation complete after 11s [id=subnet-0b6893daaa2c7f411]
+aws_route_table_association.public[1]: Creating...
+aws_route_table_association.public[0]: Creating...
+aws_eks_cluster.main: Creating...
+aws_route_table_association.public[0]: Creation complete after 1s [id=rtbassoc-04dc920b34aab23e1]
+aws_route_table_association.public[1]: Creation complete after 1s [id=rtbassoc-03d9fcbad77be32d5]
+aws_eks_cluster.main: Still creating... [00m10s elapsed]
+aws_eks_cluster.main: Still creating... [00m20s elapsed]
+aws_eks_cluster.main: Still creating... [00m30s elapsed]
+aws_eks_cluster.main: Still creating... [00m40s elapsed]
+aws_eks_cluster.main: Still creating... [00m50s elapsed]
+aws_eks_cluster.main: Still creating... [01m00s elapsed]
+aws_eks_cluster.main: Still creating... [01m10s elapsed]
+aws_eks_cluster.main: Still creating... [01m20s elapsed]
+aws_eks_cluster.main: Still creating... [01m30s elapsed]
+aws_eks_cluster.main: Still creating... [01m40s elapsed]
+aws_eks_cluster.main: Still creating... [01m50s elapsed]
+aws_eks_cluster.main: Still creating... [02m00s elapsed]
+aws_eks_cluster.main: Still creating... [02m10s elapsed]
+aws_eks_cluster.main: Still creating... [02m20s elapsed]
+aws_eks_cluster.main: Still creating... [02m30s elapsed]
+aws_eks_cluster.main: Still creating... [02m40s elapsed]
+aws_eks_cluster.main: Still creating... [02m50s elapsed]
+aws_eks_cluster.main: Still creating... [03m00s elapsed]
+aws_eks_cluster.main: Still creating... [03m10s elapsed]
+aws_eks_cluster.main: Still creating... [03m20s elapsed]
+aws_eks_cluster.main: Still creating... [03m30s elapsed]
+aws_eks_cluster.main: Still creating... [03m40s elapsed]
+aws_eks_cluster.main: Still creating... [03m50s elapsed]
+aws_eks_cluster.main: Still creating... [04m00s elapsed]
+aws_eks_cluster.main: Still creating... [04m10s elapsed]
+aws_eks_cluster.main: Still creating... [04m20s elapsed]
+aws_eks_cluster.main: Still creating... [04m30s elapsed]
+aws_eks_cluster.main: Still creating... [04m40s elapsed]
+aws_eks_cluster.main: Still creating... [04m50s elapsed]
+aws_eks_cluster.main: Still creating... [05m00s elapsed]
+aws_eks_cluster.main: Still creating... [05m10s elapsed]
+aws_eks_cluster.main: Still creating... [05m20s elapsed]
+aws_eks_cluster.main: Still creating... [05m30s elapsed]
+aws_eks_cluster.main: Still creating... [05m40s elapsed]
+aws_eks_cluster.main: Still creating... [05m50s elapsed]
+aws_eks_cluster.main: Still creating... [06m00s elapsed]
+aws_eks_cluster.main: Still creating... [06m10s elapsed]
+aws_eks_cluster.main: Still creating... [06m20s elapsed]
+aws_eks_cluster.main: Still creating... [06m30s elapsed]
+aws_eks_cluster.main: Creation complete after 6m34s [id=suhas-campusdesk-1792175635]
+aws_eks_node_group.main: Creating...
+aws_eks_node_group.main: Still creating... [00m10s elapsed]
+aws_eks_node_group.main: Still creating... [00m20s elapsed]
+aws_eks_node_group.main: Still creating... [00m30s elapsed]
+aws_eks_node_group.main: Still creating... [00m40s elapsed]
+aws_eks_node_group.main: Still creating... [00m50s elapsed]
+aws_eks_node_group.main: Still creating... [01m00s elapsed]
+aws_eks_node_group.main: Still creating... [01m10s elapsed]
+aws_eks_node_group.main: Still creating... [01m20s elapsed]
+aws_eks_node_group.main: Still creating... [01m30s elapsed]
+aws_eks_node_group.main: Still creating... [01m40s elapsed]
+aws_eks_node_group.main: Still creating... [01m50s elapsed]
+aws_eks_node_group.main: Still creating... [02m00s elapsed]
+aws_eks_node_group.main: Creation complete after 2m8s [id=suhas-campusdesk-1792175635:campusdesk-workers]
+
+Apply complete! Resources: 15 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+cluster_endpoint = "https://C4614A537FEF205AEB7EFDC0D25B6435.gr7.ap-south-1.eks.amazonaws.com"
+cluster_name = "suhas-campusdesk-1792175635"
+public_subnets = [
+  "subnet-06f62dd18680f3b55",
+  "subnet-0b6893daaa2c7f411",
+]
+vpc_id = "vpc-09395fa337d196918"
+[exit 0]
+

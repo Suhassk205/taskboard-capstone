@@ -1,0 +1,1813 @@
+test	UNKNOWN STEP	﻿2026-10-16T19:11:52.4287095Z Current runner version: '2.337.0'
+test	UNKNOWN STEP	2026-10-16T19:11:52.4311989Z ##[group]Runner Image Provisioner
+test	UNKNOWN STEP	2026-10-16T19:11:52.4312903Z Hosted Compute Agent
+test	UNKNOWN STEP	2026-10-16T19:11:52.4313454Z Version: 20261012.601
+test	UNKNOWN STEP	2026-10-16T19:11:52.4314045Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+test	UNKNOWN STEP	2026-10-16T19:11:52.4314741Z Build Date: 2026-10-12T17:48:21Z
+test	UNKNOWN STEP	2026-10-16T19:11:52.4315330Z Worker ID: {3a16b6d8-3827-4b01-8792-72672c4c8547}
+test	UNKNOWN STEP	2026-10-16T19:11:52.4315983Z Region: westus3
+test	UNKNOWN STEP	2026-10-16T19:11:52.4316497Z Cloud: Azure
+test	UNKNOWN STEP	2026-10-16T19:11:52.4316997Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-16T19:11:52.4318462Z ##[group]Operating System
+test	UNKNOWN STEP	2026-10-16T19:11:52.4319019Z Ubuntu
+test	UNKNOWN STEP	2026-10-16T19:11:52.4319569Z 24.04.5
+test	UNKNOWN STEP	2026-10-16T19:11:52.4320043Z LTS
+test	UNKNOWN STEP	2026-10-16T19:11:52.4320614Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-16T19:11:52.4321180Z ##[group]Runner Image
+test	UNKNOWN STEP	2026-10-16T19:11:52.4321730Z Image: ubuntu-24.04
+test	UNKNOWN STEP	2026-10-16T19:11:52.4322250Z Version: 20261012.334.1
+test	UNKNOWN STEP	2026-10-16T19:11:52.4323473Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+test	UNKNOWN STEP	2026-10-16T19:11:52.4324837Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+test	UNKNOWN STEP	2026-10-16T19:11:52.4325684Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-16T19:11:52.4326727Z ##[group]GITHUB_TOKEN Permissions
+test	UNKNOWN STEP	2026-10-16T19:11:52.4328886Z Contents: read
+test	UNKNOWN STEP	2026-10-16T19:11:52.4329750Z Metadata: read
+test	UNKNOWN STEP	2026-10-16T19:11:52.4330414Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-16T19:11:52.4332508Z Secret source: Actions
+test	UNKNOWN STEP	2026-10-16T19:11:52.4333501Z Cache mode: write
+test	UNKNOWN STEP	2026-10-16T19:11:52.4334109Z Prepare workflow directory
+test	UNKNOWN STEP	2026-10-16T19:11:52.4653454Z Prepare all required actions
+test	UNKNOWN STEP	2026-10-16T19:11:52.4706223Z Getting action download info
+test	UNKNOWN STEP	2026-10-16T19:11:52.8068942Z Download action repository 'actions/checkout@v6' (SHA:d23441a48e516b6c34aea4fa41551a30e30af803)
+test	UNKNOWN STEP	2026-10-16T19:11:52.9013878Z Download action repository 'actions/setup-python@v7' (SHA:5fda3b95a4ea91299a34e894583c3862153e4b97)
+test	UNKNOWN STEP	2026-10-16T19:11:52.9701026Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+test	UNKNOWN STEP	2026-10-16T19:11:53.1636781Z Complete job name: test
+test	UNKNOWN STEP	2026-10-16T19:11:53.2454849Z ##[group]Run actions/checkout@v6
+test	UNKNOWN STEP	2026-10-16T19:11:53.2455609Z with:
+test	UNKNOWN STEP	2026-10-16T19:11:53.2456046Z   repository: Suhassk205/taskboard-capstone
+test	UNKNOWN STEP	2026-10-16T19:11:53.2459900Z   token: ***
+test	UNKNOWN STEP	2026-10-16T19:11:53.2460437Z   ssh-strict: true
+test	UNKNOWN STEP	2026-10-16T19:11:53.2460832Z   ssh-user: git
+test	UNKNOWN STEP	2026-10-16T19:11:53.2461233Z   persist-credentials: true
+test	UNKNOWN STEP	2026-10-16T19:11:53.2461677Z   clean: true
+test	UNKNOWN STEP	2026-10-16T19:11:53.2462082Z   sparse-checkout-cone-mode: true
+test	UNKNOWN STEP	2026-10-16T19:11:53.2462556Z   fetch-depth: 1
+test	UNKNOWN STEP	2026-10-16T19:11:53.2462935Z   fetch-tags: false
+test	UNKNOWN STEP	2026-10-16T19:11:53.2463333Z   show-progress: true
+test	UNKNOWN STEP	2026-10-16T19:11:53.2463727Z   lfs: false
+test	UNKNOWN STEP	2026-10-16T19:11:53.2464087Z   submodules: false
+test	UNKNOWN STEP	2026-10-16T19:11:53.2464475Z   set-safe-directory: true
+test	UNKNOWN STEP	2026-10-16T19:11:53.2464916Z   allow-unsafe-pr-checkout: false
+test	UNKNOWN STEP	2026-10-16T19:11:53.2465609Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-16T19:11:53.3442818Z Syncing repository: Suhassk205/taskboard-capstone
+test	UNKNOWN STEP	2026-10-16T19:11:53.3444688Z ##[group]Getting Git version info
+test	UNKNOWN STEP	2026-10-16T19:11:53.3445481Z Working directory is '/home/runner/work/taskboard-capstone/taskboard-capstone'
+test	UNKNOWN STEP	2026-10-16T19:11:53.3446482Z [command]/usr/bin/git version
+test	UNKNOWN STEP	2026-10-16T19:11:53.3537482Z git version 2.55.0
+test	UNKNOWN STEP	2026-10-16T19:11:53.3564522Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-16T19:11:53.3581833Z Temporarily overriding HOME='/home/runner/work/_temp/5fc08b5d-a91f-436b-bdaf-fe5c352484a0' before making global git config changes
+test	UNKNOWN STEP	2026-10-16T19:11:53.3583815Z Adding repository directory to the temporary git global config as a safe directory
+test	UNKNOWN STEP	2026-10-16T19:11:53.3589934Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/taskboard-capstone/taskboard-capstone
+test	UNKNOWN STEP	2026-10-16T19:11:53.3649162Z Deleting the contents of '/home/runner/work/taskboard-capstone/taskboard-capstone'
+test	UNKNOWN STEP	2026-10-16T19:11:53.3664317Z ##[group]Determining repository object format
+test	UNKNOWN STEP	2026-10-16T19:11:53.3671253Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-16T19:11:53.3673139Z ##[group]Initializing the repository
+test	UNKNOWN STEP	2026-10-16T19:11:53.3674976Z [command]/usr/bin/git init /home/runner/work/taskboard-capstone/taskboard-capstone
+test	UNKNOWN STEP	2026-10-16T19:11:53.3761950Z hint: Using 'master' as the name for the initial branch. This default branch name
+test	UNKNOWN STEP	2026-10-16T19:11:53.3763828Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+test	UNKNOWN STEP	2026-10-16T19:11:53.3765300Z hint: to use in all of your new repositories, which will suppress this warning,
+test	UNKNOWN STEP	2026-10-16T19:11:53.3766374Z hint: call:
+test	UNKNOWN STEP	2026-10-16T19:11:53.3767168Z hint:
+test	UNKNOWN STEP	2026-10-16T19:11:53.3767746Z hint: 	git config --global init.defaultBranch <name>
+test	UNKNOWN STEP	2026-10-16T19:11:53.3768394Z hint:
+test	UNKNOWN STEP	2026-10-16T19:11:53.3769002Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+test	UNKNOWN STEP	2026-10-16T19:11:53.3769929Z hint: 'development'. The just-created branch can be renamed via this command:
+test	UNKNOWN STEP	2026-10-16T19:11:53.3771393Z hint:
+test	UNKNOWN STEP	2026-10-16T19:11:53.3772243Z hint: 	git branch -m <name>
+test	UNKNOWN STEP	2026-10-16T19:11:53.3773110Z hint:
+test	UNKNOWN STEP	2026-10-16T19:11:53.3774263Z hint: Disable this message with "git config set advice.defaultBranchName false"
+test	UNKNOWN STEP	2026-10-16T19:11:53.3776612Z Initialized empty Git repository in /home/runner/work/taskboard-capstone/taskboard-capstone/.git/
+test	UNKNOWN STEP	2026-10-16T19:11:53.3779836Z [command]/usr/bin/git remote add origin https://github.com/Suhassk205/taskboard-capstone
+test	UNKNOWN STEP	2026-10-16T19:11:53.3822785Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-16T19:11:53.3823539Z ##[group]Disabling automatic garbage collection
+test	UNKNOWN STEP	2026-10-16T19:11:53.3827967Z [command]/usr/bin/git config --local gc.auto 0
+test	UNKNOWN STEP	2026-10-16T19:11:53.3857067Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-16T19:11:53.3858396Z ##[group]Setting up auth
+test	UNKNOWN STEP	2026-10-16T19:11:53.3858975Z Removing SSH command configuration
+test	UNKNOWN STEP	2026-10-16T19:11:53.3866519Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test	UNKNOWN STEP	2026-10-16T19:11:53.3898201Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test	UNKNOWN STEP	2026-10-16T19:11:53.4243919Z Removing HTTP extra header
+test	UNKNOWN STEP	2026-10-16T19:11:53.4252827Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test	UNKNOWN STEP	2026-10-16T19:11:53.4301665Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test	UNKNOWN STEP	2026-10-16T19:11:53.4491529Z Removing includeIf entries pointing to credentials config files
+test	UNKNOWN STEP	2026-10-16T19:11:53.4501148Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test	UNKNOWN STEP	2026-10-16T19:11:53.4532885Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test	UNKNOWN STEP	2026-10-16T19:11:53.4715803Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-4882c17e-8cfa-48d3-8410-101014e49f03.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+test	UNKNOWN STEP	2026-10-16T19:11:53.4753493Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/taskboard-capstone/taskboard-capstone/.git.path /home/runner/work/_temp/git-credentials-4882c17e-8cfa-48d3-8410-101014e49f03.config
+test	UNKNOWN STEP	2026-10-16T19:11:53.4788300Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/taskboard-capstone/taskboard-capstone/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-4882c17e-8cfa-48d3-8410-101014e49f03.config
+test	UNKNOWN STEP	2026-10-16T19:11:53.4826312Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-4882c17e-8cfa-48d3-8410-101014e49f03.config
+test	UNKNOWN STEP	2026-10-16T19:11:53.4861434Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-4882c17e-8cfa-48d3-8410-101014e49f03.config
+test	UNKNOWN STEP	2026-10-16T19:11:53.4919282Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-16T19:11:53.4920793Z ##[group]Fetching the repository
+test	UNKNOWN STEP	2026-10-16T19:11:53.4928864Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e3d116880213a019f1af59caabdd48ce8fecf492:refs/remotes/origin/main
+test	UNKNOWN STEP	2026-10-16T19:11:54.6941877Z From https://github.com/Suhassk205/taskboard-capstone
+test	UNKNOWN STEP	2026-10-16T19:11:54.6944754Z  * [new ref]         e3d116880213a019f1af59caabdd48ce8fecf492 -> origin/main
+test	UNKNOWN STEP	2026-10-16T19:11:54.6950544Z [command]/usr/bin/git branch --list --remote origin/main
+test	UNKNOWN STEP	2026-10-16T19:11:54.6984294Z   origin/main
+test	UNKNOWN STEP	2026-10-16T19:11:54.6992348Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+test	UNKNOWN STEP	2026-10-16T19:11:54.7013996Z e3d116880213a019f1af59caabdd48ce8fecf492
+test	UNKNOWN STEP	2026-10-16T19:11:54.7018640Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-16T19:11:54.7021228Z ##[group]Determining the checkout info
+test	UNKNOWN STEP	2026-10-16T19:11:54.7023898Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-16T19:11:54.7025678Z [command]/usr/bin/git sparse-checkout disable
+test	UNKNOWN STEP	2026-10-16T19:11:54.7083232Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+test	UNKNOWN STEP	2026-10-16T19:11:54.7110507Z ##[group]Checking out the ref
+test	UNKNOWN STEP	2026-10-16T19:11:54.7113897Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+test	UNKNOWN STEP	2026-10-16T19:11:54.7325181Z Switched to a new branch 'main'
+test	UNKNOWN STEP	2026-10-16T19:11:54.7328070Z branch 'main' set up to track 'origin/main'.
+test	UNKNOWN STEP	2026-10-16T19:11:54.7336165Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-16T19:11:54.7375838Z [command]/usr/bin/git log -1 --format=%H
+test	UNKNOWN STEP	2026-10-16T19:11:54.7399352Z e3d116880213a019f1af59caabdd48ce8fecf492
+test	UNKNOWN STEP	2026-10-16T19:11:54.7775432Z ##[group]Run actions/setup-python@v7
+test	UNKNOWN STEP	2026-10-16T19:11:54.7776676Z with:
+test	UNKNOWN STEP	2026-10-16T19:11:54.7777535Z   python-version: 3.12
+test	UNKNOWN STEP	2026-10-16T19:11:54.7778500Z   check-latest: false
+test	UNKNOWN STEP	2026-10-16T19:11:54.7788681Z   token: ***
+test	UNKNOWN STEP	2026-10-16T19:11:54.7789580Z   update-environment: true
+test	UNKNOWN STEP	2026-10-16T19:11:54.7790735Z   allow-prereleases: false
+test	UNKNOWN STEP	2026-10-16T19:11:54.7791790Z   freethreaded: false
+test	UNKNOWN STEP	2026-10-16T19:11:54.7792714Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-16T19:11:54.8985306Z ##[group]Installed versions
+test	UNKNOWN STEP	2026-10-16T19:11:54.9052417Z Successfully set up CPython (3.12.15)
+test	UNKNOWN STEP	2026-10-16T19:11:54.9054500Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-16T19:11:54.9303169Z ##[group]Run pip install -r requirements-dev.txt
+test	UNKNOWN STEP	2026-10-16T19:11:54.9305894Z [36;1mpip install -r requirements-dev.txt[0m
+test	UNKNOWN STEP	2026-10-16T19:11:54.9564736Z shell: /usr/bin/bash -e {0}
+test	UNKNOWN STEP	2026-10-16T19:11:54.9565837Z env:
+test	UNKNOWN STEP	2026-10-16T19:11:54.9566838Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+test	UNKNOWN STEP	2026-10-16T19:11:54.9568502Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+test	UNKNOWN STEP	2026-10-16T19:11:54.9570433Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+test	UNKNOWN STEP	2026-10-16T19:11:54.9571953Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+test	UNKNOWN STEP	2026-10-16T19:11:54.9573471Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+test	UNKNOWN STEP	2026-10-16T19:11:54.9575024Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+test	UNKNOWN STEP	2026-10-16T19:11:54.9576323Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-16T19:11:56.7428383Z Collecting fastapi==0.143.3 (from -r /home/runner/work/taskboard-capstone/taskboard-capstone/backend/requirements.txt (line 1))
+test	UNKNOWN STEP	2026-10-16T19:11:56.7911340Z   Downloading fastapi-0.143.3-py3-none-any.whl.metadata (26 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:56.8307313Z Collecting uvicorn==0.54.0 (from -r /home/runner/work/taskboard-capstone/taskboard-capstone/backend/requirements.txt (line 2))
+test	UNKNOWN STEP	2026-10-16T19:11:56.8344191Z   Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:57.1543536Z Collecting sqlalchemy==2.1.4 (from -r /home/runner/work/taskboard-capstone/taskboard-capstone/backend/requirements.txt (line 3))
+test	UNKNOWN STEP	2026-10-16T19:11:57.1585592Z   Downloading sqlalchemy-2.1.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (9.7 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:57.1847711Z Collecting psycopg==3.3.6 (from psycopg[binary]==3.3.6->-r /home/runner/work/taskboard-capstone/taskboard-capstone/backend/requirements.txt (line 4))
+test	UNKNOWN STEP	2026-10-16T19:11:57.1884670Z   Downloading psycopg-3.3.6-py3-none-any.whl.metadata (4.4 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:57.2154670Z Collecting alembic==1.20.0 (from -r /home/runner/work/taskboard-capstone/taskboard-capstone/backend/requirements.txt (line 5))
+test	UNKNOWN STEP	2026-10-16T19:11:57.2190021Z   Downloading alembic-1.20.0-py3-none-any.whl.metadata (7.3 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:57.3030388Z Collecting prometheus-fastapi-instrumentator==8.1.0 (from -r /home/runner/work/taskboard-capstone/taskboard-capstone/backend/requirements.txt (line 6))
+test	UNKNOWN STEP	2026-10-16T19:11:57.3067608Z   Downloading prometheus_fastapi_instrumentator-8.1.0-py3-none-any.whl.metadata (13 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:57.3444213Z Collecting pytest (from -r requirements-dev.txt (line 2))
+test	UNKNOWN STEP	2026-10-16T19:11:57.3482196Z   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:57.3741383Z Collecting httpx (from -r requirements-dev.txt (line 3))
+test	UNKNOWN STEP	2026-10-16T19:11:57.3779028Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:57.4003474Z Collecting pytest-cov (from -r requirements-dev.txt (line 4))
+test	UNKNOWN STEP	2026-10-16T19:11:57.4041004Z   Downloading pytest_cov-7.1.0-py3-none-any.whl.metadata (32 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:57.4365643Z Collecting starlette>=0.46.0 (from fastapi==0.143.3->-r /home/runner/work/taskboard-capstone/taskboard-capstone/backend/requirements.txt (line 1))
+test	UNKNOWN STEP	2026-10-16T19:11:57.4404483Z   Downloading starlette-1.8.0-py3-none-any.whl.metadata (6.6 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:57.5550030Z Collecting pydantic>=2.9.0 (from fastapi==0.143.3->-r /home/runner/work/taskboard-capstone/taskboard-capstone/backend/requirements.txt (line 1))
+test	UNKNOWN STEP	2026-10-16T19:11:57.5587687Z   Downloading pydantic-2.14.1-py3-none-any.whl.metadata (133 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:57.5872568Z Collecting typing-extensions>=4.8.0 (from fastapi==0.143.3->-r /home/runner/work/taskboard-capstone/taskboard-capstone/backend/requirements.txt (line 1))
+test	UNKNOWN STEP	2026-10-16T19:11:57.5918590Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:57.6090876Z Collecting typing-inspection>=0.4.2 (from fastapi==0.143.3->-r /home/runner/work/taskboard-capstone/taskboard-capstone/backend/requirements.txt (line 1))
+test	UNKNOWN STEP	2026-10-16T19:11:57.6124255Z   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:57.6306660Z Collecting annotated-doc>=0.0.2 (from fastapi==0.143.3->-r /home/runner/work/taskboard-capstone/taskboard-capstone/backend/requirements.txt (line 1))
+test	UNKNOWN STEP	2026-10-16T19:11:57.6343014Z   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:57.6593619Z Collecting opentelemetry-api>=1.44.0 (from fastapi==0.143.3->-r /home/runner/work/taskboard-capstone/taskboard-capstone/backend/requirements.txt (line 1))
+test	UNKNOWN STEP	2026-10-16T19:11:57.6640826Z   Downloading opentelemetry_api-1.45.1-py3-none-any.whl.metadata (1.4 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:57.6998449Z Collecting click>=7.0 (from uvicorn==0.54.0->-r /home/runner/work/taskboard-capstone/taskboard-capstone/backend/requirements.txt (line 2))
+test	UNKNOWN STEP	2026-10-16T19:11:57.7046695Z   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:57.7276960Z Collecting h11>=0.8 (from uvicorn==0.54.0->-r /home/runner/work/taskboard-capstone/taskboard-capstone/backend/requirements.txt (line 2))
+test	UNKNOWN STEP	2026-10-16T19:11:57.7312758Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:57.7581578Z Collecting Mako (from alembic==1.20.0->-r /home/runner/work/taskboard-capstone/taskboard-capstone/backend/requirements.txt (line 5))
+test	UNKNOWN STEP	2026-10-16T19:11:57.7615150Z   Downloading mako-1.4.3-py3-none-any.whl.metadata (2.9 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:57.7841671Z Collecting prometheus-client<1.0.0,>=0.8.0 (from prometheus-fastapi-instrumentator==8.1.0->-r /home/runner/work/taskboard-capstone/taskboard-capstone/backend/requirements.txt (line 6))
+test	UNKNOWN STEP	2026-10-16T19:11:57.7872550Z   Downloading prometheus_client-0.26.0-py3-none-any.whl.metadata (2.1 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:57.9645411Z Collecting psycopg-binary==3.3.6 (from psycopg[binary]==3.3.6->-r /home/runner/work/taskboard-capstone/taskboard-capstone/backend/requirements.txt (line 4))
+test	UNKNOWN STEP	2026-10-16T19:11:57.9684135Z   Downloading psycopg_binary-3.3.6-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.7 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:57.9931948Z Collecting anyio<5,>=4.0.0 (from starlette>=0.46.0->fastapi==0.143.3->-r /home/runner/work/taskboard-capstone/taskboard-capstone/backend/requirements.txt (line 1))
+test	UNKNOWN STEP	2026-10-16T19:11:57.9966302Z   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:58.0195752Z Collecting idna>=2.8 (from anyio<5,>=4.0.0->starlette>=0.46.0->fastapi==0.143.3->-r /home/runner/work/taskboard-capstone/taskboard-capstone/backend/requirements.txt (line 1))
+test	UNKNOWN STEP	2026-10-16T19:11:58.0233446Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:58.0427273Z Collecting iniconfig>=1.0.1 (from pytest->-r requirements-dev.txt (line 2))
+test	UNKNOWN STEP	2026-10-16T19:11:58.0464594Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:58.0674517Z Collecting packaging>=22 (from pytest->-r requirements-dev.txt (line 2))
+test	UNKNOWN STEP	2026-10-16T19:11:58.0709476Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:58.0900596Z Collecting pluggy<2,>=1.5 (from pytest->-r requirements-dev.txt (line 2))
+test	UNKNOWN STEP	2026-10-16T19:11:58.0935412Z   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:58.1183858Z Collecting pygments>=2.7.2 (from pytest->-r requirements-dev.txt (line 2))
+test	UNKNOWN STEP	2026-10-16T19:11:58.1219617Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:58.1472997Z Collecting certifi (from httpx->-r requirements-dev.txt (line 3))
+test	UNKNOWN STEP	2026-10-16T19:11:58.1512372Z   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:58.1728636Z Collecting httpcore==1.* (from httpx->-r requirements-dev.txt (line 3))
+test	UNKNOWN STEP	2026-10-16T19:11:58.1764064Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:58.5584394Z Collecting coverage>=7.10.6 (from coverage[toml]>=7.10.6->pytest-cov->-r requirements-dev.txt (line 4))
+test	UNKNOWN STEP	2026-10-16T19:11:58.5620616Z   Downloading coverage-7.16.2-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.2 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:58.5873967Z Collecting annotated-types>=0.6.0 (from pydantic>=2.9.0->fastapi==0.143.3->-r /home/runner/work/taskboard-capstone/taskboard-capstone/backend/requirements.txt (line 1))
+test	UNKNOWN STEP	2026-10-16T19:11:58.5906972Z   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.2144208Z Collecting pydantic-core==2.50.1 (from pydantic>=2.9.0->fastapi==0.143.3->-r /home/runner/work/taskboard-capstone/taskboard-capstone/backend/requirements.txt (line 1))
+test	UNKNOWN STEP	2026-10-16T19:11:59.2183830Z   Downloading pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.5 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.2768160Z Collecting MarkupSafe>=2.0 (from Mako->alembic==1.20.0->-r /home/runner/work/taskboard-capstone/taskboard-capstone/backend/requirements.txt (line 5))
+test	UNKNOWN STEP	2026-10-16T19:11:59.2810501Z   Downloading markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.2901291Z Downloading fastapi-0.143.3-py3-none-any.whl (144 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.2971306Z Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.3030635Z Downloading sqlalchemy-2.1.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (4.7 MB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.3250273Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 232.4 MB/s  0:00:00
+test	UNKNOWN STEP	2026-10-16T19:11:59.3288819Z Downloading psycopg-3.3.6-py3-none-any.whl (215 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.3347589Z Downloading alembic-1.20.0-py3-none-any.whl (268 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.3405670Z Downloading prometheus_fastapi_instrumentator-8.1.0-py3-none-any.whl (19 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.3460668Z Downloading psycopg_binary-3.3.6-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.2 MB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.3622040Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 364.5 MB/s  0:00:00
+test	UNKNOWN STEP	2026-10-16T19:11:59.3663167Z Downloading prometheus_client-0.26.0-py3-none-any.whl (64 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.3718978Z Downloading starlette-1.8.0-py3-none-any.whl (79 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.3784031Z Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.3838381Z Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.3906988Z Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.3958010Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.4009058Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.4062302Z Downloading pytest_cov-7.1.0-py3-none-any.whl (22 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.4125949Z Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.4172244Z Downloading click-8.5.0-py3-none-any.whl (125 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.4229523Z Downloading coverage-7.16.2-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (258 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.4285785Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.4338999Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.4393684Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.4440807Z Downloading opentelemetry_api-1.45.1-py3-none-any.whl (60 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.4497288Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.4551671Z Downloading pydantic-2.14.1-py3-none-any.whl (488 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.4619001Z Downloading pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.2 MB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.4713259Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 290.6 MB/s  0:00:00
+test	UNKNOWN STEP	2026-10-16T19:11:59.4750398Z Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.4811335Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.4875748Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 240.5 MB/s  0:00:00
+test	UNKNOWN STEP	2026-10-16T19:11:59.4910621Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.4967100Z Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.5020943Z Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.5078353Z Downloading mako-1.4.3-py3-none-any.whl (80 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.5133536Z Downloading markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+test	UNKNOWN STEP	2026-10-16T19:11:59.7089098Z Installing collected packages: typing-extensions, pygments, psycopg-binary, prometheus-client, pluggy, packaging, MarkupSafe, iniconfig, idna, h11, coverage, click, certifi, annotated-types, annotated-doc, uvicorn, typing-inspection, sqlalchemy, pytest, pydantic-core, psycopg, opentelemetry-api, Mako, httpcore, anyio, starlette, pytest-cov, pydantic, httpx, alembic, prometheus-fastapi-instrumentator, fastapi
+test	UNKNOWN STEP	2026-10-16T19:12:03.5746038Z 
+test	UNKNOWN STEP	2026-10-16T19:12:03.5784465Z Successfully installed Mako-1.4.3 MarkupSafe-3.0.4 alembic-1.20.0 annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 certifi-2026.7.22 click-8.5.0 coverage-7.16.2 fastapi-0.143.3 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.20 iniconfig-2.3.1 opentelemetry-api-1.45.1 packaging-26.3 pluggy-1.7.0 prometheus-client-0.26.0 prometheus-fastapi-instrumentator-8.1.0 psycopg-3.3.6 psycopg-binary-3.3.6 pydantic-2.14.1 pydantic-core-2.50.1 pygments-2.21.0 pytest-9.1.1 pytest-cov-7.1.0 sqlalchemy-2.1.4 starlette-1.8.0 typing-extensions-4.16.0 typing-inspection-0.4.4 uvicorn-0.54.0
+test	UNKNOWN STEP	2026-10-16T19:12:03.7613354Z ##[group]Run pytest -v --junitxml=tests.xml
+test	UNKNOWN STEP	2026-10-16T19:12:03.7613742Z [36;1mpytest -v --junitxml=tests.xml[0m
+test	UNKNOWN STEP	2026-10-16T19:12:03.7655640Z shell: /usr/bin/bash -e {0}
+test	UNKNOWN STEP	2026-10-16T19:12:03.7655911Z env:
+test	UNKNOWN STEP	2026-10-16T19:12:03.7656188Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+test	UNKNOWN STEP	2026-10-16T19:12:03.7656606Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+test	UNKNOWN STEP	2026-10-16T19:12:03.7657021Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+test	UNKNOWN STEP	2026-10-16T19:12:03.7657385Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+test	UNKNOWN STEP	2026-10-16T19:12:03.7657740Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+test	UNKNOWN STEP	2026-10-16T19:12:03.7658101Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+test	UNKNOWN STEP	2026-10-16T19:12:03.7658408Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-16T19:12:05.0860651Z ============================= test session starts ==============================
+test	UNKNOWN STEP	2026-10-16T19:12:05.0861775Z platform linux -- Python 3.12.15, pytest-9.1.1, pluggy-1.7.0 -- /opt/hostedtoolcache/Python/3.12.15/x64/bin/python
+test	UNKNOWN STEP	2026-10-16T19:12:05.0862631Z cachedir: .pytest_cache
+test	UNKNOWN STEP	2026-10-16T19:12:05.0863390Z rootdir: /home/runner/work/taskboard-capstone/taskboard-capstone/backend
+test	UNKNOWN STEP	2026-10-16T19:12:05.0864056Z configfile: pytest.ini
+test	UNKNOWN STEP	2026-10-16T19:12:05.0864506Z testpaths: tests
+test	UNKNOWN STEP	2026-10-16T19:12:05.0864882Z plugins: cov-7.1.0, anyio-4.15.1
+test	UNKNOWN STEP	2026-10-16T19:12:05.1047444Z collecting ... collected 16 items
+test	UNKNOWN STEP	2026-10-16T19:12:05.1047804Z 
+test	UNKNOWN STEP	2026-10-16T19:12:05.1199226Z tests/test_api.py::test_health PASSED                                    [  6%]
+test	UNKNOWN STEP	2026-10-16T19:12:05.1278291Z tests/test_api.py::test_ready PASSED                                     [ 12%]
+test	UNKNOWN STEP	2026-10-16T19:12:05.1424458Z tests/test_api.py::test_create_and_read PASSED                           [ 18%]
+test	UNKNOWN STEP	2026-10-16T19:12:05.1548382Z tests/test_api.py::test_list PASSED                                      [ 25%]
+test	UNKNOWN STEP	2026-10-16T19:12:05.1687599Z tests/test_api.py::test_update PASSED                                    [ 31%]
+test	UNKNOWN STEP	2026-10-16T19:12:05.2201090Z tests/test_api.py::test_delete PASSED                                    [ 37%]
+test	UNKNOWN STEP	2026-10-16T19:12:05.2332586Z tests/test_api.py::test_stats PASSED                                     [ 43%]
+test	UNKNOWN STEP	2026-10-16T19:12:05.2478514Z tests/test_api.py::test_status_filter PASSED                             [ 50%]
+test	UNKNOWN STEP	2026-10-16T19:12:05.2632969Z tests/test_api.py::test_search PASSED                                    [ 56%]
+test	UNKNOWN STEP	2026-10-16T19:12:05.2709388Z tests/test_api.py::test_validation[changes0] PASSED                      [ 62%]
+test	UNKNOWN STEP	2026-10-16T19:12:05.2784875Z tests/test_api.py::test_validation[changes1] PASSED                      [ 68%]
+test	UNKNOWN STEP	2026-10-16T19:12:05.2853485Z tests/test_api.py::test_validation[changes2] PASSED                      [ 75%]
+test	UNKNOWN STEP	2026-10-16T19:12:05.2923663Z tests/test_api.py::test_validation[changes3] PASSED                      [ 81%]
+test	UNKNOWN STEP	2026-10-16T19:12:05.3005999Z tests/test_api.py::test_missing_ticket PASSED                            [ 87%]
+test	UNKNOWN STEP	2026-10-16T19:12:05.3108492Z tests/test_api.py::test_metrics PASSED                                   [ 93%]
+test	UNKNOWN STEP	2026-10-16T19:12:05.3954459Z tests/test_api.py::test_empty_database PASSED                            [100%]
+test	UNKNOWN STEP	2026-10-16T19:12:05.3955081Z 
+test	UNKNOWN STEP	2026-10-16T19:12:05.3955270Z =============================== warnings summary ===============================
+test	UNKNOWN STEP	2026-10-16T19:12:05.3955912Z ../../../../../../opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/fastapi/testclient.py:1
+test	UNKNOWN STEP	2026-10-16T19:12:05.3957151Z   /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+test	UNKNOWN STEP	2026-10-16T19:12:05.3958197Z     from starlette.testclient import TestClient as TestClient  # noqa
+test	UNKNOWN STEP	2026-10-16T19:12:05.3958517Z 
+test	UNKNOWN STEP	2026-10-16T19:12:05.3958778Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+test	UNKNOWN STEP	2026-10-16T19:12:05.3959835Z - generated xml file: /home/runner/work/taskboard-capstone/taskboard-capstone/backend/tests.xml -
+test	UNKNOWN STEP	2026-10-16T19:12:05.3960841Z ======================== 16 passed, 1 warning in 0.24s =========================
+test	UNKNOWN STEP	2026-10-16T19:12:05.5940912Z ##[group]Run actions/setup-node@v4
+test	UNKNOWN STEP	2026-10-16T19:12:05.5941378Z with:
+test	UNKNOWN STEP	2026-10-16T19:12:05.5941681Z   node-version: 24
+test	UNKNOWN STEP	2026-10-16T19:12:05.5942028Z   always-auth: false
+test	UNKNOWN STEP	2026-10-16T19:12:05.5942377Z   check-latest: false
+test	UNKNOWN STEP	2026-10-16T19:12:05.5946063Z   token: ***
+test	UNKNOWN STEP	2026-10-16T19:12:05.5946274Z env:
+test	UNKNOWN STEP	2026-10-16T19:12:05.5946550Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+test	UNKNOWN STEP	2026-10-16T19:12:05.5946987Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+test	UNKNOWN STEP	2026-10-16T19:12:05.5947404Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+test	UNKNOWN STEP	2026-10-16T19:12:05.5947783Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+test	UNKNOWN STEP	2026-10-16T19:12:05.5948769Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+test	UNKNOWN STEP	2026-10-16T19:12:05.5949198Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+test	UNKNOWN STEP	2026-10-16T19:12:05.5949731Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-16T19:12:05.8063719Z Found in cache @ /opt/hostedtoolcache/node/24.21.0/x64
+test	UNKNOWN STEP	2026-10-16T19:12:05.8068949Z (node:2312) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test	UNKNOWN STEP	2026-10-16T19:12:05.8070017Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test	UNKNOWN STEP	2026-10-16T19:12:05.8074270Z ##[group]Environment details
+test	UNKNOWN STEP	2026-10-16T19:12:07.2976049Z node: v24.21.0
+test	UNKNOWN STEP	2026-10-16T19:12:07.2976392Z npm: 11.19.0
+test	UNKNOWN STEP	2026-10-16T19:12:07.2976646Z yarn: 1.22.22
+test	UNKNOWN STEP	2026-10-16T19:12:07.2977421Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-16T19:12:07.3072687Z ##[group]Run npm install && npm run build
+test	UNKNOWN STEP	2026-10-16T19:12:07.3073012Z [36;1mnpm install && npm run build[0m
+test	UNKNOWN STEP	2026-10-16T19:12:07.3117900Z shell: /usr/bin/bash -e {0}
+test	UNKNOWN STEP	2026-10-16T19:12:07.3118167Z env:
+test	UNKNOWN STEP	2026-10-16T19:12:07.3118459Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+test	UNKNOWN STEP	2026-10-16T19:12:07.3118900Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+test	UNKNOWN STEP	2026-10-16T19:12:07.3119308Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+test	UNKNOWN STEP	2026-10-16T19:12:07.3119669Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+test	UNKNOWN STEP	2026-10-16T19:12:07.3120026Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+test	UNKNOWN STEP	2026-10-16T19:12:07.3120609Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+test	UNKNOWN STEP	2026-10-16T19:12:07.3120921Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-16T19:12:13.6069414Z 
+test	UNKNOWN STEP	2026-10-16T19:12:13.6079970Z added 18 packages, and audited 19 packages in 6s
+test	UNKNOWN STEP	2026-10-16T19:12:13.6080672Z 
+test	UNKNOWN STEP	2026-10-16T19:12:13.6081065Z 8 packages are looking for funding
+test	UNKNOWN STEP	2026-10-16T19:12:13.6081705Z   run `npm fund` for details
+test	UNKNOWN STEP	2026-10-16T19:12:13.6084338Z 
+test	UNKNOWN STEP	2026-10-16T19:12:13.6084842Z found 0 vulnerabilities
+test	UNKNOWN STEP	2026-10-16T19:12:13.7270922Z 
+test	UNKNOWN STEP	2026-10-16T19:12:13.7271638Z > campusdesk@1.0.0 build
+test	UNKNOWN STEP	2026-10-16T19:12:13.7272133Z > vite build
+test	UNKNOWN STEP	2026-10-16T19:12:13.7272328Z 
+test	UNKNOWN STEP	2026-10-16T19:12:13.9182455Z [36mvite v8.3.4 [32mbuilding client environment for production...[36m[39m
+test	UNKNOWN STEP	2026-10-16T19:12:13.9370035Z transforming...
+test	UNKNOWN STEP	2026-10-16T19:12:14.0274606Z ✓ 15 modules transformed.
+test	UNKNOWN STEP	2026-10-16T19:12:14.0480879Z rendering chunks...
+test	UNKNOWN STEP	2026-10-16T19:12:14.0847271Z computing gzip size...
+test	UNKNOWN STEP	2026-10-16T19:12:14.0890032Z dist/index.html                   0.41 kB │ gzip:  0.29 kB
+test	UNKNOWN STEP	2026-10-16T19:12:14.0891097Z dist/assets/index-3kM2jkTt.css    9.28 kB │ gzip:  2.91 kB
+test	UNKNOWN STEP	2026-10-16T19:12:14.0891802Z dist/assets/index-BPQ0_zNt.js   229.94 kB │ gzip: 71.77 kB
+test	UNKNOWN STEP	2026-10-16T19:12:14.0892124Z 
+test	UNKNOWN STEP	2026-10-16T19:12:14.0895578Z [32m✓ built in 170ms[39m
+test	UNKNOWN STEP	2026-10-16T19:12:14.1222794Z Post job cleanup.
+test	UNKNOWN STEP	2026-10-16T19:12:14.2444983Z (node:2391) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test	UNKNOWN STEP	2026-10-16T19:12:14.2445752Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test	UNKNOWN STEP	2026-10-16T19:12:14.2541894Z Post job cleanup.
+test	UNKNOWN STEP	2026-10-16T19:12:14.3899888Z Post job cleanup.
+test	UNKNOWN STEP	2026-10-16T19:12:14.4850246Z [command]/usr/bin/git version
+test	UNKNOWN STEP	2026-10-16T19:12:14.4898177Z git version 2.55.0
+test	UNKNOWN STEP	2026-10-16T19:12:14.4948216Z Temporarily overriding HOME='/home/runner/work/_temp/b37853d3-fa04-4a6a-8fbe-75f2d3b7db61' before making global git config changes
+test	UNKNOWN STEP	2026-10-16T19:12:14.4949288Z Adding repository directory to the temporary git global config as a safe directory
+test	UNKNOWN STEP	2026-10-16T19:12:14.4955614Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/taskboard-capstone/taskboard-capstone
+test	UNKNOWN STEP	2026-10-16T19:12:14.4992570Z Removing SSH command configuration
+test	UNKNOWN STEP	2026-10-16T19:12:14.5002106Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test	UNKNOWN STEP	2026-10-16T19:12:14.5044095Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test	UNKNOWN STEP	2026-10-16T19:12:14.5281940Z Removing HTTP extra header
+test	UNKNOWN STEP	2026-10-16T19:12:14.5289590Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test	UNKNOWN STEP	2026-10-16T19:12:14.5325031Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test	UNKNOWN STEP	2026-10-16T19:12:14.5555230Z Removing includeIf entries pointing to credentials config files
+test	UNKNOWN STEP	2026-10-16T19:12:14.5566088Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test	UNKNOWN STEP	2026-10-16T19:12:14.5592745Z includeif.gitdir:/home/runner/work/taskboard-capstone/taskboard-capstone/.git.path
+test	UNKNOWN STEP	2026-10-16T19:12:14.5594315Z includeif.gitdir:/home/runner/work/taskboard-capstone/taskboard-capstone/.git/worktrees/*.path
+test	UNKNOWN STEP	2026-10-16T19:12:14.5596212Z includeif.gitdir:/github/workspace/.git.path
+test	UNKNOWN STEP	2026-10-16T19:12:14.5599885Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+test	UNKNOWN STEP	2026-10-16T19:12:14.5602766Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/taskboard-capstone/taskboard-capstone/.git.path
+test	UNKNOWN STEP	2026-10-16T19:12:14.5626152Z /home/runner/work/_temp/git-credentials-4882c17e-8cfa-48d3-8410-101014e49f03.config
+test	UNKNOWN STEP	2026-10-16T19:12:14.5637822Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/taskboard-capstone/taskboard-capstone/.git.path /home/runner/work/_temp/git-credentials-4882c17e-8cfa-48d3-8410-101014e49f03.config
+test	UNKNOWN STEP	2026-10-16T19:12:14.5675140Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/taskboard-capstone/taskboard-capstone/.git/worktrees/*.path
+test	UNKNOWN STEP	2026-10-16T19:12:14.5710204Z /home/runner/work/_temp/git-credentials-4882c17e-8cfa-48d3-8410-101014e49f03.config
+test	UNKNOWN STEP	2026-10-16T19:12:14.5714126Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/taskboard-capstone/taskboard-capstone/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-4882c17e-8cfa-48d3-8410-101014e49f03.config
+test	UNKNOWN STEP	2026-10-16T19:12:14.5745954Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+test	UNKNOWN STEP	2026-10-16T19:12:14.5779430Z /github/runner_temp/git-credentials-4882c17e-8cfa-48d3-8410-101014e49f03.config
+test	UNKNOWN STEP	2026-10-16T19:12:14.5789102Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-4882c17e-8cfa-48d3-8410-101014e49f03.config
+test	UNKNOWN STEP	2026-10-16T19:12:14.5825359Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+test	UNKNOWN STEP	2026-10-16T19:12:14.5848499Z /github/runner_temp/git-credentials-4882c17e-8cfa-48d3-8410-101014e49f03.config
+test	UNKNOWN STEP	2026-10-16T19:12:14.5860525Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-4882c17e-8cfa-48d3-8410-101014e49f03.config
+test	UNKNOWN STEP	2026-10-16T19:12:14.5900640Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test	UNKNOWN STEP	2026-10-16T19:12:14.6108648Z Removing credentials config '/home/runner/work/_temp/git-credentials-4882c17e-8cfa-48d3-8410-101014e49f03.config'
+test	UNKNOWN STEP	2026-10-16T19:12:14.6255053Z Cleaning up orphan processes
+test	UNKNOWN STEP	2026-10-16T19:12:14.6493160Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+images	UNKNOWN STEP	﻿2026-10-16T19:12:20.3051232Z Current runner version: '2.337.0'
+images	UNKNOWN STEP	2026-10-16T19:12:20.3067382Z ##[group]Runner Image Provisioner
+images	UNKNOWN STEP	2026-10-16T19:12:20.3067943Z Hosted Compute Agent
+images	UNKNOWN STEP	2026-10-16T19:12:20.3068355Z Version: 20261012.601
+images	UNKNOWN STEP	2026-10-16T19:12:20.3068761Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+images	UNKNOWN STEP	2026-10-16T19:12:20.3069237Z Build Date: 2026-10-12T17:48:21Z
+images	UNKNOWN STEP	2026-10-16T19:12:20.3069646Z Worker ID: {079c3948-e8b6-44c4-aff1-72412912f897}
+images	UNKNOWN STEP	2026-10-16T19:12:20.3070055Z Region: centralus
+images	UNKNOWN STEP	2026-10-16T19:12:20.3070421Z Cloud: Azure
+images	UNKNOWN STEP	2026-10-16T19:12:20.3070774Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:20.3071549Z ##[group]Operating System
+images	UNKNOWN STEP	2026-10-16T19:12:20.3071959Z Ubuntu
+images	UNKNOWN STEP	2026-10-16T19:12:20.3072266Z 24.04.5
+images	UNKNOWN STEP	2026-10-16T19:12:20.3072593Z LTS
+images	UNKNOWN STEP	2026-10-16T19:12:20.3072943Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:20.3073267Z ##[group]Runner Image
+images	UNKNOWN STEP	2026-10-16T19:12:20.3073898Z Image: ubuntu-24.04
+images	UNKNOWN STEP	2026-10-16T19:12:20.3074237Z Version: 20261012.334.1
+images	UNKNOWN STEP	2026-10-16T19:12:20.3075146Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+images	UNKNOWN STEP	2026-10-16T19:12:20.3076039Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+images	UNKNOWN STEP	2026-10-16T19:12:20.3076629Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:20.3077299Z ##[group]GITHUB_TOKEN Permissions
+images	UNKNOWN STEP	2026-10-16T19:12:20.3078657Z Contents: read
+images	UNKNOWN STEP	2026-10-16T19:12:20.3079004Z Metadata: read
+images	UNKNOWN STEP	2026-10-16T19:12:20.3079370Z Packages: write
+images	UNKNOWN STEP	2026-10-16T19:12:20.3079715Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:20.3080936Z Secret source: Actions
+images	UNKNOWN STEP	2026-10-16T19:12:20.3081562Z Cache mode: write
+images	UNKNOWN STEP	2026-10-16T19:12:20.3081957Z Prepare workflow directory
+images	UNKNOWN STEP	2026-10-16T19:12:20.3357526Z Prepare all required actions
+images	UNKNOWN STEP	2026-10-16T19:12:20.3416640Z Getting action download info
+images	UNKNOWN STEP	2026-10-16T19:12:20.6079624Z Download action repository 'actions/checkout@v6' (SHA:d23441a48e516b6c34aea4fa41551a30e30af803)
+images	UNKNOWN STEP	2026-10-16T19:12:20.7146873Z Download action repository 'docker/login-action@v3' (SHA:c94ce9fb468520275223c153574b00df6fe4bcc9)
+images	UNKNOWN STEP	2026-10-16T19:12:21.3861339Z Download action repository 'aquasecurity/trivy-action@0.35.0' (SHA:57a97c7e7821a5776cebc9bb87c984fa69cba8f1)
+images	UNKNOWN STEP	2026-10-16T19:12:21.7361930Z Getting action download info
+images	UNKNOWN STEP	2026-10-16T19:12:21.8409153Z Download action repository 'aquasecurity/setup-trivy@e6c2c5e321ed9123bda567646e2f96565e34abe1' (SHA:e6c2c5e321ed9123bda567646e2f96565e34abe1)
+images	UNKNOWN STEP	2026-10-16T19:12:22.0030844Z Download action repository 'actions/cache@0400d5f644dc74513175e3cd8d07132dd4860809' (SHA:0400d5f644dc74513175e3cd8d07132dd4860809)
+images	UNKNOWN STEP	2026-10-16T19:12:22.5201547Z Getting action download info
+images	UNKNOWN STEP	2026-10-16T19:12:22.6203196Z Download action repository 'actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+images	UNKNOWN STEP	2026-10-16T19:12:22.7108580Z Getting action download info
+images	UNKNOWN STEP	2026-10-16T19:12:22.8173755Z Getting action download info
+images	UNKNOWN STEP	2026-10-16T19:12:22.9463822Z Complete job name: images
+images	UNKNOWN STEP	2026-10-16T19:12:22.9882109Z ##[group]Run actions/checkout@v6
+images	UNKNOWN STEP	2026-10-16T19:12:22.9882384Z with:
+images	UNKNOWN STEP	2026-10-16T19:12:22.9882546Z   repository: Suhassk205/taskboard-capstone
+images	UNKNOWN STEP	2026-10-16T19:12:22.9884069Z   token: ***
+images	UNKNOWN STEP	2026-10-16T19:12:22.9884208Z   ssh-strict: true
+images	UNKNOWN STEP	2026-10-16T19:12:22.9884479Z   ssh-user: git
+images	UNKNOWN STEP	2026-10-16T19:12:22.9884635Z   persist-credentials: true
+images	UNKNOWN STEP	2026-10-16T19:12:22.9884790Z   clean: true
+images	UNKNOWN STEP	2026-10-16T19:12:22.9884937Z   sparse-checkout-cone-mode: true
+images	UNKNOWN STEP	2026-10-16T19:12:22.9885106Z   fetch-depth: 1
+images	UNKNOWN STEP	2026-10-16T19:12:22.9885246Z   fetch-tags: false
+images	UNKNOWN STEP	2026-10-16T19:12:22.9885385Z   show-progress: true
+images	UNKNOWN STEP	2026-10-16T19:12:22.9885525Z   lfs: false
+images	UNKNOWN STEP	2026-10-16T19:12:22.9885654Z   submodules: false
+images	UNKNOWN STEP	2026-10-16T19:12:22.9885798Z   set-safe-directory: true
+images	UNKNOWN STEP	2026-10-16T19:12:22.9885960Z   allow-unsafe-pr-checkout: false
+images	UNKNOWN STEP	2026-10-16T19:12:22.9886203Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:23.0498209Z Syncing repository: Suhassk205/taskboard-capstone
+images	UNKNOWN STEP	2026-10-16T19:12:23.0499049Z ##[group]Getting Git version info
+images	UNKNOWN STEP	2026-10-16T19:12:23.0499435Z Working directory is '/home/runner/work/taskboard-capstone/taskboard-capstone'
+images	UNKNOWN STEP	2026-10-16T19:12:23.0500014Z [command]/usr/bin/git version
+images	UNKNOWN STEP	2026-10-16T19:12:23.0555440Z git version 2.55.0
+images	UNKNOWN STEP	2026-10-16T19:12:23.0570888Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:23.0580982Z Temporarily overriding HOME='/home/runner/work/_temp/a6c54ebf-659e-4212-8956-ef57ce6a4b97' before making global git config changes
+images	UNKNOWN STEP	2026-10-16T19:12:23.0581743Z Adding repository directory to the temporary git global config as a safe directory
+images	UNKNOWN STEP	2026-10-16T19:12:23.0584536Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/taskboard-capstone/taskboard-capstone
+images	UNKNOWN STEP	2026-10-16T19:12:23.0629553Z Deleting the contents of '/home/runner/work/taskboard-capstone/taskboard-capstone'
+images	UNKNOWN STEP	2026-10-16T19:12:23.0632460Z ##[group]Determining repository object format
+images	UNKNOWN STEP	2026-10-16T19:12:23.0633833Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:23.0634216Z ##[group]Initializing the repository
+images	UNKNOWN STEP	2026-10-16T19:12:23.0636729Z [command]/usr/bin/git init /home/runner/work/taskboard-capstone/taskboard-capstone
+images	UNKNOWN STEP	2026-10-16T19:12:23.0717046Z hint: Using 'master' as the name for the initial branch. This default branch name
+images	UNKNOWN STEP	2026-10-16T19:12:23.0717688Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+images	UNKNOWN STEP	2026-10-16T19:12:23.0718203Z hint: to use in all of your new repositories, which will suppress this warning,
+images	UNKNOWN STEP	2026-10-16T19:12:23.0720791Z hint: call:
+images	UNKNOWN STEP	2026-10-16T19:12:23.0721004Z hint:
+images	UNKNOWN STEP	2026-10-16T19:12:23.0721300Z hint: 	git config --global init.defaultBranch <name>
+images	UNKNOWN STEP	2026-10-16T19:12:23.0721615Z hint:
+images	UNKNOWN STEP	2026-10-16T19:12:23.0721924Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+images	UNKNOWN STEP	2026-10-16T19:12:23.0722405Z hint: 'development'. The just-created branch can be renamed via this command:
+images	UNKNOWN STEP	2026-10-16T19:12:23.0722787Z hint:
+images	UNKNOWN STEP	2026-10-16T19:12:23.0723014Z hint: 	git branch -m <name>
+images	UNKNOWN STEP	2026-10-16T19:12:23.0723261Z hint:
+images	UNKNOWN STEP	2026-10-16T19:12:23.0723605Z hint: Disable this message with "git config set advice.defaultBranchName false"
+images	UNKNOWN STEP	2026-10-16T19:12:23.0724447Z Initialized empty Git repository in /home/runner/work/taskboard-capstone/taskboard-capstone/.git/
+images	UNKNOWN STEP	2026-10-16T19:12:23.0727457Z [command]/usr/bin/git remote add origin https://github.com/Suhassk205/taskboard-capstone
+images	UNKNOWN STEP	2026-10-16T19:12:23.0777645Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:23.0778116Z ##[group]Disabling automatic garbage collection
+images	UNKNOWN STEP	2026-10-16T19:12:23.0780067Z [command]/usr/bin/git config --local gc.auto 0
+images	UNKNOWN STEP	2026-10-16T19:12:23.0804554Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:23.0805388Z ##[group]Setting up auth
+images	UNKNOWN STEP	2026-10-16T19:12:23.0805753Z Removing SSH command configuration
+images	UNKNOWN STEP	2026-10-16T19:12:23.0809329Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+images	UNKNOWN STEP	2026-10-16T19:12:23.0833581Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+images	UNKNOWN STEP	2026-10-16T19:12:23.1121875Z Removing HTTP extra header
+images	UNKNOWN STEP	2026-10-16T19:12:23.1122610Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+images	UNKNOWN STEP	2026-10-16T19:12:23.1150838Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+images	UNKNOWN STEP	2026-10-16T19:12:23.1307626Z Removing includeIf entries pointing to credentials config files
+images	UNKNOWN STEP	2026-10-16T19:12:23.1311787Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+images	UNKNOWN STEP	2026-10-16T19:12:23.1337363Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+images	UNKNOWN STEP	2026-10-16T19:12:23.1500030Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-3ab31d99-4c2b-40bf-860b-347f9b8be029.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+images	UNKNOWN STEP	2026-10-16T19:12:23.1529983Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/taskboard-capstone/taskboard-capstone/.git.path /home/runner/work/_temp/git-credentials-3ab31d99-4c2b-40bf-860b-347f9b8be029.config
+images	UNKNOWN STEP	2026-10-16T19:12:23.1556957Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/taskboard-capstone/taskboard-capstone/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-3ab31d99-4c2b-40bf-860b-347f9b8be029.config
+images	UNKNOWN STEP	2026-10-16T19:12:23.1585518Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-3ab31d99-4c2b-40bf-860b-347f9b8be029.config
+images	UNKNOWN STEP	2026-10-16T19:12:23.1612032Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-3ab31d99-4c2b-40bf-860b-347f9b8be029.config
+images	UNKNOWN STEP	2026-10-16T19:12:23.1637219Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:23.1637491Z ##[group]Fetching the repository
+images	UNKNOWN STEP	2026-10-16T19:12:23.1642605Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e3d116880213a019f1af59caabdd48ce8fecf492:refs/remotes/origin/main
+images	UNKNOWN STEP	2026-10-16T19:12:23.8363324Z From https://github.com/Suhassk205/taskboard-capstone
+images	UNKNOWN STEP	2026-10-16T19:12:23.8363755Z  * [new ref]         e3d116880213a019f1af59caabdd48ce8fecf492 -> origin/main
+images	UNKNOWN STEP	2026-10-16T19:12:23.8375030Z [command]/usr/bin/git branch --list --remote origin/main
+images	UNKNOWN STEP	2026-10-16T19:12:23.8399756Z   origin/main
+images	UNKNOWN STEP	2026-10-16T19:12:23.8409168Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+images	UNKNOWN STEP	2026-10-16T19:12:23.8430621Z e3d116880213a019f1af59caabdd48ce8fecf492
+images	UNKNOWN STEP	2026-10-16T19:12:23.8437206Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:23.8437519Z ##[group]Determining the checkout info
+images	UNKNOWN STEP	2026-10-16T19:12:23.8437843Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:23.8438630Z [command]/usr/bin/git sparse-checkout disable
+images	UNKNOWN STEP	2026-10-16T19:12:23.8520164Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+images	UNKNOWN STEP	2026-10-16T19:12:23.8545874Z ##[group]Checking out the ref
+images	UNKNOWN STEP	2026-10-16T19:12:23.8548331Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+images	UNKNOWN STEP	2026-10-16T19:12:23.8731664Z Switched to a new branch 'main'
+images	UNKNOWN STEP	2026-10-16T19:12:23.8737515Z branch 'main' set up to track 'origin/main'.
+images	UNKNOWN STEP	2026-10-16T19:12:23.8743102Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:23.8780640Z [command]/usr/bin/git log -1 --format=%H
+images	UNKNOWN STEP	2026-10-16T19:12:23.8804624Z e3d116880213a019f1af59caabdd48ce8fecf492
+images	UNKNOWN STEP	2026-10-16T19:12:23.8987423Z ##[group]Run echo "owner=${GITHUB_REPOSITORY_OWNER,,}" >> "$GITHUB_OUTPUT"
+images	UNKNOWN STEP	2026-10-16T19:12:23.8987741Z [36;1mecho "owner=${GITHUB_REPOSITORY_OWNER,,}" >> "$GITHUB_OUTPUT"[0m
+images	UNKNOWN STEP	2026-10-16T19:12:23.9195286Z shell: /usr/bin/bash -e {0}
+images	UNKNOWN STEP	2026-10-16T19:12:23.9195448Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:23.9329615Z ##[group]Run docker/login-action@v3
+images	UNKNOWN STEP	2026-10-16T19:12:23.9329783Z with:
+images	UNKNOWN STEP	2026-10-16T19:12:23.9329895Z   registry: ghcr.io
+images	UNKNOWN STEP	2026-10-16T19:12:23.9330016Z   username: Suhassk205
+images	UNKNOWN STEP	2026-10-16T19:12:23.9331533Z   password: ***
+images	UNKNOWN STEP	2026-10-16T19:12:23.9331653Z   logout: true
+images	UNKNOWN STEP	2026-10-16T19:12:23.9331769Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:24.1102537Z Logging into ghcr.io...
+images	UNKNOWN STEP	2026-10-16T19:12:24.1114171Z (node:2103) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+images	UNKNOWN STEP	2026-10-16T19:12:24.1114919Z (Use `node --trace-deprecation ...` to show where the warning was created)
+images	UNKNOWN STEP	2026-10-16T19:12:24.5363736Z Login Succeeded!
+images	UNKNOWN STEP	2026-10-16T19:12:24.5479540Z ##[group]Run docker build -t ghcr.io/suhassk205/campusdesk-backend:e3d116880213a019f1af59caabdd48ce8fecf492 ./backend
+images	UNKNOWN STEP	2026-10-16T19:12:24.5480037Z [36;1mdocker build -t ghcr.io/suhassk205/campusdesk-backend:e3d116880213a019f1af59caabdd48ce8fecf492 ./backend[0m
+images	UNKNOWN STEP	2026-10-16T19:12:24.5480553Z [36;1mdocker build --build-arg APP_VERSION=e3d116880213a019f1af59caabdd48ce8fecf492 -t ghcr.io/suhassk205/campusdesk-frontend:e3d116880213a019f1af59caabdd48ce8fecf492 ./frontend[0m
+images	UNKNOWN STEP	2026-10-16T19:12:24.5529872Z shell: /usr/bin/bash -e {0}
+images	UNKNOWN STEP	2026-10-16T19:12:24.5530017Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:25.0404944Z #0 building with "default" instance using docker driver
+images	UNKNOWN STEP	2026-10-16T19:12:25.0405207Z 
+images	UNKNOWN STEP	2026-10-16T19:12:25.0405328Z #1 [internal] load build definition from Dockerfile
+images	UNKNOWN STEP	2026-10-16T19:12:25.0405616Z #1 transferring dockerfile: 342B 0.0s done
+images	UNKNOWN STEP	2026-10-16T19:12:25.0405767Z #1 DONE 0.0s
+images	UNKNOWN STEP	2026-10-16T19:12:25.0406044Z 
+images	UNKNOWN STEP	2026-10-16T19:12:25.0406186Z #2 [auth] library/python:pull token for registry-1.docker.io
+images	UNKNOWN STEP	2026-10-16T19:12:25.1905287Z #2 DONE 0.0s
+images	UNKNOWN STEP	2026-10-16T19:12:25.1905424Z 
+images	UNKNOWN STEP	2026-10-16T19:12:25.1905568Z #3 [internal] load metadata for docker.io/library/python:3.12-alpine
+images	UNKNOWN STEP	2026-10-16T19:12:25.5863125Z #3 DONE 0.7s
+images	UNKNOWN STEP	2026-10-16T19:12:25.7108088Z 
+images	UNKNOWN STEP	2026-10-16T19:12:25.7108670Z #4 [internal] load .dockerignore
+images	UNKNOWN STEP	2026-10-16T19:12:25.7108986Z #4 transferring context: 83B done
+images	UNKNOWN STEP	2026-10-16T19:12:25.7109201Z #4 DONE 0.0s
+images	UNKNOWN STEP	2026-10-16T19:12:25.7109306Z 
+images	UNKNOWN STEP	2026-10-16T19:12:25.7109397Z #5 [internal] load build context
+images	UNKNOWN STEP	2026-10-16T19:12:25.7109622Z #5 transferring context: 8.26kB done
+images	UNKNOWN STEP	2026-10-16T19:12:25.7109840Z #5 DONE 0.0s
+images	UNKNOWN STEP	2026-10-16T19:12:25.7109939Z 
+images	UNKNOWN STEP	2026-10-16T19:12:25.7110276Z #6 [1/6] FROM docker.io/library/python:3.12-alpine@sha256:1b668429b3511ab407d8e00648891631b0b1a4d7e15e3ca70f38ab5b91ad4ab4
+images	UNKNOWN STEP	2026-10-16T19:12:25.7110950Z #6 resolve docker.io/library/python:3.12-alpine@sha256:1b668429b3511ab407d8e00648891631b0b1a4d7e15e3ca70f38ab5b91ad4ab4 done
+images	UNKNOWN STEP	2026-10-16T19:12:25.7111629Z #6 sha256:283ac05c32e67060aa59f8a841b02df4cc0bd7fbf8d880f67d9b622e1cbd1935 0B / 16.36MB 0.1s
+images	UNKNOWN STEP	2026-10-16T19:12:25.7112187Z #6 sha256:e203d50c86bd38d307585d33fd69e7e7fd91e7535b65af46aa1d663cfb80c0fa 0B / 248B 0.1s
+images	UNKNOWN STEP	2026-10-16T19:12:25.7112724Z #6 sha256:1b668429b3511ab407d8e00648891631b0b1a4d7e15e3ca70f38ab5b91ad4ab4 10.30kB / 10.30kB done
+images	UNKNOWN STEP	2026-10-16T19:12:25.7113255Z #6 sha256:2055081c860db8c842b663415b795b026e7e5cc63b59c5193fcc9997713ea5b8 1.74kB / 1.74kB done
+images	UNKNOWN STEP	2026-10-16T19:12:25.7113834Z #6 sha256:979e5a8a56846771598d47ebf1f8a75b46155104e168a0b237c0783c1dedff8a 5.43kB / 5.43kB done
+images	UNKNOWN STEP	2026-10-16T19:12:25.7114619Z #6 sha256:bce3d672089f7ccc5125c3f8f95542fa3971138f323fb7f77e338a14396c85aa 0B / 416.28kB 0.1s
+images	UNKNOWN STEP	2026-10-16T19:12:25.9112365Z #6 sha256:283ac05c32e67060aa59f8a841b02df4cc0bd7fbf8d880f67d9b622e1cbd1935 16.36MB / 16.36MB 0.3s
+images	UNKNOWN STEP	2026-10-16T19:12:25.9112962Z #6 sha256:e203d50c86bd38d307585d33fd69e7e7fd91e7535b65af46aa1d663cfb80c0fa 248B / 248B 0.1s done
+images	UNKNOWN STEP	2026-10-16T19:12:25.9113572Z #6 sha256:bce3d672089f7ccc5125c3f8f95542fa3971138f323fb7f77e338a14396c85aa 416.28kB / 416.28kB 0.1s done
+images	UNKNOWN STEP	2026-10-16T19:12:25.9114124Z #6 extracting sha256:bce3d672089f7ccc5125c3f8f95542fa3971138f323fb7f77e338a14396c85aa 0.1s done
+images	UNKNOWN STEP	2026-10-16T19:12:26.0358721Z #6 sha256:283ac05c32e67060aa59f8a841b02df4cc0bd7fbf8d880f67d9b622e1cbd1935 16.36MB / 16.36MB 0.4s done
+images	UNKNOWN STEP	2026-10-16T19:12:26.0359744Z #6 extracting sha256:283ac05c32e67060aa59f8a841b02df4cc0bd7fbf8d880f67d9b622e1cbd1935
+images	UNKNOWN STEP	2026-10-16T19:12:26.5227417Z #6 extracting sha256:283ac05c32e67060aa59f8a841b02df4cc0bd7fbf8d880f67d9b622e1cbd1935 0.3s done
+images	UNKNOWN STEP	2026-10-16T19:12:26.7117237Z #6 extracting sha256:e203d50c86bd38d307585d33fd69e7e7fd91e7535b65af46aa1d663cfb80c0fa
+images	UNKNOWN STEP	2026-10-16T19:12:26.8951459Z #6 extracting sha256:e203d50c86bd38d307585d33fd69e7e7fd91e7535b65af46aa1d663cfb80c0fa done
+images	UNKNOWN STEP	2026-10-16T19:12:26.8951740Z #6 DONE 1.1s
+images	UNKNOWN STEP	2026-10-16T19:12:26.8951809Z 
+images	UNKNOWN STEP	2026-10-16T19:12:26.8951906Z #7 [2/6] WORKDIR /app
+images	UNKNOWN STEP	2026-10-16T19:12:26.8952029Z #7 DONE 0.0s
+images	UNKNOWN STEP	2026-10-16T19:12:26.8952134Z 
+images	UNKNOWN STEP	2026-10-16T19:12:26.8952561Z #8 [3/6] RUN apk upgrade --no-cache && adduser -D -u 10001 campusdesk
+images	UNKNOWN STEP	2026-10-16T19:12:27.5857074Z #8 0.841 (1/2) Upgrading zlib (1.3.2-r0 -> 1.3.2-r1)
+images	UNKNOWN STEP	2026-10-16T19:12:27.7239557Z #8 0.857 (2/2) Upgrading tzdata (2026d-r0 -> 2026e-r0)
+images	UNKNOWN STEP	2026-10-16T19:12:27.7239787Z #8 0.927 OK: 13.5 MiB in 38 packages
+images	UNKNOWN STEP	2026-10-16T19:12:27.7239947Z #8 DONE 1.0s
+images	UNKNOWN STEP	2026-10-16T19:12:27.8848008Z 
+images	UNKNOWN STEP	2026-10-16T19:12:27.8848400Z #9 [4/6] COPY requirements.txt .
+images	UNKNOWN STEP	2026-10-16T19:12:27.8848594Z #9 DONE 0.0s
+images	UNKNOWN STEP	2026-10-16T19:12:27.8848662Z 
+images	UNKNOWN STEP	2026-10-16T19:12:27.8848772Z #10 [5/6] RUN pip install --no-cache-dir -r requirements.txt
+images	UNKNOWN STEP	2026-10-16T19:12:29.2132583Z #10 1.479 Collecting fastapi==0.143.3 (from -r requirements.txt (line 1))
+images	UNKNOWN STEP	2026-10-16T19:12:29.4402915Z #10 1.516   Downloading fastapi-0.143.3-py3-none-any.whl.metadata (26 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:29.4403266Z #10 1.546 Collecting uvicorn==0.54.0 (from -r requirements.txt (line 2))
+images	UNKNOWN STEP	2026-10-16T19:12:29.4403545Z #10 1.555   Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:29.5086532Z #10 1.774 Collecting sqlalchemy==2.1.4 (from -r requirements.txt (line 3))
+images	UNKNOWN STEP	2026-10-16T19:12:29.6106990Z #10 1.785   Downloading sqlalchemy-2.1.4-cp312-cp312-musllinux_1_2_x86_64.whl.metadata (9.7 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:29.6107585Z #10 1.807 Collecting psycopg==3.3.6 (from psycopg[binary]==3.3.6->-r requirements.txt (line 4))
+images	UNKNOWN STEP	2026-10-16T19:12:29.6107871Z #10 1.816   Downloading psycopg-3.3.6-py3-none-any.whl.metadata (4.4 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:29.6108205Z #10 1.839 Collecting alembic==1.20.0 (from -r requirements.txt (line 5))
+images	UNKNOWN STEP	2026-10-16T19:12:29.6108447Z #10 1.850   Downloading alembic-1.20.0-py3-none-any.whl.metadata (7.3 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:29.6108740Z #10 1.866 Collecting prometheus-fastapi-instrumentator==8.1.0 (from -r requirements.txt (line 6))
+images	UNKNOWN STEP	2026-10-16T19:12:29.6109072Z #10 1.876   Downloading prometheus_fastapi_instrumentator-8.1.0-py3-none-any.whl.metadata (13 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:29.7122247Z #10 1.902 Collecting starlette>=0.46.0 (from fastapi==0.143.3->-r requirements.txt (line 1))
+images	UNKNOWN STEP	2026-10-16T19:12:29.7122668Z #10 1.912   Downloading starlette-1.8.0-py3-none-any.whl.metadata (6.6 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:29.7122952Z #10 1.977 Collecting pydantic>=2.9.0 (from fastapi==0.143.3->-r requirements.txt (line 1))
+images	UNKNOWN STEP	2026-10-16T19:12:29.8270903Z #10 1.988   Downloading pydantic-2.14.1-py3-none-any.whl.metadata (133 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:29.8271588Z #10 2.021 Collecting typing-extensions>=4.8.0 (from fastapi==0.143.3->-r requirements.txt (line 1))
+images	UNKNOWN STEP	2026-10-16T19:12:29.8272187Z #10 2.031   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:29.8272815Z #10 2.043 Collecting typing-inspection>=0.4.2 (from fastapi==0.143.3->-r requirements.txt (line 1))
+images	UNKNOWN STEP	2026-10-16T19:12:29.8273431Z #10 2.053   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:29.8273900Z #10 2.065 Collecting annotated-doc>=0.0.2 (from fastapi==0.143.3->-r requirements.txt (line 1))
+images	UNKNOWN STEP	2026-10-16T19:12:29.8274557Z #10 2.074   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:29.8275059Z #10 2.093 Collecting opentelemetry-api>=1.44.0 (from fastapi==0.143.3->-r requirements.txt (line 1))
+images	UNKNOWN STEP	2026-10-16T19:12:29.9299855Z #10 2.102   Downloading opentelemetry_api-1.45.1-py3-none-any.whl.metadata (1.4 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:29.9300315Z #10 2.121 Collecting click>=7.0 (from uvicorn==0.54.0->-r requirements.txt (line 2))
+images	UNKNOWN STEP	2026-10-16T19:12:29.9300713Z #10 2.131   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:29.9300996Z #10 2.143 Collecting h11>=0.8 (from uvicorn==0.54.0->-r requirements.txt (line 2))
+images	UNKNOWN STEP	2026-10-16T19:12:29.9301279Z #10 2.153   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:29.9301554Z #10 2.180 Collecting Mako (from alembic==1.20.0->-r requirements.txt (line 5))
+images	UNKNOWN STEP	2026-10-16T19:12:29.9301794Z #10 2.195   Downloading mako-1.4.3-py3-none-any.whl.metadata (2.9 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.0504229Z #10 2.215 Collecting prometheus-client<1.0.0,>=0.8.0 (from prometheus-fastapi-instrumentator==8.1.0->-r requirements.txt (line 6))
+images	UNKNOWN STEP	2026-10-16T19:12:30.2400748Z #10 2.225   Downloading prometheus_client-0.26.0-py3-none-any.whl.metadata (2.1 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.2401127Z #10 2.316 Collecting psycopg-binary==3.3.6 (from psycopg[binary]==3.3.6->-r requirements.txt (line 4))
+images	UNKNOWN STEP	2026-10-16T19:12:30.2401460Z #10 2.328   Downloading psycopg_binary-3.3.6-cp312-cp312-musllinux_1_2_x86_64.whl.metadata (2.7 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.2401817Z #10 2.345 Collecting annotated-types>=0.6.0 (from pydantic>=2.9.0->fastapi==0.143.3->-r requirements.txt (line 1))
+images	UNKNOWN STEP	2026-10-16T19:12:30.2402143Z #10 2.355   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.4681792Z #10 2.733 Collecting pydantic-core==2.50.1 (from pydantic>=2.9.0->fastapi==0.143.3->-r requirements.txt (line 1))
+images	UNKNOWN STEP	2026-10-16T19:12:30.5740163Z #10 2.745   Downloading pydantic_core-2.50.1-cp312-cp312-musllinux_1_1_x86_64.whl.metadata (6.5 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.5740967Z #10 2.769 Collecting anyio<5,>=4.0.0 (from starlette>=0.46.0->fastapi==0.143.3->-r requirements.txt (line 1))
+images	UNKNOWN STEP	2026-10-16T19:12:30.5741800Z #10 2.779   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.5742317Z #10 2.822 Collecting MarkupSafe>=2.0 (from Mako->alembic==1.20.0->-r requirements.txt (line 5))
+images	UNKNOWN STEP	2026-10-16T19:12:30.5742786Z #10 2.839   Downloading markupsafe-3.0.4-cp312-cp312-musllinux_1_2_x86_64.whl.metadata (2.7 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.6910773Z #10 2.856 Collecting idna>=2.8 (from anyio<5,>=4.0.0->starlette>=0.46.0->fastapi==0.143.3->-r requirements.txt (line 1))
+images	UNKNOWN STEP	2026-10-16T19:12:30.6911304Z #10 2.866   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.6911675Z #10 2.879 Downloading fastapi-0.143.3-py3-none-any.whl (144 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.6912025Z #10 2.891 Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.6912429Z #10 2.903 Downloading sqlalchemy-2.1.4-cp312-cp312-musllinux_1_2_x86_64.whl (4.7 MB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.7978958Z #10 2.957    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 98.9 MB/s eta 0:00:00
+images	UNKNOWN STEP	2026-10-16T19:12:30.7979490Z #10 2.966 Downloading psycopg-3.3.6-py3-none-any.whl (215 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.7979855Z #10 2.976 Downloading alembic-1.20.0-py3-none-any.whl (268 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.7980274Z #10 2.986 Downloading prometheus_fastapi_instrumentator-8.1.0-py3-none-any.whl (19 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.7980781Z #10 2.997 Downloading psycopg_binary-3.3.6-cp312-cp312-musllinux_1_2_x86_64.whl (4.3 MB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.7981334Z #10 3.015    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 245.4 MB/s eta 0:00:00
+images	UNKNOWN STEP	2026-10-16T19:12:30.7981733Z #10 3.024 Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.7982089Z #10 3.034 Downloading click-8.5.0-py3-none-any.whl (125 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.7982415Z #10 3.044 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.7982764Z #10 3.054 Downloading opentelemetry_api-1.45.1-py3-none-any.whl (60 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.7983194Z #10 3.063 Downloading prometheus_client-0.26.0-py3-none-any.whl (64 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.9064747Z #10 3.073 Downloading pydantic-2.14.1-py3-none-any.whl (488 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.9065223Z #10 3.085 Downloading pydantic_core-2.50.1-cp312-cp312-musllinux_1_1_x86_64.whl (2.5 MB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.9065953Z #10 3.091    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 569.7 MB/s eta 0:00:00
+images	UNKNOWN STEP	2026-10-16T19:12:30.9066333Z #10 3.101 Downloading starlette-1.8.0-py3-none-any.whl (79 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.9066699Z #10 3.111 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.9067099Z #10 3.121 Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.9067458Z #10 3.130 Downloading mako-1.4.3-py3-none-any.whl (80 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.9067798Z #10 3.140 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.9068152Z #10 3.150 Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.9068524Z #10 3.162 Downloading markupsafe-3.0.4-cp312-cp312-musllinux_1_2_x86_64.whl (23 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:30.9069128Z #10 3.172 Downloading idna-3.20-py3-none-any.whl (69 kB)
+images	UNKNOWN STEP	2026-10-16T19:12:31.1168234Z #10 3.232 Installing collected packages: typing-extensions, psycopg-binary, prometheus-client, MarkupSafe, idna, h11, click, annotated-types, annotated-doc, uvicorn, typing-inspection, sqlalchemy, pydantic-core, psycopg, opentelemetry-api, Mako, anyio, starlette, pydantic, alembic, prometheus-fastapi-instrumentator, fastapi
+images	UNKNOWN STEP	2026-10-16T19:12:33.2948698Z #10 5.560 Successfully installed Mako-1.4.3 MarkupSafe-3.0.4 alembic-1.20.0 annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 click-8.5.0 fastapi-0.143.3 h11-0.16.0 idna-3.20 opentelemetry-api-1.45.1 prometheus-client-0.26.0 prometheus-fastapi-instrumentator-8.1.0 psycopg-3.3.6 psycopg-binary-3.3.6 pydantic-2.14.1 pydantic-core-2.50.1 sqlalchemy-2.1.4 starlette-1.8.0 typing-extensions-4.16.0 typing-inspection-0.4.4 uvicorn-0.54.0
+images	UNKNOWN STEP	2026-10-16T19:12:33.5118571Z #10 5.560 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+images	UNKNOWN STEP	2026-10-16T19:12:33.5119520Z #10 5.627 
+images	UNKNOWN STEP	2026-10-16T19:12:33.5119681Z #10 5.627 [notice] A new release of pip is available: 25.0.1 -> 26.2.1
+images	UNKNOWN STEP	2026-10-16T19:12:33.5119915Z #10 5.627 [notice] To update, run: pip install --upgrade pip
+images	UNKNOWN STEP	2026-10-16T19:12:33.9842115Z #10 DONE 6.2s
+images	UNKNOWN STEP	2026-10-16T19:12:34.1465152Z 
+images	UNKNOWN STEP	2026-10-16T19:12:34.1465605Z #11 [6/6] COPY . .
+images	UNKNOWN STEP	2026-10-16T19:12:34.1465838Z #11 DONE 0.0s
+images	UNKNOWN STEP	2026-10-16T19:12:34.1465940Z 
+images	UNKNOWN STEP	2026-10-16T19:12:34.1466016Z #12 exporting to image
+images	UNKNOWN STEP	2026-10-16T19:12:34.1466213Z #12 exporting layers
+images	UNKNOWN STEP	2026-10-16T19:12:34.4290329Z #12 exporting layers 0.4s done
+images	UNKNOWN STEP	2026-10-16T19:12:34.4423444Z #12 writing image sha256:023c8636f43d0df9b5cc5c908579da81d4dbd912a8283874472adc86a30b92cf done
+images	UNKNOWN STEP	2026-10-16T19:12:34.4424038Z #12 naming to ghcr.io/suhassk205/campusdesk-backend:e3d116880213a019f1af59caabdd48ce8fecf492 done
+images	UNKNOWN STEP	2026-10-16T19:12:34.4424328Z #12 DONE 0.4s
+images	UNKNOWN STEP	2026-10-16T19:12:34.6244063Z #0 building with "default" instance using docker driver
+images	UNKNOWN STEP	2026-10-16T19:12:34.6244312Z 
+images	UNKNOWN STEP	2026-10-16T19:12:34.6244570Z #1 [internal] load build definition from Dockerfile
+images	UNKNOWN STEP	2026-10-16T19:12:34.6244839Z #1 transferring dockerfile: 389B done
+images	UNKNOWN STEP	2026-10-16T19:12:34.6245057Z #1 DONE 0.0s
+images	UNKNOWN STEP	2026-10-16T19:12:34.6245155Z 
+images	UNKNOWN STEP	2026-10-16T19:12:34.6245299Z #2 [auth] library/nginx:pull token for registry-1.docker.io
+images	UNKNOWN STEP	2026-10-16T19:12:34.7777659Z #2 DONE 0.0s
+images	UNKNOWN STEP	2026-10-16T19:12:34.7777801Z 
+images	UNKNOWN STEP	2026-10-16T19:12:34.7777910Z #3 [auth] library/node:pull token for registry-1.docker.io
+images	UNKNOWN STEP	2026-10-16T19:12:34.7778100Z #3 DONE 0.0s
+images	UNKNOWN STEP	2026-10-16T19:12:34.7778165Z 
+images	UNKNOWN STEP	2026-10-16T19:12:34.7778259Z #4 [internal] load metadata for docker.io/library/node:24-alpine
+images	UNKNOWN STEP	2026-10-16T19:12:35.1177729Z #4 DONE 0.6s
+images	UNKNOWN STEP	2026-10-16T19:12:35.1177874Z 
+images	UNKNOWN STEP	2026-10-16T19:12:35.1178033Z #5 [internal] load metadata for docker.io/library/nginx:alpine
+images	UNKNOWN STEP	2026-10-16T19:12:35.2180951Z #5 DONE 0.7s
+images	UNKNOWN STEP	2026-10-16T19:12:35.2181267Z 
+images	UNKNOWN STEP	2026-10-16T19:12:35.2181669Z #6 [internal] load .dockerignore
+images	UNKNOWN STEP	2026-10-16T19:12:35.2181906Z #6 transferring context: 63B done
+images	UNKNOWN STEP	2026-10-16T19:12:35.2182117Z #6 DONE 0.0s
+images	UNKNOWN STEP	2026-10-16T19:12:35.2182213Z 
+images	UNKNOWN STEP	2026-10-16T19:12:35.2182292Z #7 [internal] load build context
+images	UNKNOWN STEP	2026-10-16T19:12:35.2182615Z #7 transferring context: 19.61kB done
+images	UNKNOWN STEP	2026-10-16T19:12:35.2183018Z #7 DONE 0.0s
+images	UNKNOWN STEP	2026-10-16T19:12:35.2183089Z 
+images	UNKNOWN STEP	2026-10-16T19:12:35.2183300Z #8 [stage-1 1/4] FROM docker.io/library/nginx:alpine@sha256:892bb2152464f0c5d8972593a5f5afaf8054552580b699d95f8ff4af08c2d33d
+images	UNKNOWN STEP	2026-10-16T19:12:35.2183908Z #8 resolve docker.io/library/nginx:alpine@sha256:892bb2152464f0c5d8972593a5f5afaf8054552580b699d95f8ff4af08c2d33d done
+images	UNKNOWN STEP	2026-10-16T19:12:35.4304775Z #8 sha256:892bb2152464f0c5d8972593a5f5afaf8054552580b699d95f8ff4af08c2d33d 10.33kB / 10.33kB done
+images	UNKNOWN STEP	2026-10-16T19:12:35.4305851Z #8 sha256:138af827713b7671ef4ee2deea73bc6f08ae265130ce350307e3e7b52cd4b51b 2.50kB / 2.50kB done
+images	UNKNOWN STEP	2026-10-16T19:12:35.4306576Z #8 sha256:76090a34b858323b6ab169711adc08253b5bee7123a973dc581ed46b643bc109 12.32kB / 12.32kB done
+images	UNKNOWN STEP	2026-10-16T19:12:35.6168343Z #8 sha256:6711e0c4f5a79e8db637a3412394f29da647e54476d67c5b211a11527568ddc5 1.05MB / 4.42MB 0.3s
+images	UNKNOWN STEP	2026-10-16T19:12:35.6168795Z #8 sha256:3bf3671a4e6a18510ca49e3a4a226c2ef734a646e01e34e1ad0eff5faa01e3a0 629B / 629B 0.3s done
+images	UNKNOWN STEP	2026-10-16T19:12:35.6169336Z #8 sha256:b44956913298a55652fa97af34d296339c089250911e46e1a1c0eab8a88538c7 0B / 966B 0.3s
+images	UNKNOWN STEP	2026-10-16T19:12:35.7176640Z #8 sha256:6711e0c4f5a79e8db637a3412394f29da647e54476d67c5b211a11527568ddc5 4.42MB / 4.42MB 0.5s
+images	UNKNOWN STEP	2026-10-16T19:12:35.7177301Z #8 sha256:b44956913298a55652fa97af34d296339c089250911e46e1a1c0eab8a88538c7 966B / 966B 0.5s
+images	UNKNOWN STEP	2026-10-16T19:12:35.8438057Z #8 sha256:6711e0c4f5a79e8db637a3412394f29da647e54476d67c5b211a11527568ddc5 4.42MB / 4.42MB 0.6s done
+images	UNKNOWN STEP	2026-10-16T19:12:35.8438548Z #8 sha256:b44956913298a55652fa97af34d296339c089250911e46e1a1c0eab8a88538c7 966B / 966B 0.5s done
+images	UNKNOWN STEP	2026-10-16T19:12:35.8439190Z #8 extracting sha256:6711e0c4f5a79e8db637a3412394f29da647e54476d67c5b211a11527568ddc5 0.1s done
+images	UNKNOWN STEP	2026-10-16T19:12:35.8439504Z #8 sha256:710ec83ca6cd71fa5636d861343b5660636728f71992fd1b68914e03c7af3ad4 0B / 405B 0.6s
+images	UNKNOWN STEP	2026-10-16T19:12:35.8439927Z #8 sha256:70683d58fa5c20b5b31c9998a16f6634720d3393dc62934a608754abe449fe3b 0B / 1.21kB 0.6s
+images	UNKNOWN STEP	2026-10-16T19:12:35.8440234Z #8 sha256:6638b436592c96dd194db76a6b786b60b344d80ebe160e646c871d4e7eff25b5 0B / 1.40kB 0.6s
+images	UNKNOWN STEP	2026-10-16T19:12:35.9948191Z #8 sha256:710ec83ca6cd71fa5636d861343b5660636728f71992fd1b68914e03c7af3ad4 405B / 405B 0.6s done
+images	UNKNOWN STEP	2026-10-16T19:12:35.9949492Z #8 sha256:70683d58fa5c20b5b31c9998a16f6634720d3393dc62934a608754abe449fe3b 1.21kB / 1.21kB 0.6s done
+images	UNKNOWN STEP	2026-10-16T19:12:35.9950242Z #8 sha256:6638b436592c96dd194db76a6b786b60b344d80ebe160e646c871d4e7eff25b5 1.40kB / 1.40kB 0.7s done
+images	UNKNOWN STEP	2026-10-16T19:12:35.9950914Z #8 sha256:1fdd0614a47ec2896aea36fb280a7b5e8655614dfb56ec1a64002131791de601 0B / 20.53MB 0.7s
+images	UNKNOWN STEP	2026-10-16T19:12:36.0970544Z #8 sha256:1fdd0614a47ec2896aea36fb280a7b5e8655614dfb56ec1a64002131791de601 20.53MB / 20.53MB 0.8s
+images	UNKNOWN STEP	2026-10-16T19:12:36.4672769Z #8 sha256:1fdd0614a47ec2896aea36fb280a7b5e8655614dfb56ec1a64002131791de601 20.53MB / 20.53MB 1.0s done
+images	UNKNOWN STEP	2026-10-16T19:12:36.7403415Z #8 extracting sha256:3bf3671a4e6a18510ca49e3a4a226c2ef734a646e01e34e1ad0eff5faa01e3a0 done
+images	UNKNOWN STEP	2026-10-16T19:12:36.9611310Z #8 extracting sha256:b44956913298a55652fa97af34d296339c089250911e46e1a1c0eab8a88538c7
+images	UNKNOWN STEP	2026-10-16T19:12:37.1369503Z #8 ...
+images	UNKNOWN STEP	2026-10-16T19:12:37.1370825Z 
+images	UNKNOWN STEP	2026-10-16T19:12:37.1371347Z #9 [build 1/6] FROM docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+images	UNKNOWN STEP	2026-10-16T19:12:37.1372048Z #9 resolve docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f done
+images	UNKNOWN STEP	2026-10-16T19:12:37.1372653Z #9 sha256:862c5dc468d45e2429239f43ada1e4e4bba2fa8e215f39c3f2dcc558c65007b1 441B / 441B 0.1s done
+images	UNKNOWN STEP	2026-10-16T19:12:37.1373270Z #9 sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f 3.87kB / 3.87kB done
+images	UNKNOWN STEP	2026-10-16T19:12:37.1373806Z #9 sha256:429bdfbc204b4eabc6438e6d34e4e9d8dd2ca1df8289bcd78cdd3c5db387b7a5 1.72kB / 1.72kB done
+images	UNKNOWN STEP	2026-10-16T19:12:37.1374338Z #9 sha256:b842533ff06352670de854fcbd6939f01dd0f1a0fe4fd40d8e60a943626ee58b 6.68kB / 6.68kB done
+images	UNKNOWN STEP	2026-10-16T19:12:37.1375018Z #9 sha256:c3fb422c2ba38fa35c8cca2a7872ca59ca302e4394e8edc96434c39b282b8608 57.33MB / 57.33MB 0.6s done
+images	UNKNOWN STEP	2026-10-16T19:12:37.1375586Z #9 sha256:2af284e0bab394dd343f480c97a8438422f4a8f3aaae795457c6de5dfa89b3dd 1.26MB / 1.26MB 0.2s done
+images	UNKNOWN STEP	2026-10-16T19:12:37.1376090Z #9 extracting sha256:c3fb422c2ba38fa35c8cca2a7872ca59ca302e4394e8edc96434c39b282b8608 1.1s done
+images	UNKNOWN STEP	2026-10-16T19:12:37.1376603Z #9 extracting sha256:2af284e0bab394dd343f480c97a8438422f4a8f3aaae795457c6de5dfa89b3dd 0.0s done
+images	UNKNOWN STEP	2026-10-16T19:12:37.1376932Z #9 extracting sha256:862c5dc468d45e2429239f43ada1e4e4bba2fa8e215f39c3f2dcc558c65007b1 done
+images	UNKNOWN STEP	2026-10-16T19:12:37.1377168Z #9 DONE 1.8s
+images	UNKNOWN STEP	2026-10-16T19:12:37.1377236Z 
+images	UNKNOWN STEP	2026-10-16T19:12:37.1377521Z #10 [build 2/6] WORKDIR /app
+images	UNKNOWN STEP	2026-10-16T19:12:37.1377654Z #10 DONE 0.0s
+images	UNKNOWN STEP	2026-10-16T19:12:37.1377719Z 
+images	UNKNOWN STEP	2026-10-16T19:12:37.1377811Z #11 [build 3/6] COPY package*.json ./
+images	UNKNOWN STEP	2026-10-16T19:12:37.1378365Z #11 DONE 0.0s
+images	UNKNOWN STEP	2026-10-16T19:12:37.1378461Z 
+images	UNKNOWN STEP	2026-10-16T19:12:37.1378779Z #8 [stage-1 1/4] FROM docker.io/library/nginx:alpine@sha256:892bb2152464f0c5d8972593a5f5afaf8054552580b699d95f8ff4af08c2d33d
+images	UNKNOWN STEP	2026-10-16T19:12:37.1379352Z #8 extracting sha256:b44956913298a55652fa97af34d296339c089250911e46e1a1c0eab8a88538c7 done
+images	UNKNOWN STEP	2026-10-16T19:12:37.1379829Z #8 extracting sha256:710ec83ca6cd71fa5636d861343b5660636728f71992fd1b68914e03c7af3ad4 done
+images	UNKNOWN STEP	2026-10-16T19:12:37.1380138Z #8 extracting sha256:70683d58fa5c20b5b31c9998a16f6634720d3393dc62934a608754abe449fe3b done
+images	UNKNOWN STEP	2026-10-16T19:12:37.1380606Z #8 extracting sha256:6638b436592c96dd194db76a6b786b60b344d80ebe160e646c871d4e7eff25b5 done
+images	UNKNOWN STEP	2026-10-16T19:12:37.1380988Z #8 extracting sha256:1fdd0614a47ec2896aea36fb280a7b5e8655614dfb56ec1a64002131791de601 0.1s
+images	UNKNOWN STEP	2026-10-16T19:12:37.4798232Z #8 extracting sha256:1fdd0614a47ec2896aea36fb280a7b5e8655614dfb56ec1a64002131791de601 0.3s done
+images	UNKNOWN STEP	2026-10-16T19:12:37.6028027Z #8 DONE 2.4s
+images	UNKNOWN STEP	2026-10-16T19:12:37.6028145Z 
+images	UNKNOWN STEP	2026-10-16T19:12:37.6028209Z #12 [build 4/6] RUN npm install
+images	UNKNOWN STEP	2026-10-16T19:12:38.1561997Z #12 ...
+images	UNKNOWN STEP	2026-10-16T19:12:38.1562198Z 
+images	UNKNOWN STEP	2026-10-16T19:12:38.1562332Z #13 [stage-1 2/4] RUN apk upgrade --no-cache
+images	UNKNOWN STEP	2026-10-16T19:12:38.1562637Z #13 0.437 (1/1) Upgrading zlib (1.3.2-r0 -> 1.3.2-r1)
+images	UNKNOWN STEP	2026-10-16T19:12:38.1562935Z #13 0.451 OK: 59.7 MiB in 72 packages
+images	UNKNOWN STEP	2026-10-16T19:12:38.1563156Z #13 DONE 0.6s
+images	UNKNOWN STEP	2026-10-16T19:12:38.3267075Z 
+images	UNKNOWN STEP	2026-10-16T19:12:38.3267277Z #14 [stage-1 3/4] COPY nginx.conf /etc/nginx/nginx.conf
+images	UNKNOWN STEP	2026-10-16T19:12:38.3267523Z #14 DONE 0.0s
+images	UNKNOWN STEP	2026-10-16T19:12:38.3267588Z 
+images	UNKNOWN STEP	2026-10-16T19:12:38.3267645Z #12 [build 4/6] RUN npm install
+images	UNKNOWN STEP	2026-10-16T19:12:43.7783843Z #12 6.737 
+images	UNKNOWN STEP	2026-10-16T19:12:43.7784184Z #12 6.737 added 18 packages, and audited 19 packages in 7s
+images	UNKNOWN STEP	2026-10-16T19:12:43.7784704Z #12 6.737 
+images	UNKNOWN STEP	2026-10-16T19:12:43.9305029Z #12 6.737 8 packages are looking for funding
+images	UNKNOWN STEP	2026-10-16T19:12:43.9305266Z #12 6.737   run `npm fund` for details
+images	UNKNOWN STEP	2026-10-16T19:12:43.9305412Z #12 6.738 
+images	UNKNOWN STEP	2026-10-16T19:12:43.9305527Z #12 6.738 found 0 vulnerabilities
+images	UNKNOWN STEP	2026-10-16T19:12:43.9305668Z #12 6.739 npm notice
+images	UNKNOWN STEP	2026-10-16T19:12:43.9305846Z #12 6.739 npm notice New major version of npm available! 11.19.1 -> 12.2.0
+images	UNKNOWN STEP	2026-10-16T19:12:43.9306124Z #12 6.739 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+images	UNKNOWN STEP	2026-10-16T19:12:43.9306369Z #12 6.739 npm notice To update run: npm install -g npm@12.2.0
+images	UNKNOWN STEP	2026-10-16T19:12:43.9306537Z #12 6.739 npm notice
+images	UNKNOWN STEP	2026-10-16T19:12:44.7041095Z #12 DONE 7.7s
+images	UNKNOWN STEP	2026-10-16T19:12:44.8642240Z 
+images	UNKNOWN STEP	2026-10-16T19:12:44.8642789Z #15 [build 5/6] COPY . .
+images	UNKNOWN STEP	2026-10-16T19:12:44.8643078Z #15 DONE 0.0s
+images	UNKNOWN STEP	2026-10-16T19:12:44.8643187Z 
+images	UNKNOWN STEP	2026-10-16T19:12:44.8643275Z #16 [build 6/6] RUN npm run build
+images	UNKNOWN STEP	2026-10-16T19:12:44.8893204Z #16 0.175 
+images	UNKNOWN STEP	2026-10-16T19:12:44.8893390Z #16 0.175 > campusdesk@1.0.0 build
+images	UNKNOWN STEP	2026-10-16T19:12:44.8893590Z #16 0.175 > vite build
+images	UNKNOWN STEP	2026-10-16T19:12:44.8893723Z #16 0.175 
+images	UNKNOWN STEP	2026-10-16T19:12:45.0559725Z #16 0.342 vite v8.3.4 building client environment for production...
+images	UNKNOWN STEP	2026-10-16T19:12:45.1754834Z #16 0.367 transforming...
+images	UNKNOWN STEP	2026-10-16T19:12:45.1755383Z #16 0.417 ✓ 15 modules transformed.
+images	UNKNOWN STEP	2026-10-16T19:12:45.1755546Z #16 0.437 rendering chunks...
+images	UNKNOWN STEP	2026-10-16T19:12:45.1755697Z #16 0.461 computing gzip size...
+images	UNKNOWN STEP	2026-10-16T19:12:45.4034306Z #16 0.464 dist/index.html                   0.41 kB │ gzip:  0.29 kB
+images	UNKNOWN STEP	2026-10-16T19:12:45.4034789Z #16 0.464 dist/assets/index-3kM2jkTt.css    9.28 kB │ gzip:  2.91 kB
+images	UNKNOWN STEP	2026-10-16T19:12:45.4035051Z #16 0.464 dist/assets/index-BJXE46E2.js   229.96 kB │ gzip: 71.79 kB
+images	UNKNOWN STEP	2026-10-16T19:12:45.4035231Z #16 0.464 
+images	UNKNOWN STEP	2026-10-16T19:12:45.4035368Z #16 0.464 ✓ built in 121ms
+images	UNKNOWN STEP	2026-10-16T19:12:45.4035493Z #16 DONE 0.5s
+images	UNKNOWN STEP	2026-10-16T19:12:45.4035561Z 
+images	UNKNOWN STEP	2026-10-16T19:12:45.4035667Z #17 [stage-1 4/4] COPY --from=build /app/dist /usr/share/nginx/html
+images	UNKNOWN STEP	2026-10-16T19:12:45.4035891Z #17 DONE 0.0s
+images	UNKNOWN STEP	2026-10-16T19:12:45.4035957Z 
+images	UNKNOWN STEP	2026-10-16T19:12:45.4036484Z #18 exporting to image
+images	UNKNOWN STEP	2026-10-16T19:12:45.4036614Z #18 exporting layers
+images	UNKNOWN STEP	2026-10-16T19:12:46.0074936Z #18 exporting layers 0.8s done
+images	UNKNOWN STEP	2026-10-16T19:12:46.0208931Z #18 writing image sha256:1f56c60a0aff6eff4fd5acff58f7e6dd8678daf7f029b3efd58edd33d8b9a749 done
+images	UNKNOWN STEP	2026-10-16T19:12:46.0209561Z #18 naming to ghcr.io/suhassk205/campusdesk-frontend:e3d116880213a019f1af59caabdd48ce8fecf492 done
+images	UNKNOWN STEP	2026-10-16T19:12:46.0209948Z #18 DONE 0.8s
+images	UNKNOWN STEP	2026-10-16T19:12:46.0367333Z ##[group]Run aquasecurity/trivy-action@0.35.0
+images	UNKNOWN STEP	2026-10-16T19:12:46.0367511Z with:
+images	UNKNOWN STEP	2026-10-16T19:12:46.0367726Z   image-ref: ghcr.io/suhassk205/campusdesk-backend:e3d116880213a019f1af59caabdd48ce8fecf492
+images	UNKNOWN STEP	2026-10-16T19:12:46.0367975Z   severity: HIGH,CRITICAL
+images	UNKNOWN STEP	2026-10-16T19:12:46.0368102Z   exit-code: 1
+images	UNKNOWN STEP	2026-10-16T19:12:46.0368212Z   format: table
+images	UNKNOWN STEP	2026-10-16T19:12:46.0368325Z   scan-type: image
+images	UNKNOWN STEP	2026-10-16T19:12:46.0368441Z   scan-ref: .
+images	UNKNOWN STEP	2026-10-16T19:12:46.0368717Z   ignore-unfixed: false
+images	UNKNOWN STEP	2026-10-16T19:12:46.0368840Z   vuln-type: os,library
+images	UNKNOWN STEP	2026-10-16T19:12:46.0369040Z   cache-dir: /home/runner/work/taskboard-capstone/taskboard-capstone/.cache/trivy
+images	UNKNOWN STEP	2026-10-16T19:12:46.0369261Z   list-all-pkgs: false
+images	UNKNOWN STEP	2026-10-16T19:12:46.0369379Z   version: v0.69.3
+images	UNKNOWN STEP	2026-10-16T19:12:46.0369487Z   cache: true
+images	UNKNOWN STEP	2026-10-16T19:12:46.0369599Z   skip-setup-trivy: false
+images	UNKNOWN STEP	2026-10-16T19:12:46.0371051Z   token-setup-trivy: ***
+images	UNKNOWN STEP	2026-10-16T19:12:46.0371179Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:46.0413505Z ##[start-action display=Install Trivy;id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy]
+images	UNKNOWN STEP	2026-10-16T19:12:46.0460617Z ##[group]Run aquasecurity/setup-trivy@e6c2c5e321ed9123bda567646e2f96565e34abe1
+images	UNKNOWN STEP	2026-10-16T19:12:46.0460834Z with:
+images	UNKNOWN STEP	2026-10-16T19:12:46.0460942Z   version: v0.69.3
+images	UNKNOWN STEP	2026-10-16T19:12:46.0461055Z   cache: true
+images	UNKNOWN STEP	2026-10-16T19:12:46.0462492Z   token: ***
+images	UNKNOWN STEP	2026-10-16T19:12:46.0462605Z   path: $HOME/.local/bin
+images	UNKNOWN STEP	2026-10-16T19:12:46.0462747Z   github-server-url: https://github.com
+images	UNKNOWN STEP	2026-10-16T19:12:46.0462915Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:46.0466139Z ##[start-action display=Binary dir;id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.binary-dir]
+images	UNKNOWN STEP	2026-10-16T19:12:46.0477220Z ##[group]Run echo "dir=$HOME/.local/bin/trivy-bin" >> $GITHUB_OUTPUT
+images	UNKNOWN STEP	2026-10-16T19:12:46.0477476Z [36;1mecho "dir=$HOME/.local/bin/trivy-bin" >> $GITHUB_OUTPUT[0m
+images	UNKNOWN STEP	2026-10-16T19:12:46.0529898Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+images	UNKNOWN STEP	2026-10-16T19:12:46.0530084Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:46.0601587Z ##[end-action id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.binary-dir;outcome=success;conclusion=success;duration_ms=13]
+images	UNKNOWN STEP	2026-10-16T19:12:46.0603293Z ##[start-action display=Check the version for caching;id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__run]
+images	UNKNOWN STEP	2026-10-16T19:12:46.0607572Z ##[end-action id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__run;outcome=skipped;conclusion=skipped;duration_ms=0]
+images	UNKNOWN STEP	2026-10-16T19:12:46.0608759Z ##[start-action display=Restore Trivy binary from cache;id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.cache]
+images	UNKNOWN STEP	2026-10-16T19:12:46.0635036Z ##[group]Run actions/cache@0400d5f644dc74513175e3cd8d07132dd4860809
+images	UNKNOWN STEP	2026-10-16T19:12:46.0635224Z with:
+images	UNKNOWN STEP	2026-10-16T19:12:46.0635349Z   path: /home/runner/.local/bin/trivy-bin
+images	UNKNOWN STEP	2026-10-16T19:12:46.0635508Z   key: trivy-binary-v0.69.3-Linux-X64
+images	UNKNOWN STEP	2026-10-16T19:12:46.0635660Z   enableCrossOsArchive: false
+images	UNKNOWN STEP	2026-10-16T19:12:46.0635800Z   fail-on-cache-miss: false
+images	UNKNOWN STEP	2026-10-16T19:12:46.0635930Z   lookup-only: false
+images	UNKNOWN STEP	2026-10-16T19:12:46.0636052Z   save-always: false
+images	UNKNOWN STEP	2026-10-16T19:12:46.0636167Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:46.1312747Z (node:2678) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+images	UNKNOWN STEP	2026-10-16T19:12:46.1313127Z (Use `node --trace-deprecation ...` to show where the warning was created)
+images	UNKNOWN STEP	2026-10-16T19:12:46.2647440Z Cache hit for: trivy-binary-v0.69.3-Linux-X64
+images	UNKNOWN STEP	2026-10-16T19:12:46.2709977Z (node:2678) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+images	UNKNOWN STEP	2026-10-16T19:12:47.4447991Z Received 40070599 of 44264903 (90.5%), 38.2 MBs/sec
+images	UNKNOWN STEP	2026-10-16T19:12:48.4449744Z Received 40070599 of 44264903 (90.5%), 19.1 MBs/sec
+images	UNKNOWN STEP	2026-10-16T19:12:48.7692180Z Received 44264903 of 44264903 (100.0%), 18.2 MBs/sec
+images	UNKNOWN STEP	2026-10-16T19:12:48.7692500Z Cache Size: ~42 MB (44264903 B)
+images	UNKNOWN STEP	2026-10-16T19:12:48.7741006Z [command]/usr/bin/tar -xf /home/runner/work/_temp/8881fa12-dfff-4bdc-88dd-0ec152b258bd/cache.tzst -P -C /home/runner/work/taskboard-capstone/taskboard-capstone --use-compress-program unzstd
+images	UNKNOWN STEP	2026-10-16T19:12:48.9196206Z Cache restored successfully
+images	UNKNOWN STEP	2026-10-16T19:12:48.9262413Z Cache restored from key: trivy-binary-v0.69.3-Linux-X64
+images	UNKNOWN STEP	2026-10-16T19:12:48.9342830Z ##[end-action id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.cache;outcome=success;conclusion=success;duration_ms=2873]
+images	UNKNOWN STEP	2026-10-16T19:12:48.9345123Z ##[start-action display=Checkout install script;id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__actions_checkout]
+images	UNKNOWN STEP	2026-10-16T19:12:48.9348852Z ##[end-action id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__actions_checkout;outcome=skipped;conclusion=skipped;duration_ms=0]
+images	UNKNOWN STEP	2026-10-16T19:12:48.9349951Z ##[start-action display=Install Trivy;id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__run_2]
+images	UNKNOWN STEP	2026-10-16T19:12:48.9352132Z ##[end-action id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__run_2;outcome=skipped;conclusion=skipped;duration_ms=0]
+images	UNKNOWN STEP	2026-10-16T19:12:48.9353184Z ##[start-action display=Add Trivy binary to $GITHUB_PATH;id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__run_3]
+images	UNKNOWN STEP	2026-10-16T19:12:48.9366484Z ##[group]Run echo /home/runner/.local/bin/trivy-bin >> $GITHUB_PATH
+images	UNKNOWN STEP	2026-10-16T19:12:48.9366758Z [36;1mecho /home/runner/.local/bin/trivy-bin >> $GITHUB_PATH[0m
+images	UNKNOWN STEP	2026-10-16T19:12:48.9417205Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+images	UNKNOWN STEP	2026-10-16T19:12:48.9417410Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:48.9484883Z ##[end-action id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__run_3;outcome=success;conclusion=success;duration_ms=13]
+images	UNKNOWN STEP	2026-10-16T19:12:48.9493281Z ##[end-action id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy;outcome=success;conclusion=success;duration_ms=2907]
+images	UNKNOWN STEP	2026-10-16T19:12:48.9494732Z ##[start-action display=Get current date;id=__aquasecurity_trivy-action.date]
+images	UNKNOWN STEP	2026-10-16T19:12:48.9505710Z ##[group]Run echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+images	UNKNOWN STEP	2026-10-16T19:12:48.9505946Z [36;1mecho "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT[0m
+images	UNKNOWN STEP	2026-10-16T19:12:48.9552646Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+images	UNKNOWN STEP	2026-10-16T19:12:48.9552830Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:48.9627569Z ##[end-action id=__aquasecurity_trivy-action.date;outcome=success;conclusion=success;duration_ms=13]
+images	UNKNOWN STEP	2026-10-16T19:12:48.9628826Z ##[start-action display=Restore DB from cache;id=__aquasecurity_trivy-action.__actions_cache]
+images	UNKNOWN STEP	2026-10-16T19:12:48.9696693Z ##[group]Run actions/cache@0400d5f644dc74513175e3cd8d07132dd4860809
+images	UNKNOWN STEP	2026-10-16T19:12:48.9696986Z with:
+images	UNKNOWN STEP	2026-10-16T19:12:48.9697258Z   path: /home/runner/work/taskboard-capstone/taskboard-capstone/.cache/trivy
+images	UNKNOWN STEP	2026-10-16T19:12:48.9697597Z   key: cache-trivy-2026-10-16
+images	UNKNOWN STEP	2026-10-16T19:12:48.9697818Z   restore-keys: cache-trivy-
+images	UNKNOWN STEP	2026-10-16T19:12:48.9698032Z   enableCrossOsArchive: false
+images	UNKNOWN STEP	2026-10-16T19:12:48.9698251Z   fail-on-cache-miss: false
+images	UNKNOWN STEP	2026-10-16T19:12:48.9698454Z   lookup-only: false
+images	UNKNOWN STEP	2026-10-16T19:12:48.9698657Z   save-always: false
+images	UNKNOWN STEP	2026-10-16T19:12:48.9698841Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:49.0326874Z (node:2699) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+images	UNKNOWN STEP	2026-10-16T19:12:49.0327404Z (Use `node --trace-deprecation ...` to show where the warning was created)
+images	UNKNOWN STEP	2026-10-16T19:12:49.1701317Z Cache hit for: cache-trivy-2026-10-16
+images	UNKNOWN STEP	2026-10-16T19:12:49.1768142Z (node:2699) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+images	UNKNOWN STEP	2026-10-16T19:12:50.0866778Z Received 94891431 of 94891431 (100.0%), 115.9 MBs/sec
+images	UNKNOWN STEP	2026-10-16T19:12:50.0868458Z Cache Size: ~90 MB (94891431 B)
+images	UNKNOWN STEP	2026-10-16T19:12:50.0947085Z [command]/usr/bin/tar -xf /home/runner/work/_temp/144c6f86-300a-4d77-b45c-a4ae81caaef2/cache.tzst -P -C /home/runner/work/taskboard-capstone/taskboard-capstone --use-compress-program unzstd
+images	UNKNOWN STEP	2026-10-16T19:12:51.4213798Z Cache restored successfully
+images	UNKNOWN STEP	2026-10-16T19:12:51.5453531Z Cache restored from key: cache-trivy-2026-10-16
+images	UNKNOWN STEP	2026-10-16T19:12:51.5537193Z ##[end-action id=__aquasecurity_trivy-action.__actions_cache;outcome=success;conclusion=success;duration_ms=2590]
+images	UNKNOWN STEP	2026-10-16T19:12:51.5543388Z ##[start-action display=Set GitHub Path;id=__aquasecurity_trivy-action.__run]
+images	UNKNOWN STEP	2026-10-16T19:12:51.6482388Z ##[group]Run echo "$GITHUB_ACTION_PATH" >> $GITHUB_PATH
+images	UNKNOWN STEP	2026-10-16T19:12:51.6482899Z [36;1mecho "$GITHUB_ACTION_PATH" >> $GITHUB_PATH[0m
+images	UNKNOWN STEP	2026-10-16T19:12:51.6539610Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+images	UNKNOWN STEP	2026-10-16T19:12:51.6539795Z env:
+images	UNKNOWN STEP	2026-10-16T19:12:51.6539982Z   GITHUB_ACTION_PATH: /home/runner/work/_actions/aquasecurity/trivy-action/0.35.0
+images	UNKNOWN STEP	2026-10-16T19:12:51.6540199Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:51.7501946Z ##[end-action id=__aquasecurity_trivy-action.__run;outcome=success;conclusion=success;duration_ms=195]
+images	UNKNOWN STEP	2026-10-16T19:12:51.7503711Z ##[start-action display=Clear Trivy Envs file;id=__aquasecurity_trivy-action.__run_2]
+images	UNKNOWN STEP	2026-10-16T19:12:51.8770440Z ##[group]Run rm -f trivy_envs.txt
+images	UNKNOWN STEP	2026-10-16T19:12:51.8770776Z [36;1mrm -f trivy_envs.txt[0m
+images	UNKNOWN STEP	2026-10-16T19:12:51.8770985Z [36;1mtouch trivy_envs.txt[0m
+images	UNKNOWN STEP	2026-10-16T19:12:51.8827092Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+images	UNKNOWN STEP	2026-10-16T19:12:51.8827283Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:52.0004610Z ##[end-action id=__aquasecurity_trivy-action.__run_2;outcome=success;conclusion=success;duration_ms=250]
+images	UNKNOWN STEP	2026-10-16T19:12:52.0008476Z ##[start-action display=Set Trivy environment variables;id=__aquasecurity_trivy-action.__run_3]
+images	UNKNOWN STEP	2026-10-16T19:12:52.1164335Z ##[group]Run # Note: There is currently no way to distinguish between undefined variables and empty strings in GitHub Actions.
+images	UNKNOWN STEP	2026-10-16T19:12:52.1164973Z [36;1m# Note: There is currently no way to distinguish between undefined variables and empty strings in GitHub Actions.[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1165328Z [36;1m# This limitation affects how we handle default values and empty inputs.[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1165619Z [36;1m# For more information, see: https://github.com/actions/runner/issues/924[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1165829Z [36;1m[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1166026Z [36;1m# The following logic implements the configuration priority described in the README:[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1166250Z [36;1m#[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1166357Z [36;1m# Inputs[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1166482Z [36;1m# Environment Variables[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1166623Z [36;1m# Config File[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1166752Z [36;1m# Defaults[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1166867Z [36;1m#[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1167084Z [36;1m# As noted above defaults are awkward to handle as GitHub Actions will inject those values as the input[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1167433Z [36;1m# if the caller doesn't provide them, thus if the input matches the default we don't set it as we[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1167780Z [36;1m# can't tell the difference.  Plus if we did set it when it was the default value then it could potentially[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1168161Z [36;1m# override an external environment variable, or something in the callers configuration file, which then wouldn't[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1168472Z [36;1m# match the configuration priority that is documented.[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1168664Z [36;1mset_env_var_if_provided() {[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1168814Z [36;1m  local var_name="$1"[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1168954Z [36;1m  local input_value="$2"[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1169101Z [36;1m  local default_value="$3"[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1169241Z [36;1m[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1169408Z [36;1m  if [ -n "$input_value" ] && [ "$input_value" != "$default_value" ]; then[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1169665Z [36;1m    # If action was provided with explicit input by the caller set that[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1169944Z [36;1m    # Use printf %q to safely escape special characters and prevent command injection[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1170386Z [36;1m    printf 'export %s=%q\n' "$var_name" "$input_value" >> trivy_envs.txt[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1170584Z [36;1m  fi[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1170694Z [36;1m}[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1170801Z [36;1m[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1170960Z [36;1m# Set environment variables, handling those with default values[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1171274Z [36;1m# cf. https://aquasecurity.github.io/trivy/latest/docs/configuration/#environment-variables[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1171564Z [36;1mset_env_var_if_provided "TRIVY_INPUT" "$INPUT_INPUT" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1171792Z [36;1mset_env_var_if_provided "TRIVY_EXIT_CODE" "$INPUT_EXIT_CODE" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1172165Z [36;1mset_env_var_if_provided "TRIVY_IGNORE_UNFIXED" "$INPUT_IGNORE_UNFIXED" "false"[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1172446Z [36;1mset_env_var_if_provided "TRIVY_PKG_TYPES" "$INPUT_VULN_TYPE" "os,library"[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1172760Z [36;1mset_env_var_if_provided "TRIVY_SEVERITY" "$INPUT_SEVERITY" "UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL"[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1173055Z [36;1mset_env_var_if_provided "TRIVY_FORMAT" "$INPUT_FORMAT" "table"[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1173293Z [36;1mset_env_var_if_provided "TRIVY_TEMPLATE" "$INPUT_TEMPLATE" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1173520Z [36;1mset_env_var_if_provided "TRIVY_OUTPUT" "$INPUT_OUTPUT" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1173747Z [36;1mset_env_var_if_provided "TRIVY_SKIP_DIRS" "$INPUT_SKIP_DIRS" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1173988Z [36;1mset_env_var_if_provided "TRIVY_SKIP_FILES" "$INPUT_SKIP_FILES" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1174225Z [36;1mset_env_var_if_provided "TRIVY_TIMEOUT" "$INPUT_TIMEOUT" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1174558Z [36;1mset_env_var_if_provided "TRIVY_IGNORE_POLICY" "$INPUT_IGNORE_POLICY" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1174807Z [36;1mset_env_var_if_provided "TRIVY_QUIET" "$INPUT_HIDE_PROGRESS" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1175066Z [36;1mset_env_var_if_provided "TRIVY_LIST_ALL_PKGS" "$INPUT_LIST_ALL_PKGS" "false"[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1175322Z [36;1mset_env_var_if_provided "TRIVY_SCANNERS" "$INPUT_SCANNERS" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1175559Z [36;1mset_env_var_if_provided "TRIVY_CONFIG" "$INPUT_TRIVY_CONFIG" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1175795Z [36;1mset_env_var_if_provided "TRIVY_TF_VARS" "$INPUT_TF_VARS" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1176033Z [36;1mset_env_var_if_provided "TRIVY_DOCKER_HOST" "$INPUT_DOCKER_HOST" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.1222195Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+images	UNKNOWN STEP	2026-10-16T19:12:52.1222382Z env:
+images	UNKNOWN STEP	2026-10-16T19:12:52.1222497Z   INPUT_INPUT: 
+images	UNKNOWN STEP	2026-10-16T19:12:52.1222615Z   INPUT_EXIT_CODE: 1
+images	UNKNOWN STEP	2026-10-16T19:12:52.1222749Z   INPUT_IGNORE_UNFIXED: false
+images	UNKNOWN STEP	2026-10-16T19:12:52.1222897Z   INPUT_VULN_TYPE: os,library
+images	UNKNOWN STEP	2026-10-16T19:12:52.1223041Z   INPUT_SEVERITY: HIGH,CRITICAL
+images	UNKNOWN STEP	2026-10-16T19:12:52.1223181Z   INPUT_FORMAT: table
+images	UNKNOWN STEP	2026-10-16T19:12:52.1223306Z   INPUT_TEMPLATE: 
+images	UNKNOWN STEP	2026-10-16T19:12:52.1223424Z   INPUT_OUTPUT: 
+images	UNKNOWN STEP	2026-10-16T19:12:52.1223542Z   INPUT_SKIP_DIRS: 
+images	UNKNOWN STEP	2026-10-16T19:12:52.1223681Z   INPUT_SKIP_FILES: 
+images	UNKNOWN STEP	2026-10-16T19:12:52.1223803Z   INPUT_TIMEOUT: 
+images	UNKNOWN STEP	2026-10-16T19:12:52.1223922Z   INPUT_IGNORE_POLICY: 
+images	UNKNOWN STEP	2026-10-16T19:12:52.1224052Z   INPUT_HIDE_PROGRESS: 
+images	UNKNOWN STEP	2026-10-16T19:12:52.1224183Z   INPUT_LIST_ALL_PKGS: false
+images	UNKNOWN STEP	2026-10-16T19:12:52.1224500Z   INPUT_SCANNERS: 
+images	UNKNOWN STEP	2026-10-16T19:12:52.1224687Z   INPUT_TRIVY_CONFIG: 
+images	UNKNOWN STEP	2026-10-16T19:12:52.1224810Z   INPUT_TF_VARS: 
+images	UNKNOWN STEP	2026-10-16T19:12:52.1224924Z   INPUT_DOCKER_HOST: 
+images	UNKNOWN STEP	2026-10-16T19:12:52.1225047Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:52.2451315Z ##[end-action id=__aquasecurity_trivy-action.__run_3;outcome=success;conclusion=success;duration_ms=244]
+images	UNKNOWN STEP	2026-10-16T19:12:52.2453652Z ##[start-action display=Run Trivy;id=__aquasecurity_trivy-action.__run_4]
+images	UNKNOWN STEP	2026-10-16T19:12:52.3552690Z ##[group]Run entrypoint.sh
+images	UNKNOWN STEP	2026-10-16T19:12:52.3552849Z [36;1mentrypoint.sh[0m
+images	UNKNOWN STEP	2026-10-16T19:12:52.3596877Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+images	UNKNOWN STEP	2026-10-16T19:12:52.3597061Z env:
+images	UNKNOWN STEP	2026-10-16T19:12:52.3597178Z   INPUT_SCAN_TYPE: image
+images	UNKNOWN STEP	2026-10-16T19:12:52.3597418Z   INPUT_IMAGE_REF: ghcr.io/suhassk205/campusdesk-backend:e3d116880213a019f1af59caabdd48ce8fecf492
+images	UNKNOWN STEP	2026-10-16T19:12:52.3597662Z   INPUT_SCAN_REF: .
+images	UNKNOWN STEP	2026-10-16T19:12:52.3597916Z   INPUT_TRIVYIGNORES: 
+images	UNKNOWN STEP	2026-10-16T19:12:52.3598041Z   INPUT_GITHUB_PAT: 
+images	UNKNOWN STEP	2026-10-16T19:12:52.3598172Z   INPUT_LIMIT_SEVERITIES_FOR_SARIF: 
+images	UNKNOWN STEP	2026-10-16T19:12:52.3598402Z   TRIVY_CACHE_DIR: /home/runner/work/taskboard-capstone/taskboard-capstone/.cache/trivy
+images	UNKNOWN STEP	2026-10-16T19:12:52.3598628Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:12:52.4780179Z Running Trivy with options: trivy image ghcr.io/suhassk205/campusdesk-backend:e3d116880213a019f1af59caabdd48ce8fecf492
+images	UNKNOWN STEP	2026-10-16T19:12:52.5113011Z 2026-10-16T19:12:52Z	INFO	[vuln] Vulnerability scanning is enabled
+images	UNKNOWN STEP	2026-10-16T19:12:52.5113649Z 2026-10-16T19:12:52Z	INFO	[secret] Secret scanning is enabled
+images	UNKNOWN STEP	2026-10-16T19:12:52.5114191Z 2026-10-16T19:12:52Z	INFO	[secret] If your scanning is slow, please try '--scanners vuln' to disable secret scanning
+images	UNKNOWN STEP	2026-10-16T19:12:52.5114878Z 2026-10-16T19:12:52Z	INFO	[secret] Please see https://trivy.dev/docs/v0.69/guide/scanner/secret#recommendation for faster secret detection
+images	UNKNOWN STEP	2026-10-16T19:13:01.0769416Z 2026-10-16T19:13:01Z	INFO	[python] Licenses acquired from one or more METADATA files may be subject to additional terms. Use `--debug` flag to see all affected packages.
+images	UNKNOWN STEP	2026-10-16T19:13:01.0817226Z 2026-10-16T19:13:01Z	INFO	Detected OS	family="alpine" version="3.24.2"
+images	UNKNOWN STEP	2026-10-16T19:13:01.0817520Z 2026-10-16T19:13:01Z	WARN	This OS version is not on the EOL list	family="alpine" version="3.24"
+images	UNKNOWN STEP	2026-10-16T19:13:01.0817877Z 2026-10-16T19:13:01Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.24" repository="3.24" pkg_num=38
+images	UNKNOWN STEP	2026-10-16T19:13:01.0847215Z 2026-10-16T19:13:01Z	INFO	Number of language-specific files	num=1
+images	UNKNOWN STEP	2026-10-16T19:13:01.0847603Z 2026-10-16T19:13:01Z	INFO	[python-pkg] Detecting vulnerabilities...
+images	UNKNOWN STEP	2026-10-16T19:13:01.1014528Z 
+images	UNKNOWN STEP	2026-10-16T19:13:01.1014936Z 📣 [34mNotices:[0m
+images	UNKNOWN STEP	2026-10-16T19:13:01.1015229Z   - Version 0.76.0 of Trivy is now available, current version is 0.69.3
+images	UNKNOWN STEP	2026-10-16T19:13:01.1015476Z 
+images	UNKNOWN STEP	2026-10-16T19:13:01.1015658Z To suppress version checks, run Trivy scans with the --skip-version-check flag
+images	UNKNOWN STEP	2026-10-16T19:13:01.1015958Z 
+images	UNKNOWN STEP	2026-10-16T19:13:01.1015970Z 
+images	UNKNOWN STEP	2026-10-16T19:13:01.1016139Z Report Summary
+images	UNKNOWN STEP	2026-10-16T19:13:01.1016247Z 
+images	UNKNOWN STEP	2026-10-16T19:13:01.1016619Z ┌──────────────────────────────────────────────────────────────────────────────────┬────────────┬─────────────────┬─────────┐
+images	UNKNOWN STEP	2026-10-16T19:13:01.1017151Z │                                      Target                                      │    Type    │ Vulnerabilities │ Secrets │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1017723Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:01.1018520Z │ ghcr.io/suhassk205/campusdesk-backend:e3d116880213a019f1af59caabdd48ce8fecf492   │   alpine   │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1019163Z │ (alpine 3.24.2)                                                                  │            │                 │         │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1019752Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:01.1020405Z │ usr/local/lib/python3.12/site-packages/alembic-1.20.0.dist-info/METADATA         │ python-pkg │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1021092Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:01.1021731Z │ usr/local/lib/python3.12/site-packages/annotated_doc-0.0.5.dist-info/METADATA    │ python-pkg │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1022689Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:01.1023327Z │ usr/local/lib/python3.12/site-packages/annotated_types-0.8.0.dist-info/METADATA  │ python-pkg │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1024067Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:01.1025011Z │ usr/local/lib/python3.12/site-packages/anyio-4.15.1.dist-info/METADATA           │ python-pkg │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1025694Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:01.1026319Z │ usr/local/lib/python3.12/site-packages/click-8.5.0.dist-info/METADATA            │ python-pkg │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1026997Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:01.1027648Z │ usr/local/lib/python3.12/site-packages/fastapi-0.143.3.dist-info/METADATA        │ python-pkg │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1028333Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:01.1028954Z │ usr/local/lib/python3.12/site-packages/h11-0.16.0.dist-info/METADATA             │ python-pkg │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1029685Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:01.1030338Z │ usr/local/lib/python3.12/site-packages/idna-3.20.dist-info/METADATA              │ python-pkg │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1031025Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:01.1031655Z │ usr/local/lib/python3.12/site-packages/mako-1.4.3.dist-info/METADATA             │ python-pkg │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1032467Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:01.1033107Z │ usr/local/lib/python3.12/site-packages/markupsafe-3.0.4.dist-info/METADATA       │ python-pkg │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1033882Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:01.1034617Z │ usr/local/lib/python3.12/site-packages/opentelemetry_api-1.45.1.dist-info/METAD- │ python-pkg │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1035201Z │ ATA                                                                              │            │                 │         │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1035779Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:01.1036419Z │ usr/local/lib/python3.12/site-packages/pip-25.0.1.dist-info/METADATA             │ python-pkg │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1037090Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:01.1037729Z │ usr/local/lib/python3.12/site-packages/prometheus_client-0.26.0.dist-info/METAD- │ python-pkg │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1038325Z │ ATA                                                                              │            │                 │         │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1038880Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:01.1039530Z │ usr/local/lib/python3.12/site-packages/prometheus_fastapi_instrumentator-8.1.0.- │ python-pkg │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1040150Z │ dist-info/METADATA                                                               │            │                 │         │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1040750Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:01.1041381Z │ usr/local/lib/python3.12/site-packages/psycopg-3.3.6.dist-info/METADATA          │ python-pkg │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1042180Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:01.1042874Z │ usr/local/lib/python3.12/site-packages/psycopg_binary-3.3.6.dist-info/METADATA   │ python-pkg │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1043590Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:01.1044221Z │ usr/local/lib/python3.12/site-packages/pydantic-2.14.1.dist-info/METADATA        │ python-pkg │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1045105Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:01.1045741Z │ usr/local/lib/python3.12/site-packages/pydantic_core-2.50.1.dist-info/METADATA   │ python-pkg │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1046427Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:01.1047075Z │ usr/local/lib/python3.12/site-packages/sqlalchemy-2.1.4.dist-info/METADATA       │ python-pkg │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1047768Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:01.1048397Z │ usr/local/lib/python3.12/site-packages/starlette-1.8.0.dist-info/METADATA        │ python-pkg │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1049070Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:01.1049707Z │ usr/local/lib/python3.12/site-packages/typing_extensions-4.16.0.dist-info/METAD- │ python-pkg │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1050273Z │ ATA                                                                              │            │                 │         │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1050816Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:01.1051577Z │ usr/local/lib/python3.12/site-packages/typing_inspection-0.4.4.dist-info/METADA- │ python-pkg │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1052145Z │ TA                                                                               │            │                 │         │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1052686Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:01.1053310Z │ usr/local/lib/python3.12/site-packages/uvicorn-0.54.0.dist-info/METADATA         │ python-pkg │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:01.1054134Z └──────────────────────────────────────────────────────────────────────────────────┴────────────┴─────────────────┴─────────┘
+images	UNKNOWN STEP	2026-10-16T19:13:01.1054578Z Legend:
+images	UNKNOWN STEP	2026-10-16T19:13:01.1054744Z - '-': Not scanned
+images	UNKNOWN STEP	2026-10-16T19:13:01.1054951Z - '0': Clean (no security findings detected)
+images	UNKNOWN STEP	2026-10-16T19:13:01.1055120Z 
+images	UNKNOWN STEP	2026-10-16T19:13:01.1070185Z ##[end-action id=__aquasecurity_trivy-action.__run_4;outcome=success;conclusion=success;duration_ms=8861]
+images	UNKNOWN STEP	2026-10-16T19:13:01.1071961Z ##[start-action display=Remove Trivy Envs file;id=__aquasecurity_trivy-action.__run_5]
+images	UNKNOWN STEP	2026-10-16T19:13:01.1089253Z ##[group]Run rm -f trivy_envs.txt
+images	UNKNOWN STEP	2026-10-16T19:13:01.1089433Z [36;1mrm -f trivy_envs.txt[0m
+images	UNKNOWN STEP	2026-10-16T19:13:01.1139414Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+images	UNKNOWN STEP	2026-10-16T19:13:01.1139604Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:13:01.1214966Z ##[end-action id=__aquasecurity_trivy-action.__run_5;outcome=success;conclusion=success;duration_ms=14]
+images	UNKNOWN STEP	2026-10-16T19:13:01.1318932Z ##[group]Run aquasecurity/trivy-action@0.35.0
+images	UNKNOWN STEP	2026-10-16T19:13:01.1319096Z with:
+images	UNKNOWN STEP	2026-10-16T19:13:01.1319305Z   image-ref: ghcr.io/suhassk205/campusdesk-frontend:e3d116880213a019f1af59caabdd48ce8fecf492
+images	UNKNOWN STEP	2026-10-16T19:13:01.1319550Z   severity: HIGH,CRITICAL
+images	UNKNOWN STEP	2026-10-16T19:13:01.1319683Z   exit-code: 1
+images	UNKNOWN STEP	2026-10-16T19:13:01.1319793Z   format: table
+images	UNKNOWN STEP	2026-10-16T19:13:01.1319910Z   scan-type: image
+images	UNKNOWN STEP	2026-10-16T19:13:01.1320027Z   scan-ref: .
+images	UNKNOWN STEP	2026-10-16T19:13:01.1320143Z   ignore-unfixed: false
+images	UNKNOWN STEP	2026-10-16T19:13:01.1320273Z   vuln-type: os,library
+images	UNKNOWN STEP	2026-10-16T19:13:01.1320473Z   cache-dir: /home/runner/work/taskboard-capstone/taskboard-capstone/.cache/trivy
+images	UNKNOWN STEP	2026-10-16T19:13:01.1320692Z   list-all-pkgs: false
+images	UNKNOWN STEP	2026-10-16T19:13:01.1320818Z   version: v0.69.3
+images	UNKNOWN STEP	2026-10-16T19:13:01.1320931Z   cache: true
+images	UNKNOWN STEP	2026-10-16T19:13:01.1321048Z   skip-setup-trivy: false
+images	UNKNOWN STEP	2026-10-16T19:13:01.1322430Z   token-setup-trivy: ***
+images	UNKNOWN STEP	2026-10-16T19:13:01.1322571Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:13:01.1326489Z ##[start-action display=Install Trivy;id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy]
+images	UNKNOWN STEP	2026-10-16T19:13:01.1363668Z ##[group]Run aquasecurity/setup-trivy@e6c2c5e321ed9123bda567646e2f96565e34abe1
+images	UNKNOWN STEP	2026-10-16T19:13:01.1363882Z with:
+images	UNKNOWN STEP	2026-10-16T19:13:01.1363991Z   version: v0.69.3
+images	UNKNOWN STEP	2026-10-16T19:13:01.1364107Z   cache: true
+images	UNKNOWN STEP	2026-10-16T19:13:01.1365605Z   token: ***
+images	UNKNOWN STEP	2026-10-16T19:13:01.1365722Z   path: $HOME/.local/bin
+images	UNKNOWN STEP	2026-10-16T19:13:01.1365863Z   github-server-url: https://github.com
+images	UNKNOWN STEP	2026-10-16T19:13:01.1366014Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:13:01.1368895Z ##[start-action display=Binary dir;id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.binary-dir]
+images	UNKNOWN STEP	2026-10-16T19:13:01.1379391Z ##[group]Run echo "dir=$HOME/.local/bin/trivy-bin" >> $GITHUB_OUTPUT
+images	UNKNOWN STEP	2026-10-16T19:13:01.1379637Z [36;1mecho "dir=$HOME/.local/bin/trivy-bin" >> $GITHUB_OUTPUT[0m
+images	UNKNOWN STEP	2026-10-16T19:13:01.1424309Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+images	UNKNOWN STEP	2026-10-16T19:13:01.1424622Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:13:01.1486118Z ##[end-action id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.binary-dir;outcome=success;conclusion=success;duration_ms=11]
+images	UNKNOWN STEP	2026-10-16T19:13:01.1487377Z ##[start-action display=Check the version for caching;id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.__run]
+images	UNKNOWN STEP	2026-10-16T19:13:01.1489914Z ##[end-action id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.__run;outcome=skipped;conclusion=skipped;duration_ms=0]
+images	UNKNOWN STEP	2026-10-16T19:13:01.1490916Z ##[start-action display=Restore Trivy binary from cache;id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.cache]
+images	UNKNOWN STEP	2026-10-16T19:13:01.1512589Z ##[group]Run actions/cache@0400d5f644dc74513175e3cd8d07132dd4860809
+images	UNKNOWN STEP	2026-10-16T19:13:01.1512777Z with:
+images	UNKNOWN STEP	2026-10-16T19:13:01.1512900Z   path: /home/runner/.local/bin/trivy-bin
+images	UNKNOWN STEP	2026-10-16T19:13:01.1513064Z   key: trivy-binary-v0.69.3-Linux-X64
+images	UNKNOWN STEP	2026-10-16T19:13:01.1513220Z   enableCrossOsArchive: false
+images	UNKNOWN STEP	2026-10-16T19:13:01.1513363Z   fail-on-cache-miss: false
+images	UNKNOWN STEP	2026-10-16T19:13:01.1513620Z   lookup-only: false
+images	UNKNOWN STEP	2026-10-16T19:13:01.1513744Z   save-always: false
+images	UNKNOWN STEP	2026-10-16T19:13:01.1513866Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:13:01.2146873Z (node:2737) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+images	UNKNOWN STEP	2026-10-16T19:13:01.2147261Z (Use `node --trace-deprecation ...` to show where the warning was created)
+images	UNKNOWN STEP	2026-10-16T19:13:01.3422429Z Cache hit for: trivy-binary-v0.69.3-Linux-X64
+images	UNKNOWN STEP	2026-10-16T19:13:01.3511652Z (node:2737) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+images	UNKNOWN STEP	2026-10-16T19:13:02.1380380Z Received 44264903 of 44264903 (100.0%), 68.8 MBs/sec
+images	UNKNOWN STEP	2026-10-16T19:13:02.1380725Z Cache Size: ~42 MB (44264903 B)
+images	UNKNOWN STEP	2026-10-16T19:13:02.1398327Z [command]/usr/bin/tar -xf /home/runner/work/_temp/ad5a7752-7286-46ec-8c5c-b6fe45e0eae4/cache.tzst -P -C /home/runner/work/taskboard-capstone/taskboard-capstone --use-compress-program unzstd
+images	UNKNOWN STEP	2026-10-16T19:13:02.3030775Z Cache restored successfully
+images	UNKNOWN STEP	2026-10-16T19:13:02.3097338Z Cache restored from key: trivy-binary-v0.69.3-Linux-X64
+images	UNKNOWN STEP	2026-10-16T19:13:02.3166334Z ##[end-action id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.cache;outcome=success;conclusion=success;duration_ms=1167]
+images	UNKNOWN STEP	2026-10-16T19:13:02.3168141Z ##[start-action display=Checkout install script;id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.__actions_checkout]
+images	UNKNOWN STEP	2026-10-16T19:13:02.3171817Z ##[end-action id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.__actions_checkout;outcome=skipped;conclusion=skipped;duration_ms=0]
+images	UNKNOWN STEP	2026-10-16T19:13:02.3172930Z ##[start-action display=Install Trivy;id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.__run_2]
+images	UNKNOWN STEP	2026-10-16T19:13:02.3175426Z ##[end-action id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.__run_2;outcome=skipped;conclusion=skipped;duration_ms=0]
+images	UNKNOWN STEP	2026-10-16T19:13:02.3176526Z ##[start-action display=Add Trivy binary to $GITHUB_PATH;id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.__run_3]
+images	UNKNOWN STEP	2026-10-16T19:13:02.3189272Z ##[group]Run echo /home/runner/.local/bin/trivy-bin >> $GITHUB_PATH
+images	UNKNOWN STEP	2026-10-16T19:13:02.3189525Z [36;1mecho /home/runner/.local/bin/trivy-bin >> $GITHUB_PATH[0m
+images	UNKNOWN STEP	2026-10-16T19:13:02.3241197Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+images	UNKNOWN STEP	2026-10-16T19:13:02.3241391Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:13:02.3306876Z ##[end-action id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.__run_3;outcome=success;conclusion=success;duration_ms=12]
+images	UNKNOWN STEP	2026-10-16T19:13:02.3309503Z ##[end-action id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy;outcome=success;conclusion=success;duration_ms=1198]
+images	UNKNOWN STEP	2026-10-16T19:13:02.3310650Z ##[start-action display=Get current date;id=__aquasecurity_trivy-action_2.date]
+images	UNKNOWN STEP	2026-10-16T19:13:02.3331470Z ##[group]Run echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+images	UNKNOWN STEP	2026-10-16T19:13:02.3331700Z [36;1mecho "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT[0m
+images	UNKNOWN STEP	2026-10-16T19:13:02.3373470Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+images	UNKNOWN STEP	2026-10-16T19:13:02.3373659Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:13:02.3444533Z ##[end-action id=__aquasecurity_trivy-action_2.date;outcome=success;conclusion=success;duration_ms=13]
+images	UNKNOWN STEP	2026-10-16T19:13:02.3445713Z ##[start-action display=Restore DB from cache;id=__aquasecurity_trivy-action_2.__actions_cache]
+images	UNKNOWN STEP	2026-10-16T19:13:02.3468279Z ##[group]Run actions/cache@0400d5f644dc74513175e3cd8d07132dd4860809
+images	UNKNOWN STEP	2026-10-16T19:13:02.3468474Z with:
+images	UNKNOWN STEP	2026-10-16T19:13:02.3468652Z   path: /home/runner/work/taskboard-capstone/taskboard-capstone/.cache/trivy
+images	UNKNOWN STEP	2026-10-16T19:13:02.3468869Z   key: cache-trivy-2026-10-16
+images	UNKNOWN STEP	2026-10-16T19:13:02.3469016Z   restore-keys: cache-trivy-
+images	UNKNOWN STEP	2026-10-16T19:13:02.3469160Z   enableCrossOsArchive: false
+images	UNKNOWN STEP	2026-10-16T19:13:02.3469304Z   fail-on-cache-miss: false
+images	UNKNOWN STEP	2026-10-16T19:13:02.3469441Z   lookup-only: false
+images	UNKNOWN STEP	2026-10-16T19:13:02.3469564Z   save-always: false
+images	UNKNOWN STEP	2026-10-16T19:13:02.3469826Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:13:02.4125561Z (node:2757) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+images	UNKNOWN STEP	2026-10-16T19:13:02.4126164Z (Use `node --trace-deprecation ...` to show where the warning was created)
+images	UNKNOWN STEP	2026-10-16T19:13:02.5515629Z Cache hit for: cache-trivy-2026-10-16
+images	UNKNOWN STEP	2026-10-16T19:13:02.5579752Z (node:2757) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+images	UNKNOWN STEP	2026-10-16T19:13:03.5635198Z Received 94891431 of 94891431 (100.0%), 103.8 MBs/sec
+images	UNKNOWN STEP	2026-10-16T19:13:03.5636135Z Cache Size: ~90 MB (94891431 B)
+images	UNKNOWN STEP	2026-10-16T19:13:03.5662208Z [command]/usr/bin/tar -xf /home/runner/work/_temp/7c04fbf3-08ac-46e1-8d6c-b2647f023a67/cache.tzst -P -C /home/runner/work/taskboard-capstone/taskboard-capstone --use-compress-program unzstd
+images	UNKNOWN STEP	2026-10-16T19:13:05.0790923Z Cache restored successfully
+images	UNKNOWN STEP	2026-10-16T19:13:05.3679344Z Cache restored from key: cache-trivy-2026-10-16
+images	UNKNOWN STEP	2026-10-16T19:13:05.3760390Z ##[end-action id=__aquasecurity_trivy-action_2.__actions_cache;outcome=success;conclusion=success;duration_ms=3031]
+images	UNKNOWN STEP	2026-10-16T19:13:05.3763119Z ##[start-action display=Set GitHub Path;id=__aquasecurity_trivy-action_2.__run]
+images	UNKNOWN STEP	2026-10-16T19:13:05.3835870Z ##[group]Run echo "$GITHUB_ACTION_PATH" >> $GITHUB_PATH
+images	UNKNOWN STEP	2026-10-16T19:13:05.3836217Z [36;1mecho "$GITHUB_ACTION_PATH" >> $GITHUB_PATH[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.3888520Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+images	UNKNOWN STEP	2026-10-16T19:13:05.3888719Z env:
+images	UNKNOWN STEP	2026-10-16T19:13:05.3888915Z   GITHUB_ACTION_PATH: /home/runner/work/_actions/aquasecurity/trivy-action/0.35.0
+images	UNKNOWN STEP	2026-10-16T19:13:05.3889145Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:13:05.5048509Z ##[end-action id=__aquasecurity_trivy-action_2.__run;outcome=success;conclusion=success;duration_ms=128]
+images	UNKNOWN STEP	2026-10-16T19:13:05.5050207Z ##[start-action display=Clear Trivy Envs file;id=__aquasecurity_trivy-action_2.__run_2]
+images	UNKNOWN STEP	2026-10-16T19:13:05.6311199Z ##[group]Run rm -f trivy_envs.txt
+images	UNKNOWN STEP	2026-10-16T19:13:05.6311470Z [36;1mrm -f trivy_envs.txt[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.6311691Z [36;1mtouch trivy_envs.txt[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.6358149Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+images	UNKNOWN STEP	2026-10-16T19:13:05.6358339Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:13:05.7542030Z ##[end-action id=__aquasecurity_trivy-action_2.__run_2;outcome=success;conclusion=success;duration_ms=249]
+images	UNKNOWN STEP	2026-10-16T19:13:05.7545421Z ##[start-action display=Set Trivy environment variables;id=__aquasecurity_trivy-action_2.__run_3]
+images	UNKNOWN STEP	2026-10-16T19:13:05.8404529Z ##[group]Run # Note: There is currently no way to distinguish between undefined variables and empty strings in GitHub Actions.
+images	UNKNOWN STEP	2026-10-16T19:13:05.8405222Z [36;1m# Note: There is currently no way to distinguish between undefined variables and empty strings in GitHub Actions.[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8405759Z [36;1m# This limitation affects how we handle default values and empty inputs.[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8406224Z [36;1m# For more information, see: https://github.com/actions/runner/issues/924[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8406553Z [36;1m[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8406857Z [36;1m# The following logic implements the configuration priority described in the README:[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8407215Z [36;1m#[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8407389Z [36;1m# Inputs[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8407582Z [36;1m# Environment Variables[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8407809Z [36;1m# Config File[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8408003Z [36;1m# Defaults[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8408185Z [36;1m#[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8408532Z [36;1m# As noted above defaults are awkward to handle as GitHub Actions will inject those values as the input[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8409089Z [36;1m# if the caller doesn't provide them, thus if the input matches the default we don't set it as we[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8409640Z [36;1m# can't tell the difference.  Plus if we did set it when it was the default value then it could potentially[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8410244Z [36;1m# override an external environment variable, or something in the callers configuration file, which then wouldn't[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8410911Z [36;1m# match the configuration priority that is documented.[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8411212Z [36;1mset_env_var_if_provided() {[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8411444Z [36;1m  local var_name="$1"[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8411669Z [36;1m  local input_value="$2"[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8411903Z [36;1m  local default_value="$3"[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8412119Z [36;1m[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8412373Z [36;1m  if [ -n "$input_value" ] && [ "$input_value" != "$default_value" ]; then[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8412778Z [36;1m    # If action was provided with explicit input by the caller set that[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8413221Z [36;1m    # Use printf %q to safely escape special characters and prevent command injection[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8413665Z [36;1m    printf 'export %s=%q\n' "$var_name" "$input_value" >> trivy_envs.txt[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8413977Z [36;1m  fi[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8414154Z [36;1m}[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8414540Z [36;1m[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8414797Z [36;1m# Set environment variables, handling those with default values[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8415282Z [36;1m# cf. https://aquasecurity.github.io/trivy/latest/docs/configuration/#environment-variables[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8415740Z [36;1mset_env_var_if_provided "TRIVY_INPUT" "$INPUT_INPUT" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8416106Z [36;1mset_env_var_if_provided "TRIVY_EXIT_CODE" "$INPUT_EXIT_CODE" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8416531Z [36;1mset_env_var_if_provided "TRIVY_IGNORE_UNFIXED" "$INPUT_IGNORE_UNFIXED" "false"[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8416980Z [36;1mset_env_var_if_provided "TRIVY_PKG_TYPES" "$INPUT_VULN_TYPE" "os,library"[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8417476Z [36;1mset_env_var_if_provided "TRIVY_SEVERITY" "$INPUT_SEVERITY" "UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL"[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8417891Z [36;1mset_env_var_if_provided "TRIVY_FORMAT" "$INPUT_FORMAT" "table"[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8418143Z [36;1mset_env_var_if_provided "TRIVY_TEMPLATE" "$INPUT_TEMPLATE" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8418386Z [36;1mset_env_var_if_provided "TRIVY_OUTPUT" "$INPUT_OUTPUT" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8418626Z [36;1mset_env_var_if_provided "TRIVY_SKIP_DIRS" "$INPUT_SKIP_DIRS" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8418874Z [36;1mset_env_var_if_provided "TRIVY_SKIP_FILES" "$INPUT_SKIP_FILES" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8419118Z [36;1mset_env_var_if_provided "TRIVY_TIMEOUT" "$INPUT_TIMEOUT" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8419372Z [36;1mset_env_var_if_provided "TRIVY_IGNORE_POLICY" "$INPUT_IGNORE_POLICY" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8419629Z [36;1mset_env_var_if_provided "TRIVY_QUIET" "$INPUT_HIDE_PROGRESS" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8419892Z [36;1mset_env_var_if_provided "TRIVY_LIST_ALL_PKGS" "$INPUT_LIST_ALL_PKGS" "false"[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8420157Z [36;1mset_env_var_if_provided "TRIVY_SCANNERS" "$INPUT_SCANNERS" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8420399Z [36;1mset_env_var_if_provided "TRIVY_CONFIG" "$INPUT_TRIVY_CONFIG" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8420649Z [36;1mset_env_var_if_provided "TRIVY_TF_VARS" "$INPUT_TF_VARS" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8420892Z [36;1mset_env_var_if_provided "TRIVY_DOCKER_HOST" "$INPUT_DOCKER_HOST" ""[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.8463903Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+images	UNKNOWN STEP	2026-10-16T19:13:05.8464086Z env:
+images	UNKNOWN STEP	2026-10-16T19:13:05.8464202Z   INPUT_INPUT: 
+images	UNKNOWN STEP	2026-10-16T19:13:05.8464326Z   INPUT_EXIT_CODE: 1
+images	UNKNOWN STEP	2026-10-16T19:13:05.8464535Z   INPUT_IGNORE_UNFIXED: false
+images	UNKNOWN STEP	2026-10-16T19:13:05.8464684Z   INPUT_VULN_TYPE: os,library
+images	UNKNOWN STEP	2026-10-16T19:13:05.8464832Z   INPUT_SEVERITY: HIGH,CRITICAL
+images	UNKNOWN STEP	2026-10-16T19:13:05.8464975Z   INPUT_FORMAT: table
+images	UNKNOWN STEP	2026-10-16T19:13:05.8465103Z   INPUT_TEMPLATE: 
+images	UNKNOWN STEP	2026-10-16T19:13:05.8465225Z   INPUT_OUTPUT: 
+images	UNKNOWN STEP	2026-10-16T19:13:05.8465343Z   INPUT_SKIP_DIRS: 
+images	UNKNOWN STEP	2026-10-16T19:13:05.8465464Z   INPUT_SKIP_FILES: 
+images	UNKNOWN STEP	2026-10-16T19:13:05.8465587Z   INPUT_TIMEOUT: 
+images	UNKNOWN STEP	2026-10-16T19:13:05.8465708Z   INPUT_IGNORE_POLICY: 
+images	UNKNOWN STEP	2026-10-16T19:13:05.8465840Z   INPUT_HIDE_PROGRESS: 
+images	UNKNOWN STEP	2026-10-16T19:13:05.8466073Z   INPUT_LIST_ALL_PKGS: false
+images	UNKNOWN STEP	2026-10-16T19:13:05.8466217Z   INPUT_SCANNERS: 
+images	UNKNOWN STEP	2026-10-16T19:13:05.8466340Z   INPUT_TRIVY_CONFIG: 
+images	UNKNOWN STEP	2026-10-16T19:13:05.8466463Z   INPUT_TF_VARS: 
+images	UNKNOWN STEP	2026-10-16T19:13:05.8466582Z   INPUT_DOCKER_HOST: 
+images	UNKNOWN STEP	2026-10-16T19:13:05.8466709Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:13:05.9316283Z ##[end-action id=__aquasecurity_trivy-action_2.__run_3;outcome=success;conclusion=success;duration_ms=177]
+images	UNKNOWN STEP	2026-10-16T19:13:05.9318044Z ##[start-action display=Run Trivy;id=__aquasecurity_trivy-action_2.__run_4]
+images	UNKNOWN STEP	2026-10-16T19:13:05.9328905Z ##[group]Run entrypoint.sh
+images	UNKNOWN STEP	2026-10-16T19:13:05.9329056Z [36;1mentrypoint.sh[0m
+images	UNKNOWN STEP	2026-10-16T19:13:05.9371305Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+images	UNKNOWN STEP	2026-10-16T19:13:05.9371492Z env:
+images	UNKNOWN STEP	2026-10-16T19:13:05.9371608Z   INPUT_SCAN_TYPE: image
+images	UNKNOWN STEP	2026-10-16T19:13:05.9371853Z   INPUT_IMAGE_REF: ghcr.io/suhassk205/campusdesk-frontend:e3d116880213a019f1af59caabdd48ce8fecf492
+images	UNKNOWN STEP	2026-10-16T19:13:05.9372105Z   INPUT_SCAN_REF: .
+images	UNKNOWN STEP	2026-10-16T19:13:05.9372232Z   INPUT_TRIVYIGNORES: 
+images	UNKNOWN STEP	2026-10-16T19:13:05.9372378Z   INPUT_GITHUB_PAT: 
+images	UNKNOWN STEP	2026-10-16T19:13:05.9372621Z   INPUT_LIMIT_SEVERITIES_FOR_SARIF: 
+images	UNKNOWN STEP	2026-10-16T19:13:05.9372857Z   TRIVY_CACHE_DIR: /home/runner/work/taskboard-capstone/taskboard-capstone/.cache/trivy
+images	UNKNOWN STEP	2026-10-16T19:13:05.9373091Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:13:06.0217172Z Running Trivy with options: trivy image ghcr.io/suhassk205/campusdesk-frontend:e3d116880213a019f1af59caabdd48ce8fecf492
+images	UNKNOWN STEP	2026-10-16T19:13:06.0545917Z 2026-10-16T19:13:06Z	INFO	[vuln] Vulnerability scanning is enabled
+images	UNKNOWN STEP	2026-10-16T19:13:06.0546337Z 2026-10-16T19:13:06Z	INFO	[secret] Secret scanning is enabled
+images	UNKNOWN STEP	2026-10-16T19:13:06.0546814Z 2026-10-16T19:13:06Z	INFO	[secret] If your scanning is slow, please try '--scanners vuln' to disable secret scanning
+images	UNKNOWN STEP	2026-10-16T19:13:06.0547533Z 2026-10-16T19:13:06Z	INFO	[secret] Please see https://trivy.dev/docs/v0.69/guide/scanner/secret#recommendation for faster secret detection
+images	UNKNOWN STEP	2026-10-16T19:13:14.0630239Z 2026-10-16T19:13:14Z	INFO	Detected OS	family="alpine" version="3.24.2"
+images	UNKNOWN STEP	2026-10-16T19:13:14.0630856Z 2026-10-16T19:13:14Z	WARN	This OS version is not on the EOL list	family="alpine" version="3.24"
+images	UNKNOWN STEP	2026-10-16T19:13:14.0631507Z 2026-10-16T19:13:14Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.24" repository="3.24" pkg_num=72
+images	UNKNOWN STEP	2026-10-16T19:13:14.0663721Z 2026-10-16T19:13:14Z	INFO	Number of language-specific files	num=0
+images	UNKNOWN STEP	2026-10-16T19:13:14.0737169Z 
+images	UNKNOWN STEP	2026-10-16T19:13:14.0737274Z Report Summary
+images	UNKNOWN STEP	2026-10-16T19:13:14.0737391Z 
+images	UNKNOWN STEP	2026-10-16T19:13:14.0738037Z ┌─────────────────────────────────────────────────────────────────────────────────┬────────┬─────────────────┬─────────┐
+images	UNKNOWN STEP	2026-10-16T19:13:14.0738578Z │                                     Target                                      │  Type  │ Vulnerabilities │ Secrets │
+images	UNKNOWN STEP	2026-10-16T19:13:14.0739150Z ├─────────────────────────────────────────────────────────────────────────────────┼────────┼─────────────────┼─────────┤
+images	UNKNOWN STEP	2026-10-16T19:13:14.0739738Z │ ghcr.io/suhassk205/campusdesk-frontend:e3d116880213a019f1af59caabdd48ce8fecf492 │ alpine │        0        │    -    │
+images	UNKNOWN STEP	2026-10-16T19:13:14.0740386Z │ (alpine 3.24.2)                                                                 │        │                 │         │
+images	UNKNOWN STEP	2026-10-16T19:13:14.0740747Z └─────────────────────────────────────────────────────────────────────────────────┴────────┴─────────────────┴─────────┘
+images	UNKNOWN STEP	2026-10-16T19:13:14.0740965Z Legend:
+images	UNKNOWN STEP	2026-10-16T19:13:14.0741078Z - '-': Not scanned
+images	UNKNOWN STEP	2026-10-16T19:13:14.0741225Z - '0': Clean (no security findings detected)
+images	UNKNOWN STEP	2026-10-16T19:13:14.0741348Z 
+images	UNKNOWN STEP	2026-10-16T19:13:14.0741429Z 📣 [34mNotices:[0m
+images	UNKNOWN STEP	2026-10-16T19:13:14.0741611Z   - Version 0.76.0 of Trivy is now available, current version is 0.69.3
+images	UNKNOWN STEP	2026-10-16T19:13:14.0741760Z 
+images	UNKNOWN STEP	2026-10-16T19:13:14.0741883Z To suppress version checks, run Trivy scans with the --skip-version-check flag
+images	UNKNOWN STEP	2026-10-16T19:13:14.0742049Z 
+images	UNKNOWN STEP	2026-10-16T19:13:14.0742052Z 
+images	UNKNOWN STEP	2026-10-16T19:13:14.0788063Z ##[end-action id=__aquasecurity_trivy-action_2.__run_4;outcome=success;conclusion=success;duration_ms=8146]
+images	UNKNOWN STEP	2026-10-16T19:13:14.0791274Z ##[start-action display=Remove Trivy Envs file;id=__aquasecurity_trivy-action_2.__run_5]
+images	UNKNOWN STEP	2026-10-16T19:13:14.0810528Z ##[group]Run rm -f trivy_envs.txt
+images	UNKNOWN STEP	2026-10-16T19:13:14.0810735Z [36;1mrm -f trivy_envs.txt[0m
+images	UNKNOWN STEP	2026-10-16T19:13:14.0860284Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+images	UNKNOWN STEP	2026-10-16T19:13:14.0860480Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:13:14.0933570Z ##[end-action id=__aquasecurity_trivy-action_2.__run_5;outcome=success;conclusion=success;duration_ms=14]
+images	UNKNOWN STEP	2026-10-16T19:13:14.0951974Z ##[group]Run docker push ghcr.io/suhassk205/campusdesk-backend:e3d116880213a019f1af59caabdd48ce8fecf492
+images	UNKNOWN STEP	2026-10-16T19:13:14.0952364Z [36;1mdocker push ghcr.io/suhassk205/campusdesk-backend:e3d116880213a019f1af59caabdd48ce8fecf492[0m
+images	UNKNOWN STEP	2026-10-16T19:13:14.0952720Z [36;1mdocker push ghcr.io/suhassk205/campusdesk-frontend:e3d116880213a019f1af59caabdd48ce8fecf492[0m
+images	UNKNOWN STEP	2026-10-16T19:13:14.0995333Z shell: /usr/bin/bash -e {0}
+images	UNKNOWN STEP	2026-10-16T19:13:14.0995483Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:13:14.1504553Z The push refers to repository [ghcr.io/suhassk205/campusdesk-backend]
+images	UNKNOWN STEP	2026-10-16T19:13:14.2600035Z cbef22ce0d09: Preparing
+images	UNKNOWN STEP	2026-10-16T19:13:14.2600414Z 25e5a29acb58: Preparing
+images	UNKNOWN STEP	2026-10-16T19:13:14.2600559Z bb76b9eee78d: Preparing
+images	UNKNOWN STEP	2026-10-16T19:13:14.2600687Z 510a72a92630: Preparing
+images	UNKNOWN STEP	2026-10-16T19:13:14.2600818Z de73d91dfa44: Preparing
+images	UNKNOWN STEP	2026-10-16T19:13:14.2600952Z 4d211c3f1c45: Preparing
+images	UNKNOWN STEP	2026-10-16T19:13:14.2601191Z 7e9021171c27: Preparing
+images	UNKNOWN STEP	2026-10-16T19:13:14.2601321Z 41366f7f4879: Preparing
+images	UNKNOWN STEP	2026-10-16T19:13:14.2601492Z 74d97c428c51: Preparing
+images	UNKNOWN STEP	2026-10-16T19:13:14.2601622Z 4d211c3f1c45: Waiting
+images	UNKNOWN STEP	2026-10-16T19:13:14.2601837Z 7e9021171c27: Waiting
+images	UNKNOWN STEP	2026-10-16T19:13:14.2602023Z 41366f7f4879: Waiting
+images	UNKNOWN STEP	2026-10-16T19:13:14.2602213Z 74d97c428c51: Waiting
+images	UNKNOWN STEP	2026-10-16T19:13:16.0310525Z cbef22ce0d09: Pushed
+images	UNKNOWN STEP	2026-10-16T19:13:16.0596326Z 510a72a92630: Pushed
+images	UNKNOWN STEP	2026-10-16T19:13:16.1178578Z bb76b9eee78d: Pushed
+images	UNKNOWN STEP	2026-10-16T19:13:16.1376719Z de73d91dfa44: Pushed
+images	UNKNOWN STEP	2026-10-16T19:13:16.1719134Z 4d211c3f1c45: Layer already exists
+images	UNKNOWN STEP	2026-10-16T19:13:16.1729173Z 7e9021171c27: Layer already exists
+images	UNKNOWN STEP	2026-10-16T19:13:16.2372518Z 41366f7f4879: Layer already exists
+images	UNKNOWN STEP	2026-10-16T19:13:16.2946753Z 74d97c428c51: Layer already exists
+images	UNKNOWN STEP	2026-10-16T19:13:18.1297577Z 25e5a29acb58: Pushed
+images	UNKNOWN STEP	2026-10-16T19:13:20.4314724Z e3d116880213a019f1af59caabdd48ce8fecf492: digest: sha256:544778c6cb46c9c70b6d82dc80e445cee215bfa56e85328de7a4ee24b79556d9 size: 2200
+images	UNKNOWN STEP	2026-10-16T19:13:20.4671138Z The push refers to repository [ghcr.io/suhassk205/campusdesk-frontend]
+images	UNKNOWN STEP	2026-10-16T19:13:20.5781020Z e661a2bc7157: Preparing
+images	UNKNOWN STEP	2026-10-16T19:13:20.5781285Z 28d2ee796354: Preparing
+images	UNKNOWN STEP	2026-10-16T19:13:20.5781497Z d1c88179554e: Preparing
+images	UNKNOWN STEP	2026-10-16T19:13:20.5781693Z 6aef7713033e: Preparing
+images	UNKNOWN STEP	2026-10-16T19:13:20.5781902Z a5237c8bfc43: Preparing
+images	UNKNOWN STEP	2026-10-16T19:13:20.5782153Z 1cbec789df91: Preparing
+images	UNKNOWN STEP	2026-10-16T19:13:20.5782351Z c01de5b74a88: Preparing
+images	UNKNOWN STEP	2026-10-16T19:13:20.5782862Z f4b56df1052e: Preparing
+images	UNKNOWN STEP	2026-10-16T19:13:20.5783070Z 11c068032a92: Preparing
+images	UNKNOWN STEP	2026-10-16T19:13:20.5783235Z 1d5f8e4b80b9: Preparing
+images	UNKNOWN STEP	2026-10-16T19:13:20.5783795Z 74d97c428c51: Preparing
+images	UNKNOWN STEP	2026-10-16T19:13:20.5783925Z f4b56df1052e: Waiting
+images	UNKNOWN STEP	2026-10-16T19:13:20.5784047Z 11c068032a92: Waiting
+images	UNKNOWN STEP	2026-10-16T19:13:20.5784174Z 1d5f8e4b80b9: Waiting
+images	UNKNOWN STEP	2026-10-16T19:13:20.5784291Z 74d97c428c51: Waiting
+images	UNKNOWN STEP	2026-10-16T19:13:20.5784579Z 1cbec789df91: Waiting
+images	UNKNOWN STEP	2026-10-16T19:13:20.5784703Z c01de5b74a88: Waiting
+images	UNKNOWN STEP	2026-10-16T19:13:20.8748926Z 6aef7713033e: Layer already exists
+images	UNKNOWN STEP	2026-10-16T19:13:20.8760275Z a5237c8bfc43: Layer already exists
+images	UNKNOWN STEP	2026-10-16T19:13:20.9807933Z c01de5b74a88: Layer already exists
+images	UNKNOWN STEP	2026-10-16T19:13:20.9983041Z 1cbec789df91: Layer already exists
+images	UNKNOWN STEP	2026-10-16T19:13:21.1116281Z f4b56df1052e: Layer already exists
+images	UNKNOWN STEP	2026-10-16T19:13:21.1187853Z 11c068032a92: Layer already exists
+images	UNKNOWN STEP	2026-10-16T19:13:21.2370652Z 1d5f8e4b80b9: Layer already exists
+images	UNKNOWN STEP	2026-10-16T19:13:21.2417940Z 74d97c428c51: Layer already exists
+images	UNKNOWN STEP	2026-10-16T19:13:22.3591433Z 28d2ee796354: Pushed
+images	UNKNOWN STEP	2026-10-16T19:13:22.3882787Z d1c88179554e: Pushed
+images	UNKNOWN STEP	2026-10-16T19:13:22.4226081Z e661a2bc7157: Pushed
+images	UNKNOWN STEP	2026-10-16T19:13:24.6127733Z e3d116880213a019f1af59caabdd48ce8fecf492: digest: sha256:14085c045032d2e21cbbfbf4789647affeed350be8217851aaed128b323ccaf0 size: 2615
+images	UNKNOWN STEP	2026-10-16T19:13:24.6293527Z Post job cleanup.
+images	UNKNOWN STEP	2026-10-16T19:13:24.6296193Z ##[start-action display=Restore DB from cache;id=__e1860a23-7c76-4588-8eb4-28397eeac636.__actions_cache]
+images	UNKNOWN STEP	2026-10-16T19:13:24.6316226Z Post job cleanup.
+images	UNKNOWN STEP	2026-10-16T19:13:24.6992771Z Cache hit occurred on the primary key cache-trivy-2026-10-16, not saving cache.
+images	UNKNOWN STEP	2026-10-16T19:13:24.6993844Z (node:2817) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+images	UNKNOWN STEP	2026-10-16T19:13:24.6994560Z (Use `node --trace-deprecation ...` to show where the warning was created)
+images	UNKNOWN STEP	2026-10-16T19:13:24.7046784Z ##[end-action id=__e1860a23-7c76-4588-8eb4-28397eeac636.__actions_cache;outcome=success;conclusion=success;duration_ms=75]
+images	UNKNOWN STEP	2026-10-16T19:13:24.7048493Z ##[start-action display=Install Trivy;id=__e1860a23-7c76-4588-8eb4-28397eeac636.__aquasecurity_setup-trivy]
+images	UNKNOWN STEP	2026-10-16T19:13:24.7088437Z Post job cleanup.
+images	UNKNOWN STEP	2026-10-16T19:13:24.7090459Z ##[start-action display=Restore Trivy binary from cache;id=__e1860a23-7c76-4588-8eb4-28397eeac636.__aquasecurity_setup-trivy.cache]
+images	UNKNOWN STEP	2026-10-16T19:13:24.7110506Z Post job cleanup.
+images	UNKNOWN STEP	2026-10-16T19:13:24.7748947Z Cache hit occurred on the primary key trivy-binary-v0.69.3-Linux-X64, not saving cache.
+images	UNKNOWN STEP	2026-10-16T19:13:24.7749927Z (node:2825) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+images	UNKNOWN STEP	2026-10-16T19:13:24.7750511Z (Use `node --trace-deprecation ...` to show where the warning was created)
+images	UNKNOWN STEP	2026-10-16T19:13:24.7796869Z ##[end-action id=__e1860a23-7c76-4588-8eb4-28397eeac636.__aquasecurity_setup-trivy.cache;outcome=success;conclusion=success;duration_ms=70]
+images	UNKNOWN STEP	2026-10-16T19:13:24.7799442Z ##[end-action id=__e1860a23-7c76-4588-8eb4-28397eeac636.__aquasecurity_setup-trivy;outcome=success;conclusion=success;duration_ms=75]
+images	UNKNOWN STEP	2026-10-16T19:13:24.7890343Z Post job cleanup.
+images	UNKNOWN STEP	2026-10-16T19:13:24.7892584Z ##[start-action display=Restore DB from cache;id=__97fcf3df-bca8-4b55-8f96-bd8e528f0043.__actions_cache]
+images	UNKNOWN STEP	2026-10-16T19:13:24.7912888Z Post job cleanup.
+images	UNKNOWN STEP	2026-10-16T19:13:24.8574886Z Cache hit occurred on the primary key cache-trivy-2026-10-16, not saving cache.
+images	UNKNOWN STEP	2026-10-16T19:13:24.8576660Z (node:2833) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+images	UNKNOWN STEP	2026-10-16T19:13:24.8577260Z (Use `node --trace-deprecation ...` to show where the warning was created)
+images	UNKNOWN STEP	2026-10-16T19:13:24.8647242Z ##[end-action id=__97fcf3df-bca8-4b55-8f96-bd8e528f0043.__actions_cache;outcome=success;conclusion=success;duration_ms=75]
+images	UNKNOWN STEP	2026-10-16T19:13:24.8648835Z ##[start-action display=Install Trivy;id=__97fcf3df-bca8-4b55-8f96-bd8e528f0043.__aquasecurity_setup-trivy]
+images	UNKNOWN STEP	2026-10-16T19:13:24.8690409Z Post job cleanup.
+images	UNKNOWN STEP	2026-10-16T19:13:24.8692526Z ##[start-action display=Restore Trivy binary from cache;id=__97fcf3df-bca8-4b55-8f96-bd8e528f0043.__aquasecurity_setup-trivy.cache]
+images	UNKNOWN STEP	2026-10-16T19:13:24.8713717Z Post job cleanup.
+images	UNKNOWN STEP	2026-10-16T19:13:24.9372510Z Cache hit occurred on the primary key trivy-binary-v0.69.3-Linux-X64, not saving cache.
+images	UNKNOWN STEP	2026-10-16T19:13:24.9373545Z (node:2841) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+images	UNKNOWN STEP	2026-10-16T19:13:24.9374095Z (Use `node --trace-deprecation ...` to show where the warning was created)
+images	UNKNOWN STEP	2026-10-16T19:13:24.9421003Z ##[end-action id=__97fcf3df-bca8-4b55-8f96-bd8e528f0043.__aquasecurity_setup-trivy.cache;outcome=success;conclusion=success;duration_ms=72]
+images	UNKNOWN STEP	2026-10-16T19:13:24.9423468Z ##[end-action id=__97fcf3df-bca8-4b55-8f96-bd8e528f0043.__aquasecurity_setup-trivy;outcome=success;conclusion=success;duration_ms=77]
+images	UNKNOWN STEP	2026-10-16T19:13:24.9449537Z Post job cleanup.
+images	UNKNOWN STEP	2026-10-16T19:13:25.1195417Z ##[group]Logout from ghcr.io
+images	UNKNOWN STEP	2026-10-16T19:13:25.1208549Z (node:2850) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+images	UNKNOWN STEP	2026-10-16T19:13:25.1209174Z (Use `node --trace-deprecation ...` to show where the warning was created)
+images	UNKNOWN STEP	2026-10-16T19:13:25.1224531Z [command]/usr/bin/docker logout ghcr.io
+images	UNKNOWN STEP	2026-10-16T19:13:25.1343101Z Removing login credentials for ghcr.io
+images	UNKNOWN STEP	2026-10-16T19:13:25.1388637Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:13:25.1389014Z ##[group]Post cache
+images	UNKNOWN STEP	2026-10-16T19:13:25.1389399Z State not set
+images	UNKNOWN STEP	2026-10-16T19:13:25.1389799Z ##[endgroup]
+images	UNKNOWN STEP	2026-10-16T19:13:25.1558505Z Post job cleanup.
+images	UNKNOWN STEP	2026-10-16T19:13:25.2063644Z [command]/usr/bin/git version
+images	UNKNOWN STEP	2026-10-16T19:13:25.2093907Z git version 2.55.0
+images	UNKNOWN STEP	2026-10-16T19:13:25.2118879Z Temporarily overriding HOME='/home/runner/work/_temp/d2f44157-3e7b-413e-bbc4-8420e2f719e0' before making global git config changes
+images	UNKNOWN STEP	2026-10-16T19:13:25.2119557Z Adding repository directory to the temporary git global config as a safe directory
+images	UNKNOWN STEP	2026-10-16T19:13:25.2121507Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/taskboard-capstone/taskboard-capstone
+images	UNKNOWN STEP	2026-10-16T19:13:25.2147285Z Removing SSH command configuration
+images	UNKNOWN STEP	2026-10-16T19:13:25.2151418Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+images	UNKNOWN STEP	2026-10-16T19:13:25.2183171Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+images	UNKNOWN STEP	2026-10-16T19:13:25.2368069Z Removing HTTP extra header
+images	UNKNOWN STEP	2026-10-16T19:13:25.2372938Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+images	UNKNOWN STEP	2026-10-16T19:13:25.2400403Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+images	UNKNOWN STEP	2026-10-16T19:13:25.2577827Z Removing includeIf entries pointing to credentials config files
+images	UNKNOWN STEP	2026-10-16T19:13:25.2584277Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+images	UNKNOWN STEP	2026-10-16T19:13:25.2613287Z includeif.gitdir:/home/runner/work/taskboard-capstone/taskboard-capstone/.git.path
+images	UNKNOWN STEP	2026-10-16T19:13:25.2613810Z includeif.gitdir:/home/runner/work/taskboard-capstone/taskboard-capstone/.git/worktrees/*.path
+images	UNKNOWN STEP	2026-10-16T19:13:25.2614093Z includeif.gitdir:/github/workspace/.git.path
+images	UNKNOWN STEP	2026-10-16T19:13:25.2614301Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+images	UNKNOWN STEP	2026-10-16T19:13:25.2620370Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/taskboard-capstone/taskboard-capstone/.git.path
+images	UNKNOWN STEP	2026-10-16T19:13:25.2640451Z /home/runner/work/_temp/git-credentials-3ab31d99-4c2b-40bf-860b-347f9b8be029.config
+images	UNKNOWN STEP	2026-10-16T19:13:25.2647941Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/taskboard-capstone/taskboard-capstone/.git.path /home/runner/work/_temp/git-credentials-3ab31d99-4c2b-40bf-860b-347f9b8be029.config
+images	UNKNOWN STEP	2026-10-16T19:13:25.2678127Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/taskboard-capstone/taskboard-capstone/.git/worktrees/*.path
+images	UNKNOWN STEP	2026-10-16T19:13:25.2698523Z /home/runner/work/_temp/git-credentials-3ab31d99-4c2b-40bf-860b-347f9b8be029.config
+images	UNKNOWN STEP	2026-10-16T19:13:25.2705482Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/taskboard-capstone/taskboard-capstone/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-3ab31d99-4c2b-40bf-860b-347f9b8be029.config
+images	UNKNOWN STEP	2026-10-16T19:13:25.2733621Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+images	UNKNOWN STEP	2026-10-16T19:13:25.2753723Z /github/runner_temp/git-credentials-3ab31d99-4c2b-40bf-860b-347f9b8be029.config
+images	UNKNOWN STEP	2026-10-16T19:13:25.2759747Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-3ab31d99-4c2b-40bf-860b-347f9b8be029.config
+images	UNKNOWN STEP	2026-10-16T19:13:25.2788267Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+images	UNKNOWN STEP	2026-10-16T19:13:25.2807821Z /github/runner_temp/git-credentials-3ab31d99-4c2b-40bf-860b-347f9b8be029.config
+images	UNKNOWN STEP	2026-10-16T19:13:25.2814169Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-3ab31d99-4c2b-40bf-860b-347f9b8be029.config
+images	UNKNOWN STEP	2026-10-16T19:13:25.2843839Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+images	UNKNOWN STEP	2026-10-16T19:13:25.3007249Z Removing credentials config '/home/runner/work/_temp/git-credentials-3ab31d99-4c2b-40bf-860b-347f9b8be029.config'
+images	UNKNOWN STEP	2026-10-16T19:13:25.3148728Z Cleaning up orphan processes
+images	UNKNOWN STEP	2026-10-16T19:13:25.3336743Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/cache@0400d5f644dc74513175e3cd8d07132dd4860809, docker/login-action@v3. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+deploy	UNKNOWN STEP	﻿2026-10-16T19:13:30.7246938Z Current runner version: '2.337.0'
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7266416Z ##[group]Runner Image Provisioner
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7267058Z Hosted Compute Agent
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7267442Z Version: 20261012.601
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7267824Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7268298Z Build Date: 2026-10-12T17:48:21Z
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7268725Z Worker ID: {eeb57281-4493-401a-b5cd-74262bc8eba8}
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7269165Z Region: southcentralus
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7269494Z Cloud: Azure
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7269859Z ##[endgroup]
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7270736Z ##[group]Operating System
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7271156Z Ubuntu
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7271495Z 24.04.5
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7271789Z LTS
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7272139Z ##[endgroup]
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7272484Z ##[group]Runner Image
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7272867Z Image: ubuntu-24.04
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7273242Z Version: 20261012.334.1
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7274045Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7274914Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7275858Z ##[endgroup]
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7276603Z ##[group]GITHUB_TOKEN Permissions
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7278009Z Contents: read
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7278354Z Metadata: read
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7278683Z Packages: read
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7279111Z ##[endgroup]
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7280493Z Secret source: Actions
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7281054Z Cache mode: write
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7281474Z Prepare workflow directory
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7492058Z Prepare all required actions
+deploy	UNKNOWN STEP	2026-10-16T19:13:30.7527477Z Getting action download info
+deploy	UNKNOWN STEP	2026-10-16T19:13:31.0281111Z Download action repository 'actions/checkout@v6' (SHA:d23441a48e516b6c34aea4fa41551a30e30af803)
+deploy	UNKNOWN STEP	2026-10-16T19:13:31.1506884Z Download action repository 'helm/kind-action@v1.12.0' (SHA:a1b0e391336a6ee6713a0583f8c6240d70863de3)
+deploy	UNKNOWN STEP	2026-10-16T19:13:31.3733383Z Download action repository 'docker/login-action@v3' (SHA:c94ce9fb468520275223c153574b00df6fe4bcc9)
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.0777731Z Download action repository 'azure/setup-helm@v4.3.0' (SHA:b9e51907a09c216f16ebe8536097933489208112)
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.5158072Z Complete job name: deploy
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.5738327Z ##[group]Run actions/checkout@v6
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.5739121Z with:
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.5739691Z   repository: Suhassk205/taskboard-capstone
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.5745036Z   token: ***
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.5745692Z   ssh-strict: true
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.5746223Z   ssh-user: git
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.5746760Z   persist-credentials: true
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.5747352Z   clean: true
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.5747902Z   sparse-checkout-cone-mode: true
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.5748531Z   fetch-depth: 1
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.5749055Z   fetch-tags: false
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.5749600Z   show-progress: true
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.5750162Z   lfs: false
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.5750676Z   submodules: false
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.5751224Z   set-safe-directory: true
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.5751876Z   allow-unsafe-pr-checkout: false
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.5752598Z ##[endgroup]
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6468971Z Syncing repository: Suhassk205/taskboard-capstone
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6471919Z ##[group]Getting Git version info
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6473693Z Working directory is '/home/runner/work/taskboard-capstone/taskboard-capstone'
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6476356Z [command]/usr/bin/git version
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6528139Z git version 2.55.0
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6544426Z ##[endgroup]
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6555419Z Temporarily overriding HOME='/home/runner/work/_temp/8b89cdf0-c117-4557-9ff6-ad40b4ec3ab4' before making global git config changes
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6558605Z Adding repository directory to the temporary git global config as a safe directory
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6561277Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/taskboard-capstone/taskboard-capstone
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6611529Z Deleting the contents of '/home/runner/work/taskboard-capstone/taskboard-capstone'
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6617178Z ##[group]Determining repository object format
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6623969Z ##[endgroup]
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6633510Z ##[group]Initializing the repository
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6635411Z [command]/usr/bin/git init /home/runner/work/taskboard-capstone/taskboard-capstone
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6729680Z hint: Using 'master' as the name for the initial branch. This default branch name
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6732540Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6734397Z hint: to use in all of your new repositories, which will suppress this warning,
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6735811Z hint: call:
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6736536Z hint:
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6737462Z hint: 	git config --global init.defaultBranch <name>
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6738482Z hint:
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6739529Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6741083Z hint: 'development'. The just-created branch can be renamed via this command:
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6742268Z hint:
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6743062Z hint: 	git branch -m <name>
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6743914Z hint:
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6744896Z hint: Disable this message with "git config set advice.defaultBranchName false"
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6747196Z Initialized empty Git repository in /home/runner/work/taskboard-capstone/taskboard-capstone/.git/
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6750629Z [command]/usr/bin/git remote add origin https://github.com/Suhassk205/taskboard-capstone
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6889072Z ##[endgroup]
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6890281Z ##[group]Disabling automatic garbage collection
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6893044Z [command]/usr/bin/git config --local gc.auto 0
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6936868Z ##[endgroup]
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6937999Z ##[group]Setting up auth
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6939999Z Removing SSH command configuration
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.6943420Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.7013676Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.7325944Z Removing HTTP extra header
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.7332149Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.7362690Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.7541650Z Removing includeIf entries pointing to credentials config files
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.7546551Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.7581724Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.7786517Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-51284f93-2230-4651-8546-96e4dc763aca.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.7825047Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/taskboard-capstone/taskboard-capstone/.git.path /home/runner/work/_temp/git-credentials-51284f93-2230-4651-8546-96e4dc763aca.config
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.7858502Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/taskboard-capstone/taskboard-capstone/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-51284f93-2230-4651-8546-96e4dc763aca.config
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.7897766Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-51284f93-2230-4651-8546-96e4dc763aca.config
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.7932619Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-51284f93-2230-4651-8546-96e4dc763aca.config
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.7970198Z ##[endgroup]
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.7972215Z ##[group]Fetching the repository
+deploy	UNKNOWN STEP	2026-10-16T19:13:32.7977500Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e3d116880213a019f1af59caabdd48ce8fecf492:refs/remotes/origin/main
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.5869886Z From https://github.com/Suhassk205/taskboard-capstone
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.5870727Z  * [new ref]         e3d116880213a019f1af59caabdd48ce8fecf492 -> origin/main
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.5878897Z [command]/usr/bin/git branch --list --remote origin/main
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.5905320Z   origin/main
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.5911612Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.5936793Z e3d116880213a019f1af59caabdd48ce8fecf492
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.5940183Z ##[endgroup]
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.5940692Z ##[group]Determining the checkout info
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.5941453Z ##[endgroup]
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.5943865Z [command]/usr/bin/git sparse-checkout disable
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.5993226Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.6021480Z ##[group]Checking out the ref
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.6023643Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.6221258Z Switched to a new branch 'main'
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.6225021Z branch 'main' set up to track 'origin/main'.
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.6231578Z ##[endgroup]
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.6278721Z [command]/usr/bin/git log -1 --format=%H
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.6303895Z e3d116880213a019f1af59caabdd48ce8fecf492
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.6700448Z ##[group]Run helm/kind-action@v1.12.0
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.6700725Z with:
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.6700888Z   version: v0.26.0
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.6701098Z   cluster_name: chart-testing
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.6701307Z   wait: 60s
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.6701479Z   verbosity: 0
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.6701657Z   kubectl_version: v1.31.4
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.6701860Z   registry: false
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.6702053Z   registry_image: registry:2
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.6702278Z   registry_name: kind-registry
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.6702488Z   registry_port: 5000
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.6702706Z   registry_enable_delete: false
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.6702945Z   ignore_failed_clean: false
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.6703128Z ##[endgroup]
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.7204263Z Installing kind...
+deploy	UNKNOWN STEP	2026-10-16T19:13:34.7224179Z /opt/hostedtoolcache/kind/v0.26.0/amd64/kind/bin ~/work/taskboard-capstone/taskboard-capstone
+deploy	UNKNOWN STEP	2026-10-16T19:13:35.5335072Z kind-linux-amd64: OK
+deploy	UNKNOWN STEP	2026-10-16T19:13:35.5366590Z ~/work/taskboard-capstone/taskboard-capstone
+deploy	UNKNOWN STEP	2026-10-16T19:13:35.5367034Z Adding kind directory to PATH...
+deploy	UNKNOWN STEP	2026-10-16T19:13:35.5367262Z Installing kubectl...
+deploy	UNKNOWN STEP	2026-10-16T19:13:35.8855928Z Adding kubectl directory to PATH...
+deploy	UNKNOWN STEP	2026-10-16T19:13:35.8874421Z kind v0.26.0 go1.23.4 linux/amd64
+deploy	UNKNOWN STEP	2026-10-16T19:13:35.9157388Z Client Version: v1.31.4
+deploy	UNKNOWN STEP	2026-10-16T19:13:35.9169679Z Kustomize Version: v5.4.2
+deploy	UNKNOWN STEP	2026-10-16T19:13:35.9171349Z Creating kind cluster...
+deploy	UNKNOWN STEP	2026-10-16T19:13:36.2154181Z Creating cluster "chart-testing" ...
+deploy	UNKNOWN STEP	2026-10-16T19:13:36.2154904Z  • Ensuring node image (kindest/node:v1.32.0) 🖼  ...
+deploy	UNKNOWN STEP	2026-10-16T19:13:50.6867539Z  ✓ Ensuring node image (kindest/node:v1.32.0) 🖼
+deploy	UNKNOWN STEP	2026-10-16T19:13:50.6868072Z  • Preparing nodes 📦   ...
+deploy	UNKNOWN STEP	2026-10-16T19:13:53.9385897Z  ✓ Preparing nodes 📦 
+deploy	UNKNOWN STEP	2026-10-16T19:13:53.9602133Z  • Writing configuration 📜  ...
+deploy	UNKNOWN STEP	2026-10-16T19:13:54.1088191Z  ✓ Writing configuration 📜
+deploy	UNKNOWN STEP	2026-10-16T19:13:54.1088538Z  • Starting control-plane 🕹️  ...
+deploy	UNKNOWN STEP	2026-10-16T19:14:02.1698192Z  ✓ Starting control-plane 🕹️
+deploy	UNKNOWN STEP	2026-10-16T19:14:02.1698588Z  • Installing CNI 🔌  ...
+deploy	UNKNOWN STEP	2026-10-16T19:14:02.5004958Z  ✓ Installing CNI 🔌
+deploy	UNKNOWN STEP	2026-10-16T19:14:02.5005302Z  • Installing StorageClass 💾  ...
+deploy	UNKNOWN STEP	2026-10-16T19:14:02.7251838Z  ✓ Installing StorageClass 💾
+deploy	UNKNOWN STEP	2026-10-16T19:14:02.7478722Z  • Waiting ≤ 1m0s for control-plane = Ready ⏳  ...
+deploy	UNKNOWN STEP	2026-10-16T19:14:21.5584813Z  ✓ Waiting ≤ 1m0s for control-plane = Ready ⏳
+deploy	UNKNOWN STEP	2026-10-16T19:14:21.5585104Z  • Ready after 19s 💚
+deploy	UNKNOWN STEP	2026-10-16T19:14:21.6593971Z Set kubectl context to "kind-chart-testing"
+deploy	UNKNOWN STEP	2026-10-16T19:14:21.6594550Z You can now use your cluster with:
+deploy	UNKNOWN STEP	2026-10-16T19:14:21.6594657Z 
+deploy	UNKNOWN STEP	2026-10-16T19:14:21.6594779Z kubectl cluster-info --context kind-chart-testing
+deploy	UNKNOWN STEP	2026-10-16T19:14:21.6595187Z 
+deploy	UNKNOWN STEP	2026-10-16T19:14:21.6595857Z Thanks for using kind! 😊
+deploy	UNKNOWN STEP	2026-10-16T19:14:21.8864922Z ##[group]Run docker/login-action@v3
+deploy	UNKNOWN STEP	2026-10-16T19:14:21.8865187Z with:
+deploy	UNKNOWN STEP	2026-10-16T19:14:21.8865305Z   registry: ghcr.io
+deploy	UNKNOWN STEP	2026-10-16T19:14:21.8865433Z   username: Suhassk205
+deploy	UNKNOWN STEP	2026-10-16T19:14:21.8867899Z   password: ***
+deploy	UNKNOWN STEP	2026-10-16T19:14:21.8868063Z   logout: true
+deploy	UNKNOWN STEP	2026-10-16T19:14:21.8868178Z ##[endgroup]
+deploy	UNKNOWN STEP	2026-10-16T19:14:22.1817449Z Logging into ghcr.io...
+deploy	UNKNOWN STEP	2026-10-16T19:14:22.1831243Z (node:13289) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+deploy	UNKNOWN STEP	2026-10-16T19:14:22.1831627Z (Use `node --trace-deprecation ...` to show where the warning was created)
+deploy	UNKNOWN STEP	2026-10-16T19:14:22.6807912Z Login Succeeded!
+deploy	UNKNOWN STEP	2026-10-16T19:14:22.7006467Z ##[group]Run azure/setup-helm@v4.3.0
+deploy	UNKNOWN STEP	2026-10-16T19:14:22.7006716Z with:
+deploy	UNKNOWN STEP	2026-10-16T19:14:22.7006906Z   version: latest
+deploy	UNKNOWN STEP	2026-10-16T19:14:22.7009008Z   token: ***
+deploy	UNKNOWN STEP	2026-10-16T19:14:22.7009143Z   downloadBaseURL: https://get.helm.sh
+deploy	UNKNOWN STEP	2026-10-16T19:14:22.7009313Z ##[endgroup]
+deploy	UNKNOWN STEP	2026-10-16T19:14:22.8734647Z ##[group]Installing v4.3.1
+deploy	UNKNOWN STEP	2026-10-16T19:14:22.8742312Z Downloading 'v4.3.1' from 'https://get.helm.sh'
+deploy	UNKNOWN STEP	2026-10-16T19:14:23.0574742Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/bd4b9b6e-4a38-4184-8c8b-f820d28ca938 -f /home/runner/work/_temp/f7cd5a57-f774-41aa-9909-eb1a30509574
+deploy	UNKNOWN STEP	2026-10-16T19:14:23.7125950Z ##[endgroup]
+deploy	UNKNOWN STEP	2026-10-16T19:14:23.7127700Z Helm tool version 'v4.3.1' has been cached at /opt/hostedtoolcache/helm/4.3.1/x64/linux-amd64/helm
+deploy	UNKNOWN STEP	2026-10-16T19:14:23.7261898Z ##[group]Run OWNER=${GITHUB_REPOSITORY_OWNER,,}
+deploy	UNKNOWN STEP	2026-10-16T19:14:23.7262190Z [36;1mOWNER=${GITHUB_REPOSITORY_OWNER,,}[0m
+deploy	UNKNOWN STEP	2026-10-16T19:14:23.7262432Z [36;1mdocker pull ghcr.io/$OWNER/campusdesk-backend:$GITHUB_SHA[0m
+deploy	UNKNOWN STEP	2026-10-16T19:14:23.7262688Z [36;1mdocker pull ghcr.io/$OWNER/campusdesk-frontend:$GITHUB_SHA[0m
+deploy	UNKNOWN STEP	2026-10-16T19:14:23.7263084Z [36;1mkind load docker-image ghcr.io/$OWNER/campusdesk-backend:$GITHUB_SHA ghcr.io/$OWNER/campusdesk-frontend:$GITHUB_SHA --name chart-testing[0m
+deploy	UNKNOWN STEP	2026-10-16T19:14:23.7263435Z [36;1mkubectl apply -f k8s/namespace.yaml[0m
+deploy	UNKNOWN STEP	2026-10-16T19:14:23.7263607Z [36;1mPASSWORD=$(openssl rand -hex 24)[0m
+deploy	UNKNOWN STEP	2026-10-16T19:14:23.7263885Z [36;1mkubectl -n campusdesk create secret generic campusdesk-db --from-literal=DATABASE_PASSWORD="$PASSWORD"[0m
+deploy	UNKNOWN STEP	2026-10-16T19:14:23.7264660Z [36;1mhelm upgrade --install campusdesk helm/campusdesk -n campusdesk --set backend.image=ghcr.io/$OWNER/campusdesk-backend --set backend.tag=$GITHUB_SHA --set frontend.image=ghcr.io/$OWNER/campusdesk-frontend --set frontend.tag=$GITHUB_SHA --set ingress.enabled=false --set hpa.enabled=false --wait --timeout=5m[0m
+deploy	UNKNOWN STEP	2026-10-16T19:14:23.7265299Z [36;1mkubectl -n campusdesk get pods,svc[0m
+deploy	UNKNOWN STEP	2026-10-16T19:14:23.7266094Z [36;1mkubectl -n campusdesk exec deployment/backend -- python -c 'import urllib.request; print(urllib.request.urlopen("http://backend:8000/ready").read().decode())'[0m
+deploy	UNKNOWN STEP	2026-10-16T19:14:23.7508276Z shell: /usr/bin/bash -e {0}
+deploy	UNKNOWN STEP	2026-10-16T19:14:23.7508495Z ##[endgroup]
+deploy	UNKNOWN STEP	2026-10-16T19:14:24.4487204Z e3d116880213a019f1af59caabdd48ce8fecf492: Pulling from suhassk205/campusdesk-backend
+deploy	UNKNOWN STEP	2026-10-16T19:14:24.4488841Z e2de96513ba9: Already exists
+deploy	UNKNOWN STEP	2026-10-16T19:14:24.4508955Z bce3d672089f: Pulling fs layer
+deploy	UNKNOWN STEP	2026-10-16T19:14:24.4509299Z 283ac05c32e6: Pulling fs layer
+deploy	UNKNOWN STEP	2026-10-16T19:14:24.4509469Z e203d50c86bd: Pulling fs layer
+deploy	UNKNOWN STEP	2026-10-16T19:14:24.4509613Z 0c91ed96b3a6: Pulling fs layer
+deploy	UNKNOWN STEP	2026-10-16T19:14:24.4509822Z 328541ae16d6: Pulling fs layer
+deploy	UNKNOWN STEP	2026-10-16T19:14:24.4509996Z 8e3bf5d3ffca: Pulling fs layer
+deploy	UNKNOWN STEP	2026-10-16T19:14:24.4510138Z bca9112a9acd: Pulling fs layer
+deploy	UNKNOWN STEP	2026-10-16T19:14:24.4510270Z 4448e652e857: Pulling fs layer
+deploy	UNKNOWN STEP	2026-10-16T19:14:24.4510400Z 0c91ed96b3a6: Waiting
+deploy	UNKNOWN STEP	2026-10-16T19:14:24.4510590Z 328541ae16d6: Waiting
+deploy	UNKNOWN STEP	2026-10-16T19:14:24.4510706Z 8e3bf5d3ffca: Waiting
+deploy	UNKNOWN STEP	2026-10-16T19:14:24.4511029Z bca9112a9acd: Waiting
+deploy	UNKNOWN STEP	2026-10-16T19:14:24.6675354Z e203d50c86bd: Verifying Checksum
+deploy	UNKNOWN STEP	2026-10-16T19:14:24.6676351Z e203d50c86bd: Download complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:24.7052377Z bce3d672089f: Verifying Checksum
+deploy	UNKNOWN STEP	2026-10-16T19:14:24.7052916Z bce3d672089f: Download complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:24.8815711Z 283ac05c32e6: Verifying Checksum
+deploy	UNKNOWN STEP	2026-10-16T19:14:24.8816061Z 283ac05c32e6: Download complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:24.9093103Z 0c91ed96b3a6: Verifying Checksum
+deploy	UNKNOWN STEP	2026-10-16T19:14:24.9093464Z 0c91ed96b3a6: Download complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:24.9730359Z 328541ae16d6: Verifying Checksum
+deploy	UNKNOWN STEP	2026-10-16T19:14:24.9730691Z 328541ae16d6: Download complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:25.1195793Z 8e3bf5d3ffca: Verifying Checksum
+deploy	UNKNOWN STEP	2026-10-16T19:14:25.1196190Z 8e3bf5d3ffca: Download complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:25.2039679Z 4448e652e857: Verifying Checksum
+deploy	UNKNOWN STEP	2026-10-16T19:14:25.2039922Z 4448e652e857: Download complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:25.5918531Z bca9112a9acd: Verifying Checksum
+deploy	UNKNOWN STEP	2026-10-16T19:14:25.5918824Z bca9112a9acd: Download complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:27.5231398Z bce3d672089f: Pull complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:28.2966136Z 283ac05c32e6: Pull complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:28.3061586Z e203d50c86bd: Pull complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:28.3117696Z 0c91ed96b3a6: Pull complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:28.4265099Z 328541ae16d6: Pull complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:28.4325209Z 8e3bf5d3ffca: Pull complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:29.4670643Z bca9112a9acd: Pull complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:29.4799416Z 4448e652e857: Pull complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:29.4823350Z Digest: sha256:544778c6cb46c9c70b6d82dc80e445cee215bfa56e85328de7a4ee24b79556d9
+deploy	UNKNOWN STEP	2026-10-16T19:14:29.4835020Z Status: Downloaded newer image for ghcr.io/suhassk205/campusdesk-backend:e3d116880213a019f1af59caabdd48ce8fecf492
+deploy	UNKNOWN STEP	2026-10-16T19:14:29.4842458Z ghcr.io/suhassk205/campusdesk-backend:e3d116880213a019f1af59caabdd48ce8fecf492
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.2179037Z e3d116880213a019f1af59caabdd48ce8fecf492: Pulling from suhassk205/campusdesk-frontend
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.2179407Z e2de96513ba9: Already exists
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.2196901Z 6711e0c4f5a7: Pulling fs layer
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.2197193Z 3bf3671a4e6a: Pulling fs layer
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.2197441Z b44956913298: Pulling fs layer
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.2197673Z 710ec83ca6cd: Pulling fs layer
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.2197873Z 70683d58fa5c: Pulling fs layer
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.2198070Z 6638b436592c: Pulling fs layer
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.2198271Z 1fdd0614a47e: Pulling fs layer
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.2198490Z 61ae39547b43: Pulling fs layer
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.2198692Z bd33a672f8d8: Pulling fs layer
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.2198891Z 4cb909856fcf: Pulling fs layer
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.2199085Z 6638b436592c: Waiting
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.2199262Z 1fdd0614a47e: Waiting
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.2199441Z 61ae39547b43: Waiting
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.2199632Z bd33a672f8d8: Waiting
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.2199816Z 4cb909856fcf: Waiting
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.2199979Z 70683d58fa5c: Waiting
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.2200166Z 710ec83ca6cd: Waiting
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.4008335Z b44956913298: Download complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.4019055Z 3bf3671a4e6a: Verifying Checksum
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.4019361Z 3bf3671a4e6a: Download complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.4953879Z 6711e0c4f5a7: Verifying Checksum
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.4954370Z 6711e0c4f5a7: Download complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.5835228Z 710ec83ca6cd: Download complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.5898141Z 70683d58fa5c: Download complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.6724055Z 6638b436592c: Download complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.6858442Z 6711e0c4f5a7: Pull complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.6949317Z 3bf3671a4e6a: Pull complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.7067814Z b44956913298: Pull complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.7125866Z 710ec83ca6cd: Pull complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.7198474Z 70683d58fa5c: Pull complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.7264387Z 6638b436592c: Pull complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.8364450Z 61ae39547b43: Verifying Checksum
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.8364791Z 61ae39547b43: Download complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.9291102Z bd33a672f8d8: Verifying Checksum
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.9291442Z bd33a672f8d8: Download complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.9299799Z 1fdd0614a47e: Verifying Checksum
+deploy	UNKNOWN STEP	2026-10-16T19:14:30.9300508Z 1fdd0614a47e: Download complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:31.0622868Z 4cb909856fcf: Verifying Checksum
+deploy	UNKNOWN STEP	2026-10-16T19:14:31.0623217Z 4cb909856fcf: Download complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:31.4953831Z 1fdd0614a47e: Pull complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:31.9108990Z 61ae39547b43: Pull complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:31.9215040Z bd33a672f8d8: Pull complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:31.9303802Z 4cb909856fcf: Pull complete
+deploy	UNKNOWN STEP	2026-10-16T19:14:31.9330112Z Digest: sha256:14085c045032d2e21cbbfbf4789647affeed350be8217851aaed128b323ccaf0
+deploy	UNKNOWN STEP	2026-10-16T19:14:31.9340444Z Status: Downloaded newer image for ghcr.io/suhassk205/campusdesk-frontend:e3d116880213a019f1af59caabdd48ce8fecf492
+deploy	UNKNOWN STEP	2026-10-16T19:14:31.9347821Z ghcr.io/suhassk205/campusdesk-frontend:e3d116880213a019f1af59caabdd48ce8fecf492
+deploy	UNKNOWN STEP	2026-10-16T19:14:32.0756481Z Image: "ghcr.io/suhassk205/campusdesk-backend:e3d116880213a019f1af59caabdd48ce8fecf492" with ID "sha256:023c8636f43d0df9b5cc5c908579da81d4dbd912a8283874472adc86a30b92cf" not yet present on node "chart-testing-control-plane", loading...
+deploy	UNKNOWN STEP	2026-10-16T19:14:32.1615978Z Image: "ghcr.io/suhassk205/campusdesk-frontend:e3d116880213a019f1af59caabdd48ce8fecf492" with ID "sha256:1f56c60a0aff6eff4fd5acff58f7e6dd8678daf7f029b3efd58edd33d8b9a749" not yet present on node "chart-testing-control-plane", loading...
+deploy	UNKNOWN STEP	2026-10-16T19:14:36.8437107Z namespace/campusdesk created
+deploy	UNKNOWN STEP	2026-10-16T19:14:36.8820379Z secret/campusdesk-db created
+deploy	UNKNOWN STEP	2026-10-16T19:14:36.9126828Z Release "campusdesk" does not exist. Installing it now.
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.4911591Z NAME: campusdesk
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.4912150Z LAST DEPLOYED: Fri Oct 16 19:14:36 2026
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.4912420Z NAMESPACE: campusdesk
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.4912614Z STATUS: deployed
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.4915235Z REVISION: 1
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.4915876Z DESCRIPTION: Install complete
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.4916095Z TEST SUITE: None
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.5907068Z NAME                            READY   STATUS    RESTARTS   AGE
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.5907495Z pod/backend-669b54cc8d-5n7rv    1/1     Running   0          27s
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.5907911Z pod/backend-669b54cc8d-wtf8z    1/1     Running   0          27s
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.5908276Z pod/frontend-597766479c-28bmv   1/1     Running   0          27s
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.5908638Z pod/frontend-597766479c-mvssw   1/1     Running   0          27s
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.5908991Z pod/postgres-58fc56b85d-29w9b   1/1     Running   0          27s
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.5909200Z 
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.5909380Z NAME               TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.5909745Z service/backend    ClusterIP   10.96.68.167    <none>        8000/TCP   27s
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.5910061Z service/frontend   ClusterIP   10.96.249.136   <none>        80/TCP     27s
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.5910318Z service/postgres   ClusterIP   10.96.192.23    <none>        5432/TCP   27s
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.7092601Z {"status":"ready"}
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.7305405Z Post job cleanup.
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.9324551Z ##[group]Logout from ghcr.io
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.9338589Z (node:15338) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.9339181Z (Use `node --trace-deprecation ...` to show where the warning was created)
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.9353984Z [command]/usr/bin/docker logout ghcr.io
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.9471375Z Removing login credentials for ghcr.io
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.9493369Z ##[endgroup]
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.9493898Z ##[group]Post cache
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.9494201Z State not set
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.9494560Z ##[endgroup]
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.9668702Z Post job cleanup.
+deploy	UNKNOWN STEP	2026-10-16T19:15:04.9977484Z Error response from daemon: No such container: kind-registry
+deploy	UNKNOWN STEP	2026-10-16T19:15:05.0092325Z Deleting cluster "chart-testing" ...
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.6662154Z Deleted nodes: ["chart-testing-control-plane"]
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.6767546Z Post job cleanup.
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.7341890Z [command]/usr/bin/git version
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.7379748Z git version 2.55.0
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.7409611Z Temporarily overriding HOME='/home/runner/work/_temp/f2b4bb16-8f46-4535-8c68-12750d91beea' before making global git config changes
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.7410302Z Adding repository directory to the temporary git global config as a safe directory
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.7414537Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/taskboard-capstone/taskboard-capstone
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.7446911Z Removing SSH command configuration
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.7453257Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.7487671Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.7682768Z Removing HTTP extra header
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.7691007Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.7722987Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.7914588Z Removing includeIf entries pointing to credentials config files
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.7926984Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.7950511Z includeif.gitdir:/home/runner/work/taskboard-capstone/taskboard-capstone/.git.path
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.7951316Z includeif.gitdir:/home/runner/work/taskboard-capstone/taskboard-capstone/.git/worktrees/*.path
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.7952039Z includeif.gitdir:/github/workspace/.git.path
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.7952390Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.7958621Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/taskboard-capstone/taskboard-capstone/.git.path
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.7981773Z /home/runner/work/_temp/git-credentials-51284f93-2230-4651-8546-96e4dc763aca.config
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.7990126Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/taskboard-capstone/taskboard-capstone/.git.path /home/runner/work/_temp/git-credentials-51284f93-2230-4651-8546-96e4dc763aca.config
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.8022832Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/taskboard-capstone/taskboard-capstone/.git/worktrees/*.path
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.8043885Z /home/runner/work/_temp/git-credentials-51284f93-2230-4651-8546-96e4dc763aca.config
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.8050925Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/taskboard-capstone/taskboard-capstone/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-51284f93-2230-4651-8546-96e4dc763aca.config
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.8080669Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.8101248Z /github/runner_temp/git-credentials-51284f93-2230-4651-8546-96e4dc763aca.config
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.8106960Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-51284f93-2230-4651-8546-96e4dc763aca.config
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.8136492Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.8157094Z /github/runner_temp/git-credentials-51284f93-2230-4651-8546-96e4dc763aca.config
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.8162817Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-51284f93-2230-4651-8546-96e4dc763aca.config
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.8194095Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.8368399Z Removing credentials config '/home/runner/work/_temp/git-credentials-51284f93-2230-4651-8546-96e4dc763aca.config'
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.8496530Z Cleaning up orphan processes
+deploy	UNKNOWN STEP	2026-10-16T19:15:09.8751155Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: azure/setup-helm@v4.3.0, docker/login-action@v3, helm/kind-action@v1.12.0. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

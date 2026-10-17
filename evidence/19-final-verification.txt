@@ -1,0 +1,84 @@
+CampusDesk - final local release and monitoring verification
+Actual command transcript; 2026-10-17T10:58:47.169872+05:30
+Context: kind-session13
+
+$ kubectl --context kind-session13 -n campusdesk delete pod published-frontend-check --ignore-not-found
+pod "published-frontend-check" deleted from campusdesk namespace
+[exit 0]
+
+$ kubectl --context kind-session13 -n campusdesk get pods,svc,ingress,hpa
+NAME                           READY   STATUS    RESTARTS   AGE
+pod/backend-5696d9dbf6-c9729   1/1     Running   0          10h
+pod/backend-5696d9dbf6-fcnk4   1/1     Running   0          10h
+pod/backend-5696d9dbf6-qjfdv   1/1     Running   0          10h
+pod/backend-5696d9dbf6-vxv8s   1/1     Running   0          9h
+pod/frontend-5774db5c6-4wp2m   1/1     Running   0          10h
+pod/frontend-5774db5c6-hg52j   1/1     Running   0          10h
+pod/postgres-dfc66bf4c-4c7z9   1/1     Running   0          10h
+
+NAME               TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+service/backend    ClusterIP   10.96.236.95    <none>        8000/TCP   10h
+service/frontend   ClusterIP   10.96.184.169   <none>        80/TCP     10h
+service/postgres   ClusterIP   10.96.207.119   <none>        5432/TCP   10h
+
+NAME                                   CLASS   HOSTS                  ADDRESS        PORTS   AGE
+ingress.networking.k8s.io/campusdesk   nginx   campusdesk.localhost   10.96.74.191   80      10h
+
+NAME                                                     REFERENCE            TARGETS        MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/campusdesk-backend   Deployment/backend   cpu: 44%/50%   2         4         4          10h
+[exit 0]
+
+$ helm --kube-context kind-session13 list -n campusdesk
+NAME      	NAMESPACE 	REVISION	UPDATED                             	STATUS  	CHART           	APP VERSION
+campusdesk	campusdesk	3       	2026-10-17 00:46:33.354637 +0530 IST	deployed	campusdesk-0.1.0	1.0.0
+[exit 0]
+
+$ helm --kube-context kind-session13 history campusdesk -n campusdesk
+REVISION	UPDATED                 	STATUS    	CHART           	APP VERSION	DESCRIPTION     
+1       	Sat Oct 17 00:12:58 2026	superseded	campusdesk-0.1.0	1.0.0      	Install complete
+2       	Sat Oct 17 00:34:46 2026	superseded	campusdesk-0.1.0	1.0.0      	Upgrade complete
+3       	Sat Oct 17 00:46:33 2026	deployed  	campusdesk-0.1.0	1.0.0      	Upgrade complete
+[exit 0]
+
+$ curl --fail -sS http://127.0.0.1:8001/ready
+{"status":"ready"}
+[exit 0]
+
+$ curl --fail -sS -H 'Host: campusdesk.localhost' http://127.0.0.1:8088/api/tickets/stats
+{"total":8,"open":4,"in_progress":2,"resolved":2,"urgent":2}
+[exit 0]
+
+Final live application targets:
+[
+  {
+    "url": "http://10.244.0.106:8000/metrics",
+    "health": "up"
+  },
+  {
+    "url": "http://10.244.0.102:8000/metrics",
+    "health": "up"
+  },
+  {
+    "url": "http://10.244.0.104:8000/metrics",
+    "health": "up"
+  },
+  {
+    "url": "http://10.244.0.105:8000/metrics",
+    "health": "up"
+  }
+]
+$ curl --fail -sS http://127.0.0.1:3001/api/health
+{
+  "database": "ok",
+  "version": "12.3.1",
+  "commit": "3a1c80ca7ce612f309fdc99338dd3c5e486339be"
+}
+[exit 0]
+
+$ helm lint helm/campusdesk
+==> Linting helm/campusdesk
+[INFO] Chart.yaml: icon is recommended
+
+1 chart(s) linted, 0 chart(s) failed
+[exit 0]
+

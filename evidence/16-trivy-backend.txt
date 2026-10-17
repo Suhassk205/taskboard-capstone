@@ -1,0 +1,277 @@
+Actual GitHub Actions scan output
+https://github.com/Suhassk205/taskboard-capstone/actions/runs/38953107445
+2026-10-16T19:12:46.0367333Z ##[group]Run aquasecurity/trivy-action@0.35.0
+2026-10-16T19:12:46.0367511Z with:
+2026-10-16T19:12:46.0367726Z   image-ref: ghcr.io/suhassk205/campusdesk-backend:e3d116880213a019f1af59caabdd48ce8fecf492
+2026-10-16T19:12:46.0367975Z   severity: HIGH,CRITICAL
+2026-10-16T19:12:46.0368102Z   exit-code: 1
+2026-10-16T19:12:46.0368212Z   format: table
+2026-10-16T19:12:46.0368325Z   scan-type: image
+2026-10-16T19:12:46.0368441Z   scan-ref: .
+2026-10-16T19:12:46.0368717Z   ignore-unfixed: false
+2026-10-16T19:12:46.0368840Z   vuln-type: os,library
+2026-10-16T19:12:46.0369040Z   cache-dir: /home/runner/work/taskboard-capstone/taskboard-capstone/.cache/trivy
+2026-10-16T19:12:46.0369261Z   list-all-pkgs: false
+2026-10-16T19:12:46.0369379Z   version: v0.69.3
+2026-10-16T19:12:46.0369487Z   cache: true
+2026-10-16T19:12:46.0369599Z   skip-setup-trivy: false
+2026-10-16T19:12:46.0371051Z   token-setup-trivy: ***
+2026-10-16T19:12:46.0371179Z ##[endgroup]
+2026-10-16T19:12:46.0413505Z ##[start-action display=Install Trivy;id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy]
+2026-10-16T19:12:46.0460617Z ##[group]Run aquasecurity/setup-trivy@e6c2c5e321ed9123bda567646e2f96565e34abe1
+2026-10-16T19:12:46.0460834Z with:
+2026-10-16T19:12:46.0460942Z   version: v0.69.3
+2026-10-16T19:12:46.0461055Z   cache: true
+2026-10-16T19:12:46.0462492Z   token: ***
+2026-10-16T19:12:46.0462605Z   path: $HOME/.local/bin
+2026-10-16T19:12:46.0462747Z   github-server-url: https://github.com
+2026-10-16T19:12:46.0462915Z ##[endgroup]
+2026-10-16T19:12:46.0466139Z ##[start-action display=Binary dir;id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.binary-dir]
+2026-10-16T19:12:46.0477220Z ##[group]Run echo "dir=$HOME/.local/bin/trivy-bin" >> $GITHUB_OUTPUT
+2026-10-16T19:12:46.0477476Z echo "dir=$HOME/.local/bin/trivy-bin" >> $GITHUB_OUTPUT
+2026-10-16T19:12:46.0529898Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-16T19:12:46.0530084Z ##[endgroup]
+2026-10-16T19:12:46.0601587Z ##[end-action id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.binary-dir;outcome=success;conclusion=success;duration_ms=13]
+2026-10-16T19:12:46.0603293Z ##[start-action display=Check the version for caching;id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__run]
+2026-10-16T19:12:46.0607572Z ##[end-action id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__run;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-16T19:12:46.0608759Z ##[start-action display=Restore Trivy binary from cache;id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.cache]
+2026-10-16T19:12:46.0635036Z ##[group]Run actions/cache@0400d5f644dc74513175e3cd8d07132dd4860809
+2026-10-16T19:12:46.0635224Z with:
+2026-10-16T19:12:46.0635349Z   path: /home/runner/.local/bin/trivy-bin
+2026-10-16T19:12:46.0635508Z   key: trivy-binary-v0.69.3-Linux-X64
+2026-10-16T19:12:46.0635660Z   enableCrossOsArchive: false
+2026-10-16T19:12:46.0635800Z   fail-on-cache-miss: false
+2026-10-16T19:12:46.0635930Z   lookup-only: false
+2026-10-16T19:12:46.0636052Z   save-always: false
+2026-10-16T19:12:46.0636167Z ##[endgroup]
+2026-10-16T19:12:46.1312747Z (node:2678) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-16T19:12:46.1313127Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-16T19:12:46.2647440Z Cache hit for: trivy-binary-v0.69.3-Linux-X64
+2026-10-16T19:12:46.2709977Z (node:2678) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-16T19:12:47.4447991Z Received 40070599 of 44264903 (90.5%), 38.2 MBs/sec
+2026-10-16T19:12:48.4449744Z Received 40070599 of 44264903 (90.5%), 19.1 MBs/sec
+2026-10-16T19:12:48.7692180Z Received 44264903 of 44264903 (100.0%), 18.2 MBs/sec
+2026-10-16T19:12:48.7692500Z Cache Size: ~42 MB (44264903 B)
+2026-10-16T19:12:48.7741006Z [command]/usr/bin/tar -xf /home/runner/work/_temp/8881fa12-dfff-4bdc-88dd-0ec152b258bd/cache.tzst -P -C /home/runner/work/taskboard-capstone/taskboard-capstone --use-compress-program unzstd
+2026-10-16T19:12:48.9196206Z Cache restored successfully
+2026-10-16T19:12:48.9262413Z Cache restored from key: trivy-binary-v0.69.3-Linux-X64
+2026-10-16T19:12:48.9342830Z ##[end-action id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.cache;outcome=success;conclusion=success;duration_ms=2873]
+2026-10-16T19:12:48.9345123Z ##[start-action display=Checkout install script;id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__actions_checkout]
+2026-10-16T19:12:48.9348852Z ##[end-action id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__actions_checkout;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-16T19:12:48.9349951Z ##[start-action display=Install Trivy;id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__run_2]
+2026-10-16T19:12:48.9352132Z ##[end-action id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__run_2;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-16T19:12:48.9353184Z ##[start-action display=Add Trivy binary to $GITHUB_PATH;id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__run_3]
+2026-10-16T19:12:48.9366484Z ##[group]Run echo /home/runner/.local/bin/trivy-bin >> $GITHUB_PATH
+2026-10-16T19:12:48.9366758Z echo /home/runner/.local/bin/trivy-bin >> $GITHUB_PATH
+2026-10-16T19:12:48.9417205Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-16T19:12:48.9417410Z ##[endgroup]
+2026-10-16T19:12:48.9484883Z ##[end-action id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__run_3;outcome=success;conclusion=success;duration_ms=13]
+2026-10-16T19:12:48.9493281Z ##[end-action id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy;outcome=success;conclusion=success;duration_ms=2907]
+2026-10-16T19:12:48.9494732Z ##[start-action display=Get current date;id=__aquasecurity_trivy-action.date]
+2026-10-16T19:12:48.9505710Z ##[group]Run echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+2026-10-16T19:12:48.9505946Z echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+2026-10-16T19:12:48.9552646Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-16T19:12:48.9552830Z ##[endgroup]
+2026-10-16T19:12:48.9627569Z ##[end-action id=__aquasecurity_trivy-action.date;outcome=success;conclusion=success;duration_ms=13]
+2026-10-16T19:12:48.9628826Z ##[start-action display=Restore DB from cache;id=__aquasecurity_trivy-action.__actions_cache]
+2026-10-16T19:12:48.9696693Z ##[group]Run actions/cache@0400d5f644dc74513175e3cd8d07132dd4860809
+2026-10-16T19:12:48.9696986Z with:
+2026-10-16T19:12:48.9697258Z   path: /home/runner/work/taskboard-capstone/taskboard-capstone/.cache/trivy
+2026-10-16T19:12:48.9697597Z   key: cache-trivy-2026-10-16
+2026-10-16T19:12:48.9697818Z   restore-keys: cache-trivy-
+2026-10-16T19:12:48.9698032Z   enableCrossOsArchive: false
+2026-10-16T19:12:48.9698251Z   fail-on-cache-miss: false
+2026-10-16T19:12:48.9698454Z   lookup-only: false
+2026-10-16T19:12:48.9698657Z   save-always: false
+2026-10-16T19:12:48.9698841Z ##[endgroup]
+2026-10-16T19:12:49.0326874Z (node:2699) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-16T19:12:49.0327404Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-16T19:12:49.1701317Z Cache hit for: cache-trivy-2026-10-16
+2026-10-16T19:12:49.1768142Z (node:2699) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-16T19:12:50.0866778Z Received 94891431 of 94891431 (100.0%), 115.9 MBs/sec
+2026-10-16T19:12:50.0868458Z Cache Size: ~90 MB (94891431 B)
+2026-10-16T19:12:50.0947085Z [command]/usr/bin/tar -xf /home/runner/work/_temp/144c6f86-300a-4d77-b45c-a4ae81caaef2/cache.tzst -P -C /home/runner/work/taskboard-capstone/taskboard-capstone --use-compress-program unzstd
+2026-10-16T19:12:51.4213798Z Cache restored successfully
+2026-10-16T19:12:51.5453531Z Cache restored from key: cache-trivy-2026-10-16
+2026-10-16T19:12:51.5537193Z ##[end-action id=__aquasecurity_trivy-action.__actions_cache;outcome=success;conclusion=success;duration_ms=2590]
+2026-10-16T19:12:51.5543388Z ##[start-action display=Set GitHub Path;id=__aquasecurity_trivy-action.__run]
+2026-10-16T19:12:51.6482388Z ##[group]Run echo "$GITHUB_ACTION_PATH" >> $GITHUB_PATH
+2026-10-16T19:12:51.6482899Z echo "$GITHUB_ACTION_PATH" >> $GITHUB_PATH
+2026-10-16T19:12:51.6539610Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-16T19:12:51.6539795Z env:
+2026-10-16T19:12:51.6539982Z   GITHUB_ACTION_PATH: /home/runner/work/_actions/aquasecurity/trivy-action/0.35.0
+2026-10-16T19:12:51.6540199Z ##[endgroup]
+2026-10-16T19:12:51.7501946Z ##[end-action id=__aquasecurity_trivy-action.__run;outcome=success;conclusion=success;duration_ms=195]
+2026-10-16T19:12:51.7503711Z ##[start-action display=Clear Trivy Envs file;id=__aquasecurity_trivy-action.__run_2]
+2026-10-16T19:12:51.8770440Z ##[group]Run rm -f trivy_envs.txt
+2026-10-16T19:12:51.8770776Z rm -f trivy_envs.txt
+2026-10-16T19:12:51.8770985Z touch trivy_envs.txt
+2026-10-16T19:12:51.8827092Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-16T19:12:51.8827283Z ##[endgroup]
+2026-10-16T19:12:52.0004610Z ##[end-action id=__aquasecurity_trivy-action.__run_2;outcome=success;conclusion=success;duration_ms=250]
+2026-10-16T19:12:52.0008476Z ##[start-action display=Set Trivy environment variables;id=__aquasecurity_trivy-action.__run_3]
+2026-10-16T19:12:52.1164335Z ##[group]Run # Note: There is currently no way to distinguish between undefined variables and empty strings in GitHub Actions.
+2026-10-16T19:12:52.1164973Z # Note: There is currently no way to distinguish between undefined variables and empty strings in GitHub Actions.
+2026-10-16T19:12:52.1165328Z # This limitation affects how we handle default values and empty inputs.
+2026-10-16T19:12:52.1165619Z # For more information, see: https://github.com/actions/runner/issues/924
+2026-10-16T19:12:52.1165829Z 
+2026-10-16T19:12:52.1166026Z # The following logic implements the configuration priority described in the README:
+2026-10-16T19:12:52.1166250Z #
+2026-10-16T19:12:52.1166357Z # Inputs
+2026-10-16T19:12:52.1166482Z # Environment Variables
+2026-10-16T19:12:52.1166623Z # Config File
+2026-10-16T19:12:52.1166752Z # Defaults
+2026-10-16T19:12:52.1166867Z #
+2026-10-16T19:12:52.1167084Z # As noted above defaults are awkward to handle as GitHub Actions will inject those values as the input
+2026-10-16T19:12:52.1167433Z # if the caller doesn't provide them, thus if the input matches the default we don't set it as we
+2026-10-16T19:12:52.1167780Z # can't tell the difference.  Plus if we did set it when it was the default value then it could potentially
+2026-10-16T19:12:52.1168161Z # override an external environment variable, or something in the callers configuration file, which then wouldn't
+2026-10-16T19:12:52.1168472Z # match the configuration priority that is documented.
+2026-10-16T19:12:52.1168664Z set_env_var_if_provided() {
+2026-10-16T19:12:52.1168814Z   local var_name="$1"
+2026-10-16T19:12:52.1168954Z   local input_value="$2"
+2026-10-16T19:12:52.1169101Z   local default_value="$3"
+2026-10-16T19:12:52.1169241Z 
+2026-10-16T19:12:52.1169408Z   if [ -n "$input_value" ] && [ "$input_value" != "$default_value" ]; then
+2026-10-16T19:12:52.1169665Z     # If action was provided with explicit input by the caller set that
+2026-10-16T19:12:52.1169944Z     # Use printf %q to safely escape special characters and prevent command injection
+2026-10-16T19:12:52.1170386Z     printf 'export %s=%q\n' "$var_name" "$input_value" >> trivy_envs.txt
+2026-10-16T19:12:52.1170584Z   fi
+2026-10-16T19:12:52.1170694Z }
+2026-10-16T19:12:52.1170801Z 
+2026-10-16T19:12:52.1170960Z # Set environment variables, handling those with default values
+2026-10-16T19:12:52.1171274Z # cf. https://aquasecurity.github.io/trivy/latest/docs/configuration/#environment-variables
+2026-10-16T19:12:52.1171564Z set_env_var_if_provided "TRIVY_INPUT" "$INPUT_INPUT" ""
+2026-10-16T19:12:52.1171792Z set_env_var_if_provided "TRIVY_EXIT_CODE" "$INPUT_EXIT_CODE" ""
+2026-10-16T19:12:52.1172165Z set_env_var_if_provided "TRIVY_IGNORE_UNFIXED" "$INPUT_IGNORE_UNFIXED" "false"
+2026-10-16T19:12:52.1172446Z set_env_var_if_provided "TRIVY_PKG_TYPES" "$INPUT_VULN_TYPE" "os,library"
+2026-10-16T19:12:52.1172760Z set_env_var_if_provided "TRIVY_SEVERITY" "$INPUT_SEVERITY" "UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL"
+2026-10-16T19:12:52.1173055Z set_env_var_if_provided "TRIVY_FORMAT" "$INPUT_FORMAT" "table"
+2026-10-16T19:12:52.1173293Z set_env_var_if_provided "TRIVY_TEMPLATE" "$INPUT_TEMPLATE" ""
+2026-10-16T19:12:52.1173520Z set_env_var_if_provided "TRIVY_OUTPUT" "$INPUT_OUTPUT" ""
+2026-10-16T19:12:52.1173747Z set_env_var_if_provided "TRIVY_SKIP_DIRS" "$INPUT_SKIP_DIRS" ""
+2026-10-16T19:12:52.1173988Z set_env_var_if_provided "TRIVY_SKIP_FILES" "$INPUT_SKIP_FILES" ""
+2026-10-16T19:12:52.1174225Z set_env_var_if_provided "TRIVY_TIMEOUT" "$INPUT_TIMEOUT" ""
+2026-10-16T19:12:52.1174558Z set_env_var_if_provided "TRIVY_IGNORE_POLICY" "$INPUT_IGNORE_POLICY" ""
+2026-10-16T19:12:52.1174807Z set_env_var_if_provided "TRIVY_QUIET" "$INPUT_HIDE_PROGRESS" ""
+2026-10-16T19:12:52.1175066Z set_env_var_if_provided "TRIVY_LIST_ALL_PKGS" "$INPUT_LIST_ALL_PKGS" "false"
+2026-10-16T19:12:52.1175322Z set_env_var_if_provided "TRIVY_SCANNERS" "$INPUT_SCANNERS" ""
+2026-10-16T19:12:52.1175559Z set_env_var_if_provided "TRIVY_CONFIG" "$INPUT_TRIVY_CONFIG" ""
+2026-10-16T19:12:52.1175795Z set_env_var_if_provided "TRIVY_TF_VARS" "$INPUT_TF_VARS" ""
+2026-10-16T19:12:52.1176033Z set_env_var_if_provided "TRIVY_DOCKER_HOST" "$INPUT_DOCKER_HOST" ""
+2026-10-16T19:12:52.1222195Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-16T19:12:52.1222382Z env:
+2026-10-16T19:12:52.1222497Z   INPUT_INPUT: 
+2026-10-16T19:12:52.1222615Z   INPUT_EXIT_CODE: 1
+2026-10-16T19:12:52.1222749Z   INPUT_IGNORE_UNFIXED: false
+2026-10-16T19:12:52.1222897Z   INPUT_VULN_TYPE: os,library
+2026-10-16T19:12:52.1223041Z   INPUT_SEVERITY: HIGH,CRITICAL
+2026-10-16T19:12:52.1223181Z   INPUT_FORMAT: table
+2026-10-16T19:12:52.1223306Z   INPUT_TEMPLATE: 
+2026-10-16T19:12:52.1223424Z   INPUT_OUTPUT: 
+2026-10-16T19:12:52.1223542Z   INPUT_SKIP_DIRS: 
+2026-10-16T19:12:52.1223681Z   INPUT_SKIP_FILES: 
+2026-10-16T19:12:52.1223803Z   INPUT_TIMEOUT: 
+2026-10-16T19:12:52.1223922Z   INPUT_IGNORE_POLICY: 
+2026-10-16T19:12:52.1224052Z   INPUT_HIDE_PROGRESS: 
+2026-10-16T19:12:52.1224183Z   INPUT_LIST_ALL_PKGS: false
+2026-10-16T19:12:52.1224500Z   INPUT_SCANNERS: 
+2026-10-16T19:12:52.1224687Z   INPUT_TRIVY_CONFIG: 
+2026-10-16T19:12:52.1224810Z   INPUT_TF_VARS: 
+2026-10-16T19:12:52.1224924Z   INPUT_DOCKER_HOST: 
+2026-10-16T19:12:52.1225047Z ##[endgroup]
+2026-10-16T19:12:52.2451315Z ##[end-action id=__aquasecurity_trivy-action.__run_3;outcome=success;conclusion=success;duration_ms=244]
+2026-10-16T19:12:52.2453652Z ##[start-action display=Run Trivy;id=__aquasecurity_trivy-action.__run_4]
+2026-10-16T19:12:52.3552690Z ##[group]Run entrypoint.sh
+2026-10-16T19:12:52.3552849Z entrypoint.sh
+2026-10-16T19:12:52.3596877Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-16T19:12:52.3597061Z env:
+2026-10-16T19:12:52.3597178Z   INPUT_SCAN_TYPE: image
+2026-10-16T19:12:52.3597418Z   INPUT_IMAGE_REF: ghcr.io/suhassk205/campusdesk-backend:e3d116880213a019f1af59caabdd48ce8fecf492
+2026-10-16T19:12:52.3597662Z   INPUT_SCAN_REF: .
+2026-10-16T19:12:52.3597916Z   INPUT_TRIVYIGNORES: 
+2026-10-16T19:12:52.3598041Z   INPUT_GITHUB_PAT: 
+2026-10-16T19:12:52.3598172Z   INPUT_LIMIT_SEVERITIES_FOR_SARIF: 
+2026-10-16T19:12:52.3598402Z   TRIVY_CACHE_DIR: /home/runner/work/taskboard-capstone/taskboard-capstone/.cache/trivy
+2026-10-16T19:12:52.3598628Z ##[endgroup]
+2026-10-16T19:12:52.4780179Z Running Trivy with options: trivy image ghcr.io/suhassk205/campusdesk-backend:e3d116880213a019f1af59caabdd48ce8fecf492
+2026-10-16T19:12:52.5113011Z 2026-10-16T19:12:52Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-10-16T19:12:52.5113649Z 2026-10-16T19:12:52Z	INFO	[secret] Secret scanning is enabled
+2026-10-16T19:12:52.5114191Z 2026-10-16T19:12:52Z	INFO	[secret] If your scanning is slow, please try '--scanners vuln' to disable secret scanning
+2026-10-16T19:12:52.5114878Z 2026-10-16T19:12:52Z	INFO	[secret] Please see https://trivy.dev/docs/v0.69/guide/scanner/secret#recommendation for faster secret detection
+2026-10-16T19:13:01.0769416Z 2026-10-16T19:13:01Z	INFO	[python] Licenses acquired from one or more METADATA files may be subject to additional terms. Use `--debug` flag to see all affected packages.
+2026-10-16T19:13:01.0817226Z 2026-10-16T19:13:01Z	INFO	Detected OS	family="alpine" version="3.24.2"
+2026-10-16T19:13:01.0817520Z 2026-10-16T19:13:01Z	WARN	This OS version is not on the EOL list	family="alpine" version="3.24"
+2026-10-16T19:13:01.0817877Z 2026-10-16T19:13:01Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.24" repository="3.24" pkg_num=38
+2026-10-16T19:13:01.0847215Z 2026-10-16T19:13:01Z	INFO	Number of language-specific files	num=1
+2026-10-16T19:13:01.0847603Z 2026-10-16T19:13:01Z	INFO	[python-pkg] Detecting vulnerabilities...
+2026-10-16T19:13:01.1014528Z 
+2026-10-16T19:13:01.1014936Z 📣 Notices:
+2026-10-16T19:13:01.1015229Z   - Version 0.76.0 of Trivy is now available, current version is 0.69.3
+2026-10-16T19:13:01.1015476Z 
+2026-10-16T19:13:01.1015658Z To suppress version checks, run Trivy scans with the --skip-version-check flag
+2026-10-16T19:13:01.1015958Z 
+2026-10-16T19:13:01.1015970Z 
+2026-10-16T19:13:01.1016139Z Report Summary
+2026-10-16T19:13:01.1016247Z 
+2026-10-16T19:13:01.1016619Z ┌──────────────────────────────────────────────────────────────────────────────────┬────────────┬─────────────────┬─────────┐
+2026-10-16T19:13:01.1017151Z │                                      Target                                      │    Type    │ Vulnerabilities │ Secrets │
+2026-10-16T19:13:01.1017723Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+2026-10-16T19:13:01.1018520Z │ ghcr.io/suhassk205/campusdesk-backend:e3d116880213a019f1af59caabdd48ce8fecf492   │   alpine   │        0        │    -    │
+2026-10-16T19:13:01.1019163Z │ (alpine 3.24.2)                                                                  │            │                 │         │
+2026-10-16T19:13:01.1019752Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+2026-10-16T19:13:01.1020405Z │ usr/local/lib/python3.12/site-packages/alembic-1.20.0.dist-info/METADATA         │ python-pkg │        0        │    -    │
+2026-10-16T19:13:01.1021092Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+2026-10-16T19:13:01.1021731Z │ usr/local/lib/python3.12/site-packages/annotated_doc-0.0.5.dist-info/METADATA    │ python-pkg │        0        │    -    │
+2026-10-16T19:13:01.1022689Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+2026-10-16T19:13:01.1023327Z │ usr/local/lib/python3.12/site-packages/annotated_types-0.8.0.dist-info/METADATA  │ python-pkg │        0        │    -    │
+2026-10-16T19:13:01.1024067Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+2026-10-16T19:13:01.1025011Z │ usr/local/lib/python3.12/site-packages/anyio-4.15.1.dist-info/METADATA           │ python-pkg │        0        │    -    │
+2026-10-16T19:13:01.1025694Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+2026-10-16T19:13:01.1026319Z │ usr/local/lib/python3.12/site-packages/click-8.5.0.dist-info/METADATA            │ python-pkg │        0        │    -    │
+2026-10-16T19:13:01.1026997Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+2026-10-16T19:13:01.1027648Z │ usr/local/lib/python3.12/site-packages/fastapi-0.143.3.dist-info/METADATA        │ python-pkg │        0        │    -    │
+2026-10-16T19:13:01.1028333Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+2026-10-16T19:13:01.1028954Z │ usr/local/lib/python3.12/site-packages/h11-0.16.0.dist-info/METADATA             │ python-pkg │        0        │    -    │
+2026-10-16T19:13:01.1029685Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+2026-10-16T19:13:01.1030338Z │ usr/local/lib/python3.12/site-packages/idna-3.20.dist-info/METADATA              │ python-pkg │        0        │    -    │
+2026-10-16T19:13:01.1031025Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+2026-10-16T19:13:01.1031655Z │ usr/local/lib/python3.12/site-packages/mako-1.4.3.dist-info/METADATA             │ python-pkg │        0        │    -    │
+2026-10-16T19:13:01.1032467Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+2026-10-16T19:13:01.1033107Z │ usr/local/lib/python3.12/site-packages/markupsafe-3.0.4.dist-info/METADATA       │ python-pkg │        0        │    -    │
+2026-10-16T19:13:01.1033882Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+2026-10-16T19:13:01.1034617Z │ usr/local/lib/python3.12/site-packages/opentelemetry_api-1.45.1.dist-info/METAD- │ python-pkg │        0        │    -    │
+2026-10-16T19:13:01.1035201Z │ ATA                                                                              │            │                 │         │
+2026-10-16T19:13:01.1035779Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+2026-10-16T19:13:01.1036419Z │ usr/local/lib/python3.12/site-packages/pip-25.0.1.dist-info/METADATA             │ python-pkg │        0        │    -    │
+2026-10-16T19:13:01.1037090Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+2026-10-16T19:13:01.1037729Z │ usr/local/lib/python3.12/site-packages/prometheus_client-0.26.0.dist-info/METAD- │ python-pkg │        0        │    -    │
+2026-10-16T19:13:01.1038325Z │ ATA                                                                              │            │                 │         │
+2026-10-16T19:13:01.1038880Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+2026-10-16T19:13:01.1039530Z │ usr/local/lib/python3.12/site-packages/prometheus_fastapi_instrumentator-8.1.0.- │ python-pkg │        0        │    -    │
+2026-10-16T19:13:01.1040150Z │ dist-info/METADATA                                                               │            │                 │         │
+2026-10-16T19:13:01.1040750Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+2026-10-16T19:13:01.1041381Z │ usr/local/lib/python3.12/site-packages/psycopg-3.3.6.dist-info/METADATA          │ python-pkg │        0        │    -    │
+2026-10-16T19:13:01.1042180Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+2026-10-16T19:13:01.1042874Z │ usr/local/lib/python3.12/site-packages/psycopg_binary-3.3.6.dist-info/METADATA   │ python-pkg │        0        │    -    │
+2026-10-16T19:13:01.1043590Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+2026-10-16T19:13:01.1044221Z │ usr/local/lib/python3.12/site-packages/pydantic-2.14.1.dist-info/METADATA        │ python-pkg │        0        │    -    │
+2026-10-16T19:13:01.1045105Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+2026-10-16T19:13:01.1045741Z │ usr/local/lib/python3.12/site-packages/pydantic_core-2.50.1.dist-info/METADATA   │ python-pkg │        0        │    -    │
+2026-10-16T19:13:01.1046427Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+2026-10-16T19:13:01.1047075Z │ usr/local/lib/python3.12/site-packages/sqlalchemy-2.1.4.dist-info/METADATA       │ python-pkg │        0        │    -    │
+2026-10-16T19:13:01.1047768Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+2026-10-16T19:13:01.1048397Z │ usr/local/lib/python3.12/site-packages/starlette-1.8.0.dist-info/METADATA        │ python-pkg │        0        │    -    │
+2026-10-16T19:13:01.1049070Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+2026-10-16T19:13:01.1049707Z │ usr/local/lib/python3.12/site-packages/typing_extensions-4.16.0.dist-info/METAD- │ python-pkg │        0        │    -    │
+2026-10-16T19:13:01.1050273Z │ ATA                                                                              │            │                 │         │
+2026-10-16T19:13:01.1050816Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+2026-10-16T19:13:01.1051577Z │ usr/local/lib/python3.12/site-packages/typing_inspection-0.4.4.dist-info/METADA- │ python-pkg │        0        │    -    │
+2026-10-16T19:13:01.1052145Z │ TA                                                                               │            │                 │         │
+2026-10-16T19:13:01.1052686Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+2026-10-16T19:13:01.1053310Z │ usr/local/lib/python3.12/site-packages/uvicorn-0.54.0.dist-info/METADATA         │ python-pkg │        0        │    -    │
+2026-10-16T19:13:01.1054134Z └──────────────────────────────────────────────────────────────────────────────────┴────────────┴─────────────────┴─────────┘
+2026-10-16T19:13:01.1054578Z Legend:
+2026-10-16T19:13:01.1054744Z - '-': Not scanned
+2026-10-16T19:13:01.1054951Z - '0': Clean (no security findings detected)
+2026-10-16T19:13:01.1055120Z 
