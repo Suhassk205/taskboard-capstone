@@ -1,6 +1,6 @@
 # CampusDesk — DevOps Capstone
 
-**Suhas · 24BCS10261**
+**Suhas Kembhavi· 24BCS10261**
 
 CampusDesk is a campus helpdesk for IT, facilities, and academic support. Students can raise a request, choose a team and priority, assign an owner, and follow the request from open to resolved. The dashboard includes search, status filters, request counts, and create, edit, resolve, reopen, and delete actions.
 
